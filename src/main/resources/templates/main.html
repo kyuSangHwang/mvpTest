@@ -24,24 +24,41 @@
     <title>TREEPET</title>
 
     <!--jquery-->
-    <script type="text/javascript" src="../static/js/jquery/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="../static/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <!--thisPage-->
-    <link rel="stylesheet" href="../static/css/main/main.css">
-    <script type="text/javascript" src="../static/js/main/main.js"></script>
+    <link rel="stylesheet" href="css/main/main.css">
+    <script type="text/javascript" src="js/main/main.js"></script>
     <!--All CSS/JS-->
-    <link rel="stylesheet" href="../static/css/fragments/header.css">
-    <link rel="stylesheet" href="../static/css/fragments/footer.css">
-    <script type="text/javascript" src="../static/js/fragments/header.js"></script>
+    <link rel="stylesheet" href="css/fragments/header.css">
+    <link rel="stylesheet" href="css/fragments/footer.css">
+    <script type="text/javascript" src="js/fragments/header.js"></script>
     <!--fullpage-->
-    <link rel="stylesheet" href="../static/css/fullpage/fullpage.css">
-    <script type="text/javascript" src="../static/js/fullpage/fullpage.js"></script>
+    <link rel="stylesheet" href="css/fullpage/fullpage.css">
+    <script type="text/javascript" src="js/fullpage/fullpage.js"></script>
     <!--swiper-->
-    <link rel="stylesheet" href="../static/css/swiper/swiper-5.4.5.css">
-    <script src="../static/js/swiper/swiper-4.5.5.js"></script>
+    <link rel="stylesheet" href="css/swiper/swiper-5.4.5.css">
+    <script src="js/swiper/swiper-4.5.5.js"></script>
 
 </head>
 <body>
-안녕 TREEPET
+<div th:include="fragments/header ::header" id="headerWrap"></div>
+
+<div id="fullpage">
+    <div name="section1" class="section"> <p class="textCenter"> 메인 section 입니다. </p> </div>
+    <div name="section2" class="section"> <p class="textCenter"> 회사소개 section 입니다. </p> </div>
+    <div name="section3" class="section"> <p class="textCenter"> 서비스 소개 1 section 입니다. </p> </div>
+    <div name="section4" class="section"> <p class="textCenter"> 서비스 소개 2 section 입니다. </p> </div>
+    <div name="section5" class="section"> <p class="textCenter"> 서비스 소개 3 section 입니다. </p> </div>
+    <div name="section6" class="section"> <p class="textCenter"> 서비스 소개 4 section 입니다. </p> </div>
+    <div name="section7" class="section"> <p class="textCenter"> 서비스 소개 5 section 입니다. </p> </div>
+    <div name="section8" class="section"> <p class="textCenter"> contactUs section 입니다. </p> </div>
+
+    <div th:include="fragments/footer ::footer" id="footer" class="section fp-auto-height"></div>
+</div>
 </body>
 </html>

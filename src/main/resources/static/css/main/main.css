@@ -1,0 +1,37 @@
+.section:nth-child(1) {
+    background-color: blue;
+}
+
+.section:nth-child(2) {
+    background-color: red;
+}
+
+.section:nth-child(3) {
+    background-color: yellow;
+}
+
+.section:nth-child(4) {
+    background-color: green;
+}
+
+.section:nth-child(5) {
+    background-color: magenta;
+}
+
+.section:nth-child(6) {
+    background-color: teal;
+}
+
+.section:nth-child(7) {
+    background-color: coral;
+}
+
+.section:nth-child(8) {
+    background-color: darkslategray;
+}
+
+.textCenter {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+}
