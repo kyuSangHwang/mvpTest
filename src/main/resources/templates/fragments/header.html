@@ -2,7 +2,26 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body>
 <div th:fragment="header">
-
+    <div id="headerContainer">
+        <a class="companyLogo"></a>
+        <div id="categoryWrap">
+            <ul class="menuUl" style="user-select: auto;">
+                <li>
+                    <p> TREEPET </p>
+                     <ul class="detailMenuUl">
+                        <li onclick="companyInfo()"> 회사소개 </li>
+                    </ul>
+                </li>
+                <li> <p> 매칭서비스 </p> </li>
+                <li> <p> 입양/검증 </p> </li>
+                <li> <p> 등록/족보 </p> </li>
+                <li> <p> 지식정보 </p> </li>
+                <li> <p> 스토어 </p> </li>
+                <li> <p> ContactUs </p> </li>
+            </ul>
+        </div>
+    </div>
+    <div id="detailMenuWrap"> </div>
 </div>
 </body>
 </html>
