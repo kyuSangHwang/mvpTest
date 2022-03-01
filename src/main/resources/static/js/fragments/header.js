@@ -15,14 +15,6 @@ $(document).ready(function () {
             headerManager();
         }
     }
-
-    $('.linkBox a').click(function (e) {
-        e.preventDefault();
-        const targetPosition = $($(this).attr('href')).position().top;
-        $('body,html').animate({
-            scrollTop: targetPosition
-        }, 500);
-    });
 });
 
 function headerManager() {
@@ -32,13 +24,11 @@ function headerManager() {
 
     if (pathName != "/") {
         $headerWrap.css('position', 'absolute');
-
     } else {
         $headerWrap.css('position', 'fixed');
         $headerWrap.css('color', 'white');
         $headerWrap.css('background-color', 'rgba(0,0,0,0)');
         $headerLogo.css('background-image', 'url("/images/header/sampleLogo.png")');
-
     }
 }
 
@@ -74,4 +64,3 @@ function companyInfo() {
 function locationSearch() {
     return  location.search;
 }
-
