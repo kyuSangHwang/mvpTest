@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class viewController {
-    // main
+
+    // 메인(Home)
     @GetMapping(value = "")
     public String Home(Model model){
         return "main";
     }
 
+    // 회사소개
     @GetMapping(value = "/companyInfo")
     public String companyInfo(){
         return "/company/companyInfo";

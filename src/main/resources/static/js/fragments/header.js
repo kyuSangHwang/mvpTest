@@ -15,8 +15,15 @@ $(document).ready(function () {
             headerManager();
         }
     }
-});
 
+    $('.linkBox a').click(function (e) {
+        e.preventDefault();
+        const targetPosition = $($(this).attr('href')).position().top;
+        $('body,html').animate({
+            scrollTop: targetPosition
+        }, 500);
+    });
+});
 
 function headerManager() {
     const $headerWrap = $('#headerWrap');

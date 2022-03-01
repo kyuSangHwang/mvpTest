@@ -203,6 +203,7 @@ $(document).ready(function () {
         categoryBodyContent.css("font-size", "13px");
         categoryBodyContent.css("line-height", "19px");
     }
+
 });
 
 $(window).resize(mainSecondSizeController);
