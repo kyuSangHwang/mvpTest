@@ -29,7 +29,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
     <!--thisPage-->
     <link rel="stylesheet" href="css/main/main.css">
     <script type="text/javascript" src="js/main/main.js"></script>
@@ -49,14 +48,18 @@
 <div th:include="fragments/header ::header" id="headerWrap"></div>
 
 <div id="fullpage">
-    <div name="section1" class="section"> <p class="textCenter"> 메인 section 입니다. </p> </div>
-    <div name="section2" class="section"> <p class="textCenter"> 회사소개 section 입니다. </p> </div>
-    <div name="section3" class="section"> <p class="textCenter"> 서비스 소개 1 section 입니다. </p> </div>
-    <div name="section4" class="section"> <p class="textCenter"> 서비스 소개 2 section 입니다. </p> </div>
-    <div name="section5" class="section"> <p class="textCenter"> 서비스 소개 3 section 입니다. </p> </div>
-    <div name="section6" class="section"> <p class="textCenter"> 서비스 소개 4 section 입니다. </p> </div>
-    <div name="section7" class="section"> <p class="textCenter"> 서비스 소개 5 section 입니다. </p> </div>
-    <div name="section8" class="section"> <p class="textCenter"> contactUs section 입니다. </p> </div>
+    <div name="section1" class="section">
+        <p class="textCenter"> 메인 section 입니다. </p>
+    </div>
+    <div name="section2" class="section" id="a1">
+        <p class="textCenter"> 회사소개 section 입니다. </p>
+    </div>
+    <div name="section3" class="section" id="a2"> <p class="textCenter"> 서비스 소개 1 section 입니다. </p> </div>
+    <div name="section4" class="section" id="a3"> <p class="textCenter"> 서비스 소개 2 section 입니다. </p> </div>
+    <div name="section5" class="section" id="a4"> <p class="textCenter"> 서비스 소개 3 section 입니다. </p> </div>
+    <div name="section6" class="section" id="a5"> <p class="textCenter"> 서비스 소개 4 section 입니다. </p> </div>
+    <div name="section7" class="section" id="a6"> <p class="textCenter"> 서비스 소개 5 section 입니다. </p> </div>
+    <div name="section8" class="section" id="a7"> <p class="textCenter"> contactUs section 입니다. </p> </div>
 
     <div th:include="fragments/footer ::footer" id="footer" class="section fp-auto-height"></div>
 </div>
