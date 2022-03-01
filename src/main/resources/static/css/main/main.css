@@ -35,3 +35,89 @@
     font-size: 100px;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+/* section8 part */
+.section8-title {
+    float: right;
+    height: 550px;
+    margin: 50px 250px 0px 0px;
+}
+
+.section8-title1 {
+    font-size: 70px;
+}
+
+.section8-title2 {
+    float: right;
+    font-size: 70px;
+
+}
+
+/* section8 다운로드 버튼 */
+.section8-downloadButton {
+    float: right;
+    position: absolute;
+    top: 400px;
+    right: 250px;
+
+    color: black;
+    background-color: #551cee;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+
+    font-size: 40px;
+    padding: 10px 25px 10px 25px;
+}
+
+/* section8 다운로드 버튼에 호버 넣기 */
+.section8-downloadButton:hover {
+    color: brown;
+    background-color: antiquewhite;
+}
+
+/* section8 연락할 곳 */
+.section8-contact {
+    margin-left: 200px;
+}
+
+/* section8 연락할 곳 전체 div */
+.section8-contact-title {
+
+}
+
+/* section8 연락할 곳 대표자 p */
+.section8-contact-representative {
+
+}
+
+/* section8 연락할 곳 핸드폰 p */
+.section8-contact-phone {
+
+}
+
+/* section8 연락할 곳 이메일 p */
+.section8-contact-email {
+
+}
+
+/* section8 연락할 곳 주소 p */
+.section8-contact-address {
+
+}
+
+/* section8 연락할 곳 제작 출처 p */
+.section8-contact-productionSource {
+
+}
+
+
+
+
