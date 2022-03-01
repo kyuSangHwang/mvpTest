@@ -12,4 +12,9 @@ public class viewController {
         return "main";
     }
 
+    @GetMapping(value = "/companyInfo")
+    public String companyInfo(){
+        return "/company/companyInfo";
+    }
+
 }
