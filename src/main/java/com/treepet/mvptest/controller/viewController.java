@@ -13,10 +13,28 @@ public class viewController {
         return "main";
     }
 
+    // TREEPET 소개
+    @GetMapping(value = "/treePetInfo")
+    public String treePetInfo(){
+        return "/company/treepetInfo";
+    }
+
     // 회사소개
     @GetMapping(value = "/companyInfo")
     public String companyInfo(){
         return "/company/companyInfo";
+    }
+
+    // 이용방법
+    @GetMapping(value = "/howToUseInfo")
+    public String howToUseInfo(){
+        return "/howToUse/howToUseInfo";
+    }
+
+    // Contact us
+    @GetMapping(value = "/contactUsInfo")
+    public String contactUsInfo(){
+        return "/contactUs/contactUsInfo";
     }
 
 }
