@@ -26,10 +26,24 @@
     background-color: coral;
 }
 
-.section:nth-child(8) {
-    background-color: darkslategray;
+/*.section:nth-child(8) {*/
+/*    !*background-color: darkslategray;*!*/
+/*    color: white;*/
+/*}*/
+
+.test {
+    color: white;
+    background-image: url(/images/main/laundrygo.jpeg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
 }
 
+/*.section8Img> .fp-tableCell {*/
+/*    background-image: url("static/images/main/laundrygo.jpeg");*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 .textCenter {
     text-align: center;
     font-size: 100px;
@@ -47,7 +61,7 @@
 .section8-title {
     float: right;
     height: 550px;
-    margin: 50px 250px 0px 0px;
+    margin: 380px 145px 0px 0px;
 }
 
 .section8-title1 {
@@ -64,9 +78,8 @@
 .section8-downloadButton {
     float: right;
     position: absolute;
-    top: 400px;
-    right: 250px;
-
+    top: 480px;
+    right: 145px;
     color: black;
     background-color: #551cee;
     border: 1px solid black;
@@ -83,39 +96,76 @@
     background-color: antiquewhite;
 }
 
-/* section8 연락할 곳 */
-.section8-contact {
-    margin-left: 200px;
+/* section8 footer 전체 div */
+.section8-footer {
+    padding: 38px 40px 45px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.3);
+
+    position: absolute;
+    top: 83%;
+    width: 100%;
+;
 }
 
-/* section8 연락할 곳 전체 div */
-.section8-contact-title {
+/* section8 footer Logo div */
+.section8-footer-logo {
+    width: 80px;
+}
+
+/* section8 footer contact 전체 div  */
+.section8-footer-contact {
+    margin-right: 73px;
 
 }
 
-/* section8 연락할 곳 대표자 p */
-.section8-contact-representative {
-
+/* section8 연락할 곳 contact us p */
+.section8-footer-contact-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /* section8 연락할 곳 핸드폰 p */
-.section8-contact-phone {
-
+.section8-footer-contact-phone {
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
 /* section8 연락할 곳 이메일 p */
-.section8-contact-email {
+.section8-footer-contact-email {
+    font-size: 15px;
+}
+
+/* section8 회사소개 전체 div */
+.section8-footer-companyInfo {
 
 }
 
-/* section8 연락할 곳 주소 p */
-.section8-contact-address {
-
+/* section8 회사소개 제목 */
+.section8-footer-companyInfo-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* section8 연락할 곳 제작 출처 p */
-.section8-contact-productionSource {
+/* section8 회사소개 대표자 p */
+.section8-footer-representative {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
 
+/* section8 회사소개 주소 p */
+.section8-footer-address {
+    font-size: 15px;
+}
+
+/* section8 제작 출처 p */
+.section8-footer-productionSource {
+    font-size: 15px;
+    margin: 60px 80px 0px 460px;
 }
 
 
