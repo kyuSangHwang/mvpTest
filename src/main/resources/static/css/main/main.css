@@ -78,22 +78,24 @@
 .section8-downloadButton {
     float: right;
     position: absolute;
-    top: 480px;
+    top: 570px;
     right: 145px;
-    color: black;
-    background-color: #551cee;
-    border: 1px solid black;
+    border: 3px solid white;
     padding: 5px;
-    border-radius: 5px;
-
-    font-size: 40px;
+    border-radius: 35px;
     padding: 10px 25px 10px 25px;
+    background-color: transparent;
 }
 
 /* section8 다운로드 버튼에 호버 넣기 */
 .section8-downloadButton:hover {
-    color: brown;
-    background-color: antiquewhite;
+    color: black;
+    background-color: #5B67CA;
+}
+
+.section8-downloadButton-font {
+    color: white;
+    font-size: 40px;
 }
 
 /* section8 footer 전체 div */
@@ -112,7 +114,7 @@
 
 /* section8 footer Logo div */
 .section8-footer-logo {
-    width: 80px;
+    width: 100px;
 }
 
 /* section8 footer contact 전체 div  */
