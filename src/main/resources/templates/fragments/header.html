@@ -1,44 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body>
-<div th:fragment="header">
-    <div id="headerContainer">
-        <a class="companyLogo"></a>
-        <div id="categoryWrap">
-            <ul class="menuUl" style="user-select: auto;">
-                <li><a class="a"> TREEPET </a>
-                     <ul class="detailMenuUl">
-                        <li onclick="companyInfo()"> 회사소개 </li>
-                    </ul>
-                </li>
+<header th:fragment="header">
+    <nav class="header-container">
+        <a href="/">
+            <img class="container-logo-img" src="images/header/sampleLogo.png" alt="TREEPET"/>
+        </a>
+        <ul class="container-ul">
+            <li color="white" class="container-li">
+                <a onclick="treePetInfo()">TREEPET</a>
+            </li>
 
-                <li>
-                    <a class="a"> 매칭서비스 </a>
-                </li>
+            <li color="white" class="container-li">
+                <a onclick="companyInfo()"> 회사소개 </a>
+            </li>
 
-                <li>
-                    <a class="a"> 입양/검증 </a>
-                </li>
+            <li color="white" class="container-li">
+                <a onclick="howToUseInfo()"> 이용밥법 </a>
+            </li>
 
-                <li>
-                    <a class="a"> 등록/족보 </a>
-                </li>
-
-                <li>
-                    <a class="a"> 지식정보 </a>
-                </li>
-
-                <li>
-                    <a class="a"> 스토어 </a>
-                </li>
-
-                <li>
-                    <a class="a"> ContactUs </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="detailMenuWrap"> </div>
-</div>
+            <li color="white" class="container-li">
+                <a onclick="contactUsInfo()"> Contact us </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 </body>
 </html>
