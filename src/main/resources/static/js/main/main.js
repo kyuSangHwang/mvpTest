@@ -1,5 +1,6 @@
 
 $(document).ready(function () {
+
     //fullPage
     new fullpage('#fullpage', {
         licenseKey: 'D1AF2031-25C74F5F-8F279168-8FF34DAF',
