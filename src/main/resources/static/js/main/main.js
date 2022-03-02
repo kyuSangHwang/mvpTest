@@ -15,7 +15,8 @@ $(document).ready(function () {
         controlArrows: false, //슬라이더 버튼
         keyboardScrolling: false, //키보드로 슬라이더 이동
         dragAndMove: true, //마우스나 손가락을 써서 슬라이더 이동
-        fadingEffect: 'slides'
+        fadingEffect: 'slides',
+        navigationTooltips: ['메인페이지', '회사소개', '매칭서비스', '입양/검증', '등록/정보', '지식정보', '스토어', 'Contact us']
     });
     //fullPageEnd
 
