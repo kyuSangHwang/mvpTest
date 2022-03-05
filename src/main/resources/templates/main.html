@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="css/fullpage/fullpage.css">
     <script type="text/javascript" src="js/fullpage/fullpage.js"></script>
 
+
 </head>
 <body>
 <header th:include="fragments/header ::header" id="header-wrap"></header>
@@ -72,19 +73,31 @@
     </div>
 
     <div name="section8" class="section section8Img">
-        <div class="test">
+        <div class="section8">
             <div class="section8-title">
                 <p class="section8-title1">TREEPET과 함께하는 교배와 입양</p>
                 <p class="section8-title2">지금 시작하세요</p>
-                <button class="section8-downloadButton">
-                    <p class="section8-downloadButton-font">Download</p>
-                </button>
+<!--                <button class="section8-downloadButton">-->
+<!--                    <p class="section8-downloadButton-font">-->
+<!--                        <div class="section8-downloadButton">-->
+                            <input type="checkbox" id="popup">
+                            <label for="popup" class="section8-downloadButton" onclick="section8DownloadBtnCnt()">Download</label>
+                            <div>
+                                <!--팝업 박스-->
+                                <div>
+
+                                </div>
+                                <label for="popup"></label>
+                            </div>
+<!--                        </div>-->
+<!--                    </p>-->
+<!--                </button>-->
             </div>
 
             <!--contact us-->
             <div class="section8-footer">
-                <div class="">
-                    <img class="section8-footer-logo" src="images/header/sampleLogo.png">
+                <div class="section8-footer-logo">
+                    <img class="section8-footer-logo-img" src="images/header/sampleLogo.png">
                 </div>
 
                 <div class="section8-footer-contact">

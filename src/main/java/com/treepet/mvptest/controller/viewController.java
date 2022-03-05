@@ -37,4 +37,10 @@ public class viewController {
         return "/contactUs/contactUsInfo";
     }
 
+    // Popup
+    @GetMapping(value = "/popup")
+    public String openPop(){
+        return "/popup/popup";
+    }
+
 }
