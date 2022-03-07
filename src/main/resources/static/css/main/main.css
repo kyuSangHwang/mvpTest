@@ -114,7 +114,6 @@
     right: 145px;
 }
 
-
 input[id*="popup"] {
     display: none;
 }
@@ -130,7 +129,6 @@ input[id*="popup"] + label {
 
     color: white;
     font-size: 40px;
-}
 }
 
 input[id*="popup"] + label + div {
@@ -152,18 +150,6 @@ input[id*="popup"] + label + div > div {
     background: white;
     z-index: 2;
 }
-
-/* 취소버튼 */
-/*input[id*="popup"] + label + div > div > label  {*/
-/*    position: absolute;*/
-/*    top: 0%;*/
-/*    right: 0%;*/
-/*    transform: translate(-40%,-40%);*/
-/*    padding: 20px;*/
-/*    background: red;*/
-/*    border-radius: 100%;*/
-/*    z-index: 1;*/
-/*}*/
 
 input[id*="popup"] + label + div > label {
     position: absolute;

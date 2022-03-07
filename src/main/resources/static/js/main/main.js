@@ -24,38 +24,31 @@ $(document).ready(function () {
 
 
 //
-function openPop() {
-    window.open("/popup", "test", "top=350, left=2200, width=400, height=380, menubar=no, toolbar=no, directories=no, status=no, scrollbars=no, copyhistory=no, resizable=no");
-
-//    2.. 팝업창이 켜질때
-
-//    2-1. 카운트 세는 다운로드 버튼이 사라지고
-//    2-2. 일반 다운로드 팝업창 버튼이 생긴다
-
-}
+// function openPop() {
+//     window.open("/popup", "test", "top=350, left=2200, width=400, height=380, menubar=no, toolbar=no, directories=no, status=no, scrollbars=no, copyhistory=no, resizable=no");
+// }
 
 // 다운로드 버튼 클릭 수   localStorage.length 로 개수(길이) 알수있음
 function section8DownloadBtnCnt() {
     // 2. 변수(downloadClickCnt) 0으로 초기화
     let downloadClickCnt = 0;
     let lsLength = localStorage.length;
+    // let a = localStorage.getItem(downloadClickCnt) + 1;
 
+    if()
     if (lsLength === 0) {
-        localStorage.setItem(downloadClickCnt, downloadClickCnt);
+        localStorage.setItem(downloadClickCnt, downloadClickCn);
     }
-    else {
+    else if(downloadClickCnt === localStorage.length-1) {
         downloadClickCnt = lsLength;
-        localStorage.setItem(downloadClickCnt, downloadClickCnt);
+        localStorage.setItem(downloadClickCnt, downloadClickCn);
     }
     // localStorage.setItem(downloadClickCnt,downloadClickCnt);
     // downloadClickCnt++;
 
-
-
-
-
-
-
-
-
+    //카운트 세는 다운로드 버튼은 사라진다
+    // const btn = document.getElementById('popup');
+    // const btn = document.getElementsByClassName('downloadBtn');
+    // btn.disabled = true;
+    //일반 다운로드 팝업창 버튼이 생긴다
 }
