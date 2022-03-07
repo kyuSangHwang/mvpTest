@@ -6,14 +6,6 @@
     background-color: red;
 }
 
-.section:nth-child(3) {
-    background-color: yellow;
-}
-
-.section:nth-child(4) {
-    background-color: green;
-}
-
 .section:nth-child(5) {
     background-color: magenta;
 }
@@ -26,11 +18,6 @@
     background-color: coral;
 }
 
-/*.section:nth-child(8) {*/
-/*    !*background-color: darkslategray;*!*/
-/*    color: white;*/
-/*}*/
-
 .section8 {
     color: white;
     background-image: url(/images/main/laundrygo.jpeg);
@@ -39,23 +26,11 @@
     background-repeat: no-repeat;
 }
 
-/*.section8Img> .fp-tableCell {*/
-/*    background-image: url("static/images/main/laundrygo.jpeg");*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
 .textCenter {
     text-align: center;
     font-size: 100px;
     font-weight: bold;
 }
-
-
-
-
-
-
-
 
 /* section8 part */
 .section8-title {
@@ -73,31 +48,6 @@
     font-size: 70px;
 
 }
-
-/* section8 다운로드 버튼 */
-/*.section8-downloadButton {*/
-/*    float: right;*/
-/*    position: absolute;*/
-/*    top: 570px;*/
-/*    right: 145px;*/
-/*    border: 3px solid white;*/
-/*    padding: 5px;*/
-/*    border-radius: 35px;*/
-/*    padding: 10px 25px 10px 25px;*/
-/*    background-color: transparent;*/
-/*}*/
-
-/*!* section8 다운로드 버튼에 호버 넣기 *!*/
-/*.section8-downloadButton:hover {*/
-/*    color: black;*/
-/*    background-color: #5B67CA;*/
-/*}*/
-
-/*.section8-downloadButton-font {*/
-/*    color: white;*/
-/*    font-size: 40px;*/
-/*}*/
-
 
 /* section8 다운로드 버튼 & 팝업창 */
 .section8-downloadButton {
@@ -121,12 +71,10 @@ input[id*="popup"] {
 input[id*="popup"] + label {
     display: inline-block;
     background: #5B67CA;
-
     border: 3px solid white;
     border-radius: 35px;
     background-color: transparent;
     padding: 10px 25px 10px 25px;
-
     color: white;
     font-size: 40px;
 }
@@ -141,7 +89,7 @@ input[id*="popup"] + label + div {
 }
 
 input[id*="popup"] + label + div > div {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -152,7 +100,7 @@ input[id*="popup"] + label + div > div {
 }
 
 input[id*="popup"] + label + div > label {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -176,15 +124,12 @@ input[id*="popup"]:checked + label + div {
 /* section8 footer 전체 div */
 .section8-footer {
     padding: 38px 40px 45px 40px;
-
     display: flex;
     justify-content: space-between;
     background: rgba(0,0,0,0.3);
-
     position: absolute;
     top: 83%;
     width: 100%;
-;
 }
 
 .section8-footer-logo {
@@ -252,4 +197,45 @@ input[id*="popup"]:checked + label + div {
 
 
 
-
+/* test */
+.css-t70j0z {
+    margin-top: 88px;
+    width: 978px;
+    padding-left: 470px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-flow: row;
+}
+.css-1kyudii {
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-flow: column;
+}
+.css-dqef8h {
+    width: 100px;
+}
+.css-sm6bqj {
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+    color: rgb(51, 51, 51);
+}
+.css-1n8v76p {
+    margin-top: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+    line-height: 1.8;
+}
+.css-61x4mc {
+    margin-left: 172px;
+    width: 342px;
+}
