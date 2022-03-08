@@ -120,6 +120,17 @@ input[id*="popup"]:checked + label + div {
     visibility: visible;
 }
 
+/* 모달 팝업창 하단 사전예약 버튼 */
+.section8-popup-modal-btn {
+    background: #551cee;
+    width: 600px;
+    height: 65px;
+    /* position: absolute를 줘야 겉div안에서 움직일수있다 */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
 
 /* section8 footer 전체 div */
 .section8-footer {

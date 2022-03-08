@@ -75,10 +75,10 @@ li{
     width: 0px;
     margin: 5px 0 0;
     /*transition-duration: 0.3s;*/
-    opacity: 0;
+    opacity: 2;
     background-color: rgb(0, 0, 0);
     height: 4px;
-    transition: width 0.3s ease 0s;
+    transition: width 0.3s ease 0.1s;
 }
 
 .container-li:hover:after{
