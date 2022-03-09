@@ -120,6 +120,55 @@ input[id*="popup"]:checked + label + div {
     visibility: visible;
 }
 
+
+/* 모달창 안 div */
+.section8-popup-box {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.section8-popup-box-text {
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-flow: column;
+
+
+}
+
+/* 모달창 안 div */
+.section8-popup-box-text > span {
+    font-size: 20px;
+    color: black;
+    width: 80%;
+    border: #551cee;
+
+
+}
+
+.section8-popup-box-text-name {
+    width: 27%;
+    font-size: 20px;
+}
+
+.section8-popup-box-text-phone {
+    width: 78%;
+    font-size: 20px;
+}
+
+.section8-popup-box-text-email {
+    width: 87%;
+    font-size: 20px;
+}
+
+.section8-popup-box-text-select {
+    width: 52%;
+    font-size: 20px;
+}
+
 /* 모달 팝업창 하단 사전예약 버튼 */
 .section8-popup-modal-btn {
     background: #551cee;
@@ -131,6 +180,8 @@ input[id*="popup"]:checked + label + div {
     bottom: 0;
 
 }
+
+
 
 /* section8 footer 전체 div */
 .section8-footer {

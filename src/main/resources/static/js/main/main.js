@@ -1,5 +1,6 @@
 let preventDuplicateBtn = true;
 
+
 $(document).ready(function () {
 
     //fullPage
@@ -79,3 +80,8 @@ function section8DownloadBtnCnt() {
         localStorage.setItem(downloadClickCnt, 'customers_' + downloadClickCnt);
     }
 }
+
+
+(function() {
+    emailjs.init("oheTEu0jy6XxN5NCQ");
+})();
