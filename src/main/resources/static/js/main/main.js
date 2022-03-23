@@ -23,7 +23,7 @@ $(document).ready(function () {
         // Accessibility
         keyboardScrolling: false, //키보드로 슬라이더 이동
         // Design
-        sectionsColor : ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+        sectionsColor : ['#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb'],
         controlArrows: false, //슬라이더 버튼
         paddingTop: '0px',
         paddingBottom: '0px',
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         },
         afterRender: function(){
-            // afterRenderTest();
+            afterRenderTest();
         },
         afterResize: function(width, height){},
         afterReBuild: function(){},
@@ -81,7 +81,43 @@ function section8DownloadBtnCnt() {
     }
 }
 
+/**
+ * afterRenderTest: fullPage 로드 된 다음에 실행 되는 함수
+ *
+ */
+function afterRenderTest() {
 
-(function() {
+}
+
+/**
+ * sendEmail: 다운로드(사전예약) 클릭 시 팝업의 신청하기 버튼 클릭했을 떄 실행되는 함수
+ *
+ */
+function sendEmail(){
+
+    const fullEmail = $("#email");
+    // const wantCartegory = $("#cartegory");
+
+    const templateParams = {
+        // cartegory: wantCartegory,
+        email: fullEmail.val()
+    };
+
     emailjs.init("oheTEu0jy6XxN5NCQ");
-})();
+
+    emailjs.send('service_n432v57', 'template_4p7abob', templateParams).then(function (response) {
+        Swal.fire({
+            title: '사전 신청되었습니다.!',
+            text: '사전 신청해주신 보호자님께 가장 먼저 알려드릴께요!',
+            icon: 'success',
+            confirmButtonText: '확인'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload();
+            }
+        })
+    },function () {
+        location.reload();
+    })
+
+}

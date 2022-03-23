@@ -29,11 +29,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--thisPage-->
     <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="url(https://fonts.googleapis.com/earlyaccess/hanna.css)">
     <script type="text/javascript" src="js/main/main.js"></script>
     <script type="text/javascript" src="js/fragments/header.js"></script>
     <!--All CSS/JS-->
     <link rel="stylesheet" href="css/fragments/header.css">
     <link rel="stylesheet" href="css/fragments/footer.css">
+    <!--EmailJS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <!--fullpage-->
     <link rel="stylesheet" href="css/fullpage/fullpage.css">
     <script type="text/javascript" src="js/fullpage/fullpage.js"></script>
@@ -45,8 +48,9 @@
 <header th:include="fragments/header ::header" id="header-wrap"></header>
 
 <div id="fullpage">
-    <div name="section1" class="section">
-        <p class="textCenter"> 메인 </p>
+    <div name="section1" class="section mainBackground">
+        <!--<p class="mainText1"> 반려동물의 삶이 시작되는 곳 </p> <br>
+        <p class="mainText2"> 여려분의 가정입니다 </p>-->
     </div>
 
     <div name="section2" class="section">
@@ -54,46 +58,58 @@
     </div>
 
     <div name="section3" class="section">
-        <div class="css-t70j0z">
-            <div class="css-1kyudii">
-<!--                <img src="images/main/lbs.png" alt="Phone Icon 01" class="css-dqef8h">-->
-                <img src="images/main/123123.png" alt="Phone Icon 01" class="css-dqef8h">
-                <h3 class="css-sm6bqj">Sex 상대방<br>Fuckin TREEPET에서</h3>
-                <span class="css-1n8v76p">AI 간편투자 엔진 아이작이 실시간<br>시장 분석부터 자산배분, 리밸런싱까지.<br>당신의 투자를 책임져요.</span>
+        <div class="section-services">
+            <div class="services-information">
+                <img src="images/main/serviceIcon1.png" alt="Phone Icon 01" class="information-icon">
+                <h3 class="information-title">상대방과의 매칭,<br>지역부터 조건까지<br>쉽고 빠르게</h3>
+                <span class="information-content">지도에서 실시간으로 위치를 확인하고<br>리스트내에 상대방들과 만나보세요.</span>
             </div>
-            <img src="images/main/lbs.png" alt="Phone 01" class="css-61x4mc">
+            <img src="images/main/moblieLbs.png" alt="Phone 01" class="services-img-right">
         </div>
     </div>
 
     <div name="section4" class="section">
-        <div class="css-t70j0z">
-            <div class="css-1kyudii">
-                <!--                <img src="images/main/lbs.png" alt="Phone Icon 01" class="css-dqef8h">-->
-                <img src="images/main/123123.png" alt="Phone Icon 01" class="css-dqef8h">
-                <h3 class="css-sm6bqj">입양/검증<br>Funkin TREEPET 에서</h3>
-                <span class="css-1n8v76p">AI 간편투자 엔진 아이작이 실시간<br>시장 분석부터 자산배분, 리밸런싱까지.<br>당신의 투자를 책임져요.</span>
+        <div class="section-services">
+            <img src="images/main/mobileAdoptListVerification.png" alt="Phone 05" class="services-img-left">
+            <div class="services-information">
+                <img src="images/main/serviceIcon2.png" alt="Phone Icon 05" class="information-icon">
+                <h3 class="information-title">가족을 찾기위한 올바른 입양<br>가족이 되기위한 필수검증</h3>
+                <span class="information-content">미래를 위한 연금 자산도 오랜 기간 꾸준하게<br>AI가 알아서 관리해 드려요.</span>
             </div>
-            <img src="images/main/listVerification.png" alt="Phone 01" class="css-61x4mc">
         </div>
     </div>
 
     <div name="section5" class="section">
-        <div class="css-t70j0z">
-            <div class="css-1kyudii">
-                <img src="images/main/123123.png" alt="Phone Icon 01" class="css-dqef8h">
-                <h3 class="css-sm6bqj">등록/족보<br>Funkin TREEPET 에서</h3>
-                <span class="css-1n8v76p">AI 간편투자 엔진 아이작이 실시간<br>시장 분석부터 자산배분, 리밸런싱까지.<br>당신의 투자를 책임져요.</span>
+        <div class="section-services">
+            <div class="services-information">
+                <img src="images/main/serviceIcon3.png" alt="Phone Icon 01" class="information-icon">
+                <h3 class="information-title">반려동물 등록과 동시에,<br>우리 아이의 족보 생성</h3>
+                <span class="information-content">AI 간편투자 엔진 아이작이 실시간<br>시장 분석부터 자산배분, 리밸런싱까지.<br>당신의 투자를 책임져요.</span>
             </div>
-            <img src="images/main/Combine4.png" alt="Phone 01" class="css-61x4mc">
+            <img src="images/main/moblieFamilyTree.png" alt="Phone 01" class="services-img-right">
         </div>
     </div>
 
     <div name="section6" class="section">
-        <p class="textCenter"> 지식정보 </p>
+        <div class="section-services">
+            <img src="images/main/moblieInformation.png" alt="Phone 05" class="services-img-left">
+            <div class="services-information">
+                <img src="images/main/serviceIcon4.png" alt="Phone Icon 05" class="information-icon">
+                <h3 class="information-title">교배는 안전하게,<br>양육은 정확하게,<br>놀이는 신나게</h3>
+                <span class="information-content">미래를 위한 연금 자산도 오랜 기간 꾸준하게<br>AI가 알아서 관리해 드려요.</span>
+            </div>
+        </div>
     </div>
 
     <div name="section7" class="section">
-        <p class="textCenter"> 스토어 </p>
+        <div class="section-services">
+            <div class="services-information">
+                <img src="images/main/serviceIcon5.png" alt="Phone Icon 01" class="information-icon">
+                <h3 class="information-title">보호자도 만족하고<br>우리 아이도 만족하는<br>나만의  비서</h3>
+                <span class="information-content">AI 간편투자 엔진 아이작이 실시간<br>시장 분석부터 자산배분, 리밸런싱까지.<br>당신의 투자를 책임져요.</span>
+            </div>
+            <img src="images/main/moblieStore.png" alt="Phone 01" class="services-img-right">
+        </div>
     </div>
 
     <div name="section8" class="section section8Img">
@@ -112,9 +128,9 @@
                         <div class="section8-popup-modal-btn">
                             <div>
                                 <div class="section8-popup-modal-btn-text">
-                                    <input class="section8-popup-modal-btn-text-email" type="email" placeholder="name@example.com"/>
+                                    <input class="section8-popup-modal-btn-text-email" id="email" type="email" placeholder="name@example.com"/>
                                 </div>
-                                <button class="section8-popup-modal-btn-click">신청하기</button>
+                                <button onclick="sendEmail()" class="section8-popup-modal-btn-click">신청하기</button>
                             </div>
                         </div>
                     </div>
