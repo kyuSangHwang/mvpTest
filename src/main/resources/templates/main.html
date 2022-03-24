@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div name="section7" class="section">
+    <div name="section7" class="section" id="section7">
         <div class="section-services">
             <div class="services-information">
                 <img src="images/main/serviceIcon5.png" alt="Phone Icon 01" class="information-icon">
@@ -112,7 +112,7 @@
         </div>
     </div>
 
-    <div name="section8" class="section section8Img">
+    <div name="section8" class="section section8Img" id="section8">
         <div class="section8">
             <div class="section8-title">
                 <p class="section8-title1">TREEPET과 함께하는 교배와 입양</p>
@@ -122,17 +122,20 @@
                 <div>
                     <!--팝업 박스-->
                     <div class="section8-popup-box">
-                        <p class="section8-popup-box-text1">지금 사전 신청하세요.</p>
-                        <p class="section8-popup-box-text2">서비스 출시를 가장 먼저 알려드릴 메일 주소를 알려주세요.</p>
+                        <p class="section8-popup-box-text1">반려동물을 위한 어플 TREEPET<br>지금 사전 신청하세요.</p>
+                        <p class="section8-popup-box-text2">1차 사전 신청기간 (2022.03.31 ~ 2022.04.30)</p>
+                        <p class="section8-popup-box-text3">서비스 출시를 가장 먼저 알려드릴 메일 주소를 알려주세요.</p>
 
                         <div class="section8-popup-modal-btn">
                             <div>
                                 <div class="section8-popup-modal-btn-text">
-                                    <input class="section8-popup-modal-btn-text-email" id="email" type="email" placeholder="name@example.com"/>
+                                    <input class="section8-popup-modal-btn-text-email" id="email" type="email" placeholder="  name@example.com"/>
+                                    <button onclick="sendEmail()" class="section8-popup-modal-btn-click">신청하기</button>
                                 </div>
-                                <button onclick="sendEmail()" class="section8-popup-modal-btn-click">신청하기</button>
                             </div>
                         </div>
+                        <p class="emailSuccess" id="emailSuccess">사전예약이 완료되었습니다.</p>
+                        <p class="emailFail" id="emailFail">이메일 형식이 아닙니다. 이메일 형식인지 확인 해주세요.</p>
                     </div>
                     <label for="popup"></label>
                 </div>

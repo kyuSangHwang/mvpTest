@@ -88,7 +88,7 @@ input[id*="popup"] + label + div {
     z-index: 100;
 }
 
-input[id*="popup"] + label + div > div {
+.section8-popup-box {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -97,7 +97,9 @@ input[id*="popup"] + label + div > div {
     height: 550px;
     background: white;
     z-index: 2;
+    border-radius: 10px;
 }
+
 
 input[id*="popup"] + label + div > label {
     position: fixed;
@@ -120,71 +122,126 @@ input[id*="popup"]:checked + label + div {
     visibility: visible;
 }
 
-
-/* 모달창 안 div */
-/*.section8-popup-box {*/
-/*    position: relative;*/
-/*    width: 100%;*/
-/*    display: inline-flex;*/
-/*    justify-content: center;*/
-/*}*/
-
 .section8-popup-box-text1 {
     margin-top: 10%;
     color: #551cee;
     text-align: center;
-    font-size: 70px;
-
+    font-size: 50px;
 }
 
 .section8-popup-box-text2 {
+    color: blueviolet;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 4%;
+}
+
+.section8-popup-box-text3 {
     color: darkgray;
     text-align: center;
     font-size: 20px;
-    margin-top: 30%;
+    margin-top: 10%;
 }
 
 .section8-popup-modal-btn-click {
     position: relative;
-    left: 75%;
-    font-size: 44px;
+    left: 107%;
+    top: -52px;
+    font-size: 30px;
     width: 25%;
-    height: 110px;
+    height: 52px;
     background-color: #551cee;
     color: white;
-
+    border-radius: 10px;
+    border: solid 1px gray;
 }
 
 .section8-popup-modal-btn-text {
     position: absolute;
     width: 70%;
-
 }
 
 .section8-popup-modal-btn-text-email {
-    width: 103%;
+    width: 100%;
     margin-top: 2.7%;
-    margin-left: 1.5%;
-    height: 2.5em;
+    margin-left: 11.5%;
+    height: 50px;
     font-size: 30px;
+    background: #5B67CA;
+    border-radius: 10px;
+    text-align: center;
+    border: solid 1px gray;
+    color: white;
 }
-/* 모달창 안 div */
 
+input::placeholder {
+    color: oldlace;
+}
 
+.popupSuccess {
+    display: none;
+    background-color: #5B67CA;
+    padding: 20px;
+    z-index: 3;
+    width: 300px;
+    height: 222px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    text-align: center;
+}
 
-/* 모달 팝업창 하단 사전예약 버튼 */
-.section8-popup-modal-btn {
-    background: #551cee;
-    width: 800px;
-    height: 20%;
-    /* position: absolute를 줘야 겉div안에서 움직일수있다 */
+/* 사전 예약 완료 텍스트 */
+.popupSuccessText {
+    color: white;
+    font-size: 20px;
+}
+
+/* 사전 예약 완료 버튼 */
+.popupSuccessBtn {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background: #004fff;
+    color: white;
+    font-size: 16px;
+    /* 박스쉐도우 : x축 y축 블러값 */
+    box-shadow: 0 4px 16px rgba(0,79,255,0.3);
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.popupSuccessBtn:focus {
+    outline: 0;
+}
+
+.popupSuccessBtn:hover {
+    box-shadow: 0 4px 16px rgba(0,79,255,0.9);
+}
+
+/* 이메일 성공 텍스트 */
+.emailSuccess {
+    color: blue;
+    margin-top: 73px;
     position: absolute;
-    left: 0;
-    bottom: 0;
-
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
 }
 
-
+/* 이메일 실패 텍스트 */
+.emailFail {
+    color: red;
+    margin-top: 73px;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
 
 /* section8 footer 전체 div */
 .section8-footer {
@@ -210,7 +267,6 @@ input[id*="popup"]:checked + label + div {
 /* section8 footer contact 전체 div  */
 .section8-footer-contact {
     margin-right: 73px;
-
 }
 
 /* section8 연락할 곳 contact us p */

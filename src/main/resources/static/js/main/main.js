@@ -60,6 +60,12 @@ $(document).ready(function () {
         }
     });
 
+    //클릭 아벤트
+    // {
+    //     sendEmail();
+    //     .fadeOut
+    // }
+
 });
 
 
@@ -103,21 +109,75 @@ function sendEmail(){
         email: fullEmail.val()
     };
 
-    emailjs.init("oheTEu0jy6XxN5NCQ");
+    const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
 
-    emailjs.send('service_n432v57', 'template_4p7abob', templateParams).then(function (response) {
-        Swal.fire({
-            title: '사전 신청되었습니다.!',
-            text: '사전 신청해주신 보호자님께 가장 먼저 알려드릴께요!',
-            icon: 'success',
-            confirmButtonText: '확인'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                location.reload();
-            }
+    if(emailCheck.test(templateParams.email)) {
+
+        emailjs.init("oheTEu0jy6XxN5NCQ");
+
+        emailjs.send('service_n432v57', 'template_4p7abob', templateParams).then(function (response) {
+            Swal.fire({
+                title: '사전 신청되었습니다.!',
+                text: '사전 신청해주신 보호자님께 가장 먼저 알려드릴께요!',
+                icon: 'success',
+                confirmButtonText: '확인'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            })
+        },function () {
+            location.reload();
         })
-    },function () {
-        location.reload();
-    })
 
+        //이메일 성공시
+        reset();
+        //이메일 보내기 실패 숨기기
+        emailFailHide();
+        //사전예약이 완료되었습니다 아래에 띄우는 것
+        emailSuccessShow();
+
+        return;
+
+    } else {
+        reset();
+        //이메일 보내기 성공 숨기기
+        emailSuccessHide();
+        //이메일형식이 다릅니다 아래에 띄우는 것
+        emailFailShow();
+
+        return;
+    }
+}
+
+//input 텍스트 초기화 ('')
+function reset() {
+    const email = document.getElementsByClassName('section8-popup-modal-btn-text-email');
+    for(let i=0; i<email.length; i++){
+        email[i].value='';
+    }
+}
+
+//이메일 성공 텍스트 보여주기
+function emailSuccessShow() {
+    const emailSuccess = document.getElementById('emailSuccess');
+    emailSuccess.style.display = "block";
+}
+
+//이메일 실패 텍스트 보여주기
+function emailFailShow() {
+    const emailFail = document.getElementById('emailFail');
+    emailFail.style.display = "block";
+}
+
+//이메일 성공 텍스트 숨기기
+function emailSuccessHide() {
+    const emailSuccess = document.getElementById('emailSuccess');
+    emailSuccess.style.display = "none";
+}
+
+//이메일 실패 텍스트 숨기기
+function emailFailHide() {
+    const emailFail = document.getElementById('emailFail');
+    emailFail.style.display = "none";
 }
