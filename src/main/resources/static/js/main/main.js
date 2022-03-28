@@ -99,56 +99,81 @@ function afterRenderTest() {
  * sendEmail: 다운로드(사전예약) 클릭 시 팝업의 신청하기 버튼 클릭했을 떄 실행되는 함수
  *
  */
-function sendEmail(){
 
-    const fullEmail = $("#email");
+
+
+function sendEmail() {
+
+
     // const wantCartegory = $("#cartegory");
 
-    const templateParams = {
-        // cartegory: wantCartegory,
-        email: fullEmail.val()
-    };
+// 라디오 버튼을 클릭했을때 값을 받아온다
+    const optionVal = $('input[name="option"]:checked').val();
 
-    const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
-
-    if(emailCheck.test(templateParams.email)) {
-
-        emailjs.init("oheTEu0jy6XxN5NCQ");
-
-        emailjs.send('service_n432v57', 'template_4p7abob', templateParams).then(function (response) {
-            Swal.fire({
-                title: '사전 신청되었습니다.!',
-                text: '사전 신청해주신 보호자님께 가장 먼저 알려드릴께요!',
-                icon: 'success',
-                confirmButtonText: '확인'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    location.reload();
-                }
-            })
-        },function () {
-            location.reload();
-        })
-
-        //이메일 성공시
-        reset();
-        //이메일 보내기 실패 숨기기
-        emailFailHide();
-        //사전예약이 완료되었습니다 아래에 띄우는 것
-        emailSuccessShow();
-
+    // 받아온 값이 ‘ ’ (공란) 이라면
+    if(optionVal==null){
+        // 체크 선택하라는 알림
+        alert("교배/입양/분양 중 원하시는 서비스를 선택해주세요")
+        // 종료
         return;
-
     } else {
-        reset();
-        //이메일 보내기 성공 숨기기
-        emailSuccessHide();
-        //이메일형식이 다릅니다 아래에 띄우는 것
-        emailFailShow();
+        const fullEmail = $("#email");
 
-        return;
+        const templateParams = {
+            category: optionVal,
+            email: fullEmail.val()
+        };
+
+        const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
+
+        if(emailCheck.test(templateParams.email)) {
+
+            emailjs.init("oheTEu0jy6XxN5NCQ");
+
+            emailjs.send('service_n432v57', 'template_4p7abob', templateParams).then(function (response) {
+                Swal.fire({
+                    title: '사전 신청되었습니다.!',
+                    text: '사전 신청해주신 보호자님께 가장 먼저 알려드릴께요!',
+                    icon: 'success',
+                    confirmButtonText: '확인'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                })
+            },function () {
+                location.reload();
+            })
+
+            //이메일 성공시
+            reset();
+            //이메일 보내기 실패 숨기기
+            emailFailHide();
+                //사전예약이 완료되었습니다 아래에 띄우는 것
+            emailSuccessShow();
+
+            return;
+
+        } else {
+            reset();
+            //이메일 보내기 성공 숨기기
+            emailSuccessHide();
+            //이메일형식이 다릅니다 아래에 띄우는 것
+            emailFailShow();
+
+            return;
+        }
     }
+
 }
+//
+// 받아온 값이 ‘무언가’ 이라라면
+//     이메일 보내는 기능
+//     받아온 값 (‘무언가’)를 메일에 보낼 파라미터에 넣기
+//     ~~~
+
+
+
 
 //input 텍스트 초기화 ('')
 function reset() {
@@ -181,3 +206,17 @@ function emailFailHide() {
     const emailFail = document.getElementById('emailFail');
     emailFail.style.display = "none";
 }
+
+// const options = document.querySelectorAll('input[type=radio][name=option]')
+// options.forEach((radio) => {
+//     radio.addEventListener('change', () => {
+//
+//     })
+// })
+// let option = options.values();
+
+
+
+
+
+

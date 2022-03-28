@@ -42,7 +42,8 @@
     <script type="text/javascript" src="js/fullpage/fullpage.js"></script>
     <!-- emailJs  -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
 <header th:include="fragments/header ::header" id="header-wrap"></header>
@@ -124,6 +125,36 @@
                     <div class="section8-popup-box">
                         <p class="section8-popup-box-text1">반려동물을 위한 어플 TREEPET<br>지금 사전 신청하세요.</p>
                         <p class="section8-popup-box-text2">1차 사전 신청기간 (2022.03.31 ~ 2022.04.30)</p>
+                        <div class="section8-popup-box-option">
+
+                            <div class="section8-popup-box-option-div">
+                                <input class="section8-popup-box-option1 option" type="radio" name="option" id="breed" value="교배"/>
+                                <label for="breed">교배</label>
+                                <i class="bi bi-check-square" onclick="checkOption()"></i>
+                                <!-- <i class="bi bi-check-square-fill"></i>-->
+                            </div>
+                            <div class="section8-popup-box-option-div">
+                                <input class="section8-popup-box-option2 option" type="radio" name="option" id="adopt" value="입양"/>
+                                <label for="adopt">입양</label>
+                                <i class="bi bi-check-square" onclick="checkOption()"></i>
+                                <!-- <i class="bi bi-check-square-fill"></i>-->
+                            </div>
+                            <div class="section8-popup-box-option-div">
+                                <input class="section8-popup-box-option3 option" type="radio" name="option" id="parcel" value="분양"/>
+                                <label for="parcel">분양</label>
+                                <i class="bi bi-check-square" onclick="checkOption()"></i>
+                                <!-- <i class="bi bi-check-square-fill"></i>-->
+                            </div>
+
+
+
+<!--                            <input class="section8-popup-box-option1" type="radio" name="option" id="breed" value="교배"/>-->
+<!--                            <label for="breed">교배</label>-->
+<!--                            <input class="section8-popup-box-option2 option" type="radio" name="option" id="adopt" value="입양"/>-->
+<!--                            <label for="adopt">입양</label>-->
+<!--                            <input class="section8-popup-box-option3 option" type="radio" name="option" id="parcel" value="분양"/>-->
+<!--                            <label for="parcel">분양</label>-->
+                        </div>
                         <p class="section8-popup-box-text3">서비스 출시를 가장 먼저 알려드릴 메일 주소를 알려주세요.</p>
 
                         <div class="section8-popup-modal-btn">
