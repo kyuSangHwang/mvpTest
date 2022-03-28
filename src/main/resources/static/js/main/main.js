@@ -1,6 +1,5 @@
 let preventDuplicateBtn = true;
 
-
 $(document).ready(function () {
 
     //fullPage
@@ -60,15 +59,29 @@ $(document).ready(function () {
         }
     });
 
-    //클릭 아벤트
-    // {
-    //     sendEmail();
-    //     .fadeOut
-    // }
+    $('.checkCategories').on('click', function () {
+        const clickCategory = this;
+        const clickCategoryValue = clickCategory.innerHTML;
+        let categoryLists = $(".checkCategories");
+
+        if(!!clickCategory || !!clickCategoryValue || !!categoryLists) {
+            return;
+        }
+
+        for (let i = 0; i < categoryLists.length; i++) {
+            let categoryList = categoryLists[i];
+            let categoryListValue = categoryList.innerHTML;
+
+            if (clickCategoryValue === categoryListValue) {
+
+            } else {
+
+            }
+        }
+
+    });
 
 });
-
-
 
 /**
 * section8DownloadBtnCnt: 다운로드 클릭했을 때 클릭횟수 count 하는 함수
@@ -96,15 +109,10 @@ function afterRenderTest() {
 }
 
 /**
- * sendEmail: 다운로드(사전예약) 클릭 시 팝업의 신청하기 버튼 클릭했을 떄 실행되는 함수
+ * sendEmail: 다운로드(사전예약) 클릭 시 팝업의 신청하기 버튼 클릭했을 떄 실행되는 함동
  *
  */
-
-
-
 function sendEmail() {
-
-
     // const wantCartegory = $("#cartegory");
 
 // 라디오 버튼을 클릭했을때 값을 받아온다
@@ -112,10 +120,7 @@ function sendEmail() {
 
     // 받아온 값이 ‘ ’ (공란) 이라면
     if(optionVal==null){
-        // 체크 선택하라는 알림
-        alert("교배/입양/분양 중 원하시는 서비스를 선택해주세요")
-        // 종료
-        return;
+        alert("교배/입양/분양 중 원하시는 서비스를 선택해주세요");
     } else {
         const fullEmail = $("#email");
 
@@ -166,14 +171,6 @@ function sendEmail() {
     }
 
 }
-//
-// 받아온 값이 ‘무언가’ 이라라면
-//     이메일 보내는 기능
-//     받아온 값 (‘무언가’)를 메일에 보낼 파라미터에 넣기
-//     ~~~
-
-
-
 
 //input 텍스트 초기화 ('')
 function reset() {
@@ -207,13 +204,6 @@ function emailFailHide() {
     emailFail.style.display = "none";
 }
 
-// const options = document.querySelectorAll('input[type=radio][name=option]')
-// options.forEach((radio) => {
-//     radio.addEventListener('change', () => {
-//
-//     })
-// })
-// let option = options.values();
 
 
 
