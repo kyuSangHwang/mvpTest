@@ -27,6 +27,7 @@ function contactUsInfo() {
     location.href = "/contactUsInfo" + locationSearch();
 }
 
+
 function locationSearch() {
     return  location.search;
 }

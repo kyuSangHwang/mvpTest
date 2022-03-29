@@ -9,6 +9,16 @@
     background-color: red;
 }
 
+/* 회사소개 섹션2 */
+.section2 {
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+
 .section:nth-child(5) {
     background-color: magenta;
 }

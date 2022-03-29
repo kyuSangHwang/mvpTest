@@ -61,24 +61,34 @@ $(document).ready(function () {
 
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
-        const clickCategoryValue = clickCategory.innerHTML;
+        const clickCategoryValue = clickCategory.innerText;
         let categoryLists = $(".checkCategories");
 
-        if(!!clickCategory || !!clickCategoryValue || !!categoryLists) {
+        if(!clickCategory || !clickCategoryValue || !categoryLists) {
             return;
         }
 
         for (let i = 0; i < categoryLists.length; i++) {
             let categoryList = categoryLists[i];
-            let categoryListValue = categoryList.innerHTML;
+            let categoryListValue = categoryList.innerText;
+            let clickCategoryValue1;
 
-            if (clickCategoryValue === categoryListValue) {
+            if (clickCategoryValue === categoryListValue) { //클릭한 값과 같을때
+                clickCategoryValue1 = clickCategoryValue.substring(1,3);
 
-            } else {
-
+                $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().removeClass('bi-check-square');//흰색 버튼 클래스 지우고
+                $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().addClass('bi-check-square-fill');//검정 버튼 클래스 생성
+            } else { //클릭한 값과 다를때 중
+                clickCategoryValue1 = categoryListValue.substring(1,3);
+                if(!!$('input[value=\"' + clickCategoryValue1 + '\"]').next().next().hasClass('bi-check-square-fill')){
+                    $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
+                    $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().addClass('bi-check-square'); //흰색 버튼 클래스 생성
+                }
             }
         }
-
+        // 밸류가 clickCategoryValue 인 인풋 라디오 체크하기
+        let clickCategoryValue2 = clickCategoryValue.substring(1,3);
+        $('input[value=\"' + clickCategoryValue2 + '\"]').prop("checked", true);
     });
 
 });
@@ -113,7 +123,6 @@ function afterRenderTest() {
  *
  */
 function sendEmail() {
-    // const wantCartegory = $("#cartegory");
 
 // 라디오 버튼을 클릭했을때 값을 받아온다
     const optionVal = $('input[name="option"]:checked').val();
