@@ -31,3 +31,20 @@ function contactUsInfo() {
 function locationSearch() {
     return  location.search;
 }
+
+/**
+ * mainHeaderManager: fullPage 에서 제공하는 함수 (페이지 스크롤 할 떄 타는 함수)
+ * @Param index : fullPage section index
+ */
+function mainHeaderManager(index) {
+    const $containerLi = $('#header-wrap');
+    const $headerLogoImg = $('.container-logo-img')[0];
+
+    if (index > 0) {
+        $containerLi.css('color', 'black');
+        $headerLogoImg.src="images/header/sampleLogoB.png";
+    } else {
+        $containerLi.css('color', 'white');
+        $headerLogoImg.src="images/header/sampleLogoW.png";
+    }
+}
