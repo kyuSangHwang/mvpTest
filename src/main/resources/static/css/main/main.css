@@ -375,28 +375,28 @@ input::placeholder {
 
 
 /* test */
-.css-t70j0z {
-    margin-top: 88px;
+.section-services {
+    margin: 88px auto 0 auto;;
     width: 978px;
-    padding-left: 470px;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
     flex-flow: row;
+
 }
-.css-1kyudii {
+.services-information {
     display: flex;
     align-items: flex-start;
     -webkit-box-pack: center;
     justify-content: center;
     flex-flow: column;
 }
-.css-dqef8h {
+.information-icon {
     width: 100px;
 }
-.css-sm6bqj {
+.information-title {
     margin-top: 40px;
     font-style: normal;
     font-weight: bold;
@@ -404,7 +404,7 @@ input::placeholder {
     line-height: 56px;
     color: rgb(51, 51, 51);
 }
-.css-1n8v76p {
+.information-content {
     margin-top: 18px;
     font-style: normal;
     font-weight: normal;
@@ -412,7 +412,11 @@ input::placeholder {
     color: rgb(102, 102, 102);
     line-height: 1.8;
 }
-.css-61x4mc {
+.services-img-right {
     margin-left: 172px;
+    width: 342px;
+}
+.services-img-left {
+    margin-right: 172px;
     width: 342px;
 }

@@ -86,6 +86,7 @@ $(document).ready(function () {
                 }
             }
         }
+
         // 밸류가 clickCategoryValue 인 인풋 라디오 체크하기
         let clickCategoryValue2 = clickCategoryValue.substring(1,3);
         $('input[value=\"' + clickCategoryValue2 + '\"]').prop("checked", true);
