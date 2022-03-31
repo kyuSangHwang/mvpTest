@@ -22,7 +22,7 @@ $(document).ready(function () {
         // Accessibility
         keyboardScrolling: false, //키보드로 슬라이더 이동
         // Design
-        sectionsColor : ['#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb'],
+        sectionsColor : ['#3e55f2', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb'],
         controlArrows: false, //슬라이더 버튼
         paddingTop: '0px',
         paddingBottom: '0px',
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
-        const clickCategoryValue = clickCategory.innerText;
+        const clickCategoryValue = clickCategory.innerText.substring(1,3);
         let categoryLists = $(".checkCategories");
 
         if(!clickCategory || !clickCategoryValue || !categoryLists) {
@@ -70,26 +70,23 @@ $(document).ready(function () {
 
         for (let i = 0; i < categoryLists.length; i++) {
             let categoryList = categoryLists[i];
-            let categoryListValue = categoryList.innerText;
-            let clickCategoryValue1;
+            let categoryListValue = categoryList.innerText.substring(1,3);
 
             if (clickCategoryValue === categoryListValue) { //클릭한 값과 같을때
-                clickCategoryValue1 = clickCategoryValue.substring(1,3);
+                $('input[value=\"' + clickCategoryValue + '\"]').next().next().removeClass('bi-check-square'); //흰색 버튼 클래스 지우고
+                $('input[value=\"' + clickCategoryValue + '\"]').next().next().addClass('bi-check-square-fill'); //검정 버튼 클래스 생성
+                $('input[value=\"' + clickCategoryValue + '\"]').prop("checked", true); // 밸류가 clickCategoryValue 인 인풋 라디오 체크하기
 
-                $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().removeClass('bi-check-square');//흰색 버튼 클래스 지우고
-                $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().addClass('bi-check-square-fill');//검정 버튼 클래스 생성
             } else { //클릭한 값과 다를때 중
-                clickCategoryValue1 = categoryListValue.substring(1,3);
-                if(!!$('input[value=\"' + clickCategoryValue1 + '\"]').next().next().hasClass('bi-check-square-fill')){
-                    $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
-                    $('input[value=\"' + clickCategoryValue1 + '\"]').next().next().addClass('bi-check-square'); //흰색 버튼 클래스 생성
+                if(!!$('input[value=\"' + clickCategoryValue + '\"]').next().next().hasClass('bi-check-square-fill')){
+                    $('input[value=\"' + clickCategoryValue + '\"]').next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
+                    $('input[value=\"' + clickCategoryValue + '\"]').next().next().addClass('bi-check-square'); //흰색 버튼 클래스 생성
                 }
             }
         }
 
-        // 밸류가 clickCategoryValue 인 인풋 라디오 체크하기
-        let clickCategoryValue2 = clickCategoryValue.substring(1,3);
-        $('input[value=\"' + clickCategoryValue2 + '\"]').prop("checked", true);
+
+
     });
 
 });
@@ -116,7 +113,8 @@ function section8DownloadBtnCnt() {
  *
  */
 function afterRenderTest() {
-
+    // fullPage navigationTooltips Text Color Change
+    navigationTooltipsTextColorChange();
 }
 
 /**
@@ -214,7 +212,15 @@ function emailFailHide() {
     emailFail.style.display = "none";
 }
 
+function navigationTooltipsTextColorChange() {
+    const nvgTooltipsList = $("#fp-nav ul li .fp-tooltip.fp-right");
 
+    if (!!nvgTooltipsList) {
+        for (let nvgTooltipsListAttribute of nvgTooltipsList) {
+            nvgTooltipsListAttribute.style.color = "black";
+        }
+    }
+}
 
 
 

@@ -180,18 +180,6 @@ input[id*="popup"]:checked + label + div {
     opacity: 0;
 }
 
-/* 분양 radio */
-.section8-popup-box-option3 {
-    margin-left: 20px;
-    font-size: 20px;
-    opacity: 0;
-}
-
-/* radio 공통 */
-.option {
-    opacity: 0;
-}
-
 .section8-popup-box-text3 {
     color: darkgray;
     text-align: center;
