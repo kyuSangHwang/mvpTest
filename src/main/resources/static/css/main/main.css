@@ -364,7 +364,7 @@ input::placeholder {
 
 /* test */
 .section-services {
-    margin: 88px auto 0 auto;;
+    margin: 50px auto 0 auto;;
     width: 978px;
     display: flex;
     -webkit-box-align: center;
@@ -382,10 +382,10 @@ input::placeholder {
     flex-flow: column;
 }
 .information-icon {
-    width: 100px;
+    width: 120px;
 }
 .information-title {
-    margin-top: 40px;
+    margin-top: 30px;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -407,4 +407,10 @@ input::placeholder {
 .services-img-left {
     margin-right: 172px;
     width: 342px;
+}
+
+.auto-hover{
+    width: auto;
+    font-size: 14px;
+    opacity: 1;
 }
