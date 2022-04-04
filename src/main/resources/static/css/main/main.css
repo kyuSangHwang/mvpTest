@@ -12,12 +12,169 @@
 /* 회사소개 섹션2 */
 .section2 {
     position: absolute;
+    z-index: 2;
     width: 70%;
-    left: 50%;
+    left: 33%;
     transform: translateX(-50%);
-    text-align: center;
+    top: 13em;
+}
+
+/* 위에서 애라로 내려오는 애니메이션 css */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.fadeInDown {
+    position: relative;
+    animation: fadeInDown 10s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.fadeIn {
+    position: relative;
+    animation: fadeInUp 1.5s;
+}
+
+.section2__slogan {
+    margin-left: 17em;
+}
+
+/* 큰제목 */
+.section2__slogan__title {
+    font-size: 55px;
+    font-weight: 700;
+    color: black;
+}
+
+/* 소제목 */
+.section2__slogan__little-title {
+    font-size: 35px;
+    font-weight: 350;
+    color: black;
+    margin-bottom: 30px;
+    margin-left: 33px;
 
 }
+
+/* 설명란 p태그 */
+.section2__slogan__detail-text {
+    margin-left: 4em;
+
+}
+
+/* faq div */
+.section2__faq {
+    margin-top: 60px;
+    width: 50%;
+    margin-left: 21em;
+
+}
+
+input[id*="section2__faq__accordion__q"] {
+    display: none;
+}
+
+label[for*="section2__faq__accordion__q"] {
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    color: white;
+    font-weight: 500;
+    background: #551cee;
+    cursor: pointer;
+}
+
+label[for*="section2__faq__accordion__q"] em {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    display: inline-block;
+    background: url("images/main/arrow-down-circle.svg") 0 0 no-repeat;
+}
+
+div[class*="section2__faq__accordion__answer__q"] {
+    max-height: 0;
+    transition: all .35s;
+    overflow: hidden;
+    background: #ebf8ff;
+}
+
+div[class*="section2__faq__accordion__answer__q"] p {
+    display: inline-block;
+    padding: 10px;
+}
+
+
+/* faq */
+.section2__faq__title {
+    font-size: 35px;
+
+}
+
+
+
+/* faq q1 제목 */
+.section2__faq__q {
+    margin-top: 30px;
+    font-size: 18px;
+    display: block;
+    padding: 5px;
+    border: 1px solid #551cee;
+    border-bottom: 0;
+    color: white;
+    font-weight: 900;
+    background: #551cee;
+    cursor: pointer;
+}
+
+/* faq q1 대답 */
+.section2__faq__q__answer {
+    padding: 10px 30px 10px 30px;
+    background: mediumpurple;
+}
+
+/*  */
+.section2-background {
+    position: absolute;
+    width: 1920px;
+    height: 944px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: -200px;
+    opacity: 0.3;
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*background-image: url("../resources/static/images/main/companyInfoImg1.png");*/
+}
+
+.section2-background-img {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+
 
 .section:nth-child(5) {
     background-color: magenta;
@@ -32,8 +189,8 @@
 }
 
 .section8 {
-    color: white;
-    background-image: url(/images/main/laundrygo.jpeg);
+    color: black;
+    /*background-image: url(/images/main/laundrygo.jpeg);*/
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -47,35 +204,67 @@
 
 /* section8 part */
 .section8-title {
-    float: right;
-    height: 550px;
-    margin: 380px 145px 0px 0px;
+    margin-top: 370px;
+    text-align: center;
 }
 
 .section8-title1 {
-    font-size: 70px;
-}
-
-.section8-title2 {
-    float: right;
-    font-size: 70px;
+    font-size: 50px;
 
 }
+
+.section8__title__logo {
+    width: 120px;
+    height: 120px;
+    background: blueviolet;
+    /* 가운데정렬 */
+    position: absolute;
+    left: 47%;
+    transform: translateX(-47%);
+    /*    */
+
+}
+
+.section8__title__popup {
+
+}
+
+.section8__title__img {
+    width: 200px;
+    height: 200px;
+    background: red;
+    /* 가운데정렬 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*    */
+    margin-top: 280px;
+
+}
+
+
 
 /* section8 다운로드 버튼 & 팝업창 */
-.section8-downloadButton {
+.section8-downloadButton-ios {
     float: right;
     position: absolute;
-    top: 570px;
-    right: 145px;
+    top: 425px;
+    right: 970px;
     cursor: pointer;
+    padding: 10px 63px 10px 63px;
 }
 
-/*.section8-downloadButton:active {*/
-/*    box-shadow: 1px 1px 0 rgb(0,0,0,0.5);*/
-/*    position: relative;*/
-/*    top: 150px;*/
-/*}*/
+.section8-downloadButton-android {
+    float: right;
+    position: absolute;
+    top: 425px;
+    right: 770px;
+    cursor: pointer;
+    padding: 10px 25px 10px 25px;
+
+}
+
+
 
 #popup {
     float: right;
@@ -91,11 +280,11 @@ input[id*="popup"] {
 input[id*="popup"] + label {
     display: inline-block;
     background: #5B67CA;
-    border: 3px solid white;
+    border: 3px solid black;
     border-radius: 35px;
     background-color: transparent;
-    padding: 10px 25px 10px 25px;
-    color: white;
+    /*padding: 10px 25px 10px 25px;*/
+    color: black;
     font-size: 40px;
 }
 
@@ -189,7 +378,7 @@ input[id*="popup"]:checked + label + div {
 
 .section8-popup-modal-btn-click {
     position: relative;
-    left: 107%;
+    left: 70%;
     top: -52px;
     font-size: 30px;
     width: 25%;
@@ -407,6 +596,24 @@ input::placeholder {
 .services-img-left {
     margin-right: 172px;
     width: 342px;
+}
+
+.section2-Background {
+    background-image: url("/images/main/companyInfoImg5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section2-Background::before {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ffffff;
 }
 
 .auto-hover{

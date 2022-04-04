@@ -46,7 +46,24 @@ $(document).ready(function () {
     });
     //fullPageEnd
 
-    $('.section8-downloadButton').click(function() {
+
+
+
+    $('.section8-downloadButton-ios').click(function() {
+        const sessionValue = sessionStorage.getItem('sessionKey');
+
+        $('#section8-popup-ios').load('../resources/templates/popup/popup.html');
+
+        if (!!preventDuplicateBtn && !sessionValue) {
+            preventDuplicateBtn = false;
+            sessionStorage.setItem('sessionKey', 'fuck');
+
+            section8DownloadBtnCnt();
+        } else {
+            return "";
+        }
+    });
+    $('.section8-downloadButton-android').click(function() {
         const sessionValue = sessionStorage.getItem('sessionKey');
 
         if (!!preventDuplicateBtn && !sessionValue) {
@@ -221,7 +238,6 @@ function navigationTooltipsTextColorChange() {
         }
     }
 }
-
 
 
 
