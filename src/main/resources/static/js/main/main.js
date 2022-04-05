@@ -105,8 +105,19 @@ $(document).ready(function () {
         }
 
         addAutoHover();
-
     });
+
+    const $section = $('.section');
+    const $offset = 944;
+    const $sectionOST = $section.offset().top - $offset;
+
+    $(window).scroll(function () {
+        if($(this).scrollTop() > $sectionOST) {
+            $section.find('img').addClass('animate');
+            alert("안녕");
+
+        }
+    })
 });
 
 /**
