@@ -48,6 +48,16 @@ $(document).ready(function () {
 
 
 
+    $('.section2__faq__q').mouseover(function () {
+        $('.section2__faq__q__answer').display = 'block';
+        $(this).next().stop().slideDown();
+
+    });
+    $('.section2__faq__q').mouseleave(function () {
+        $(this).next().stop().slideUp();
+    });
+
+
 
     $('.section8-downloadButton-ios').click(function() {
         const sessionValue = sessionStorage.getItem('sessionKey');
@@ -62,6 +72,7 @@ $(document).ready(function () {
         } else {
             return "";
         }
+
     });
     $('.section8-downloadButton-android').click(function() {
         const sessionValue = sessionStorage.getItem('sessionKey');
@@ -76,7 +87,57 @@ $(document).ready(function () {
         }
     });
 
+    //모달 팝업 띄우기
+    const openBtnIos = document.querySelector('.open-ios');
+    const openBtnAndroid = document.querySelector('.open-android');
+    const modal = document.querySelector('.modal');
+    const overlay = modal.querySelector('.section8__modal-popup__overlay');
+
+    const openModal = function () {
+        modal.classList.remove("hidden");
+    }
+    const closeModal = function () {
+        modal.classList.add("hidden");
+    }
+
+    openBtnIos.addEventListener("click", openModal);
+    openBtnAndroid.addEventListener("click", openModal);
+    overlay.addEventListener("click", closeModal);
+
+
+
+
+
+    // IoS 팝업
     $('.checkCategories').on('click', function () {
+        const clickCategory = this;
+        const clickCategoryValue = clickCategory.innerText.substring(1,3);
+        let categoryLists = $(".checkCategories");
+
+        if(!clickCategory || !clickCategoryValue || !categoryLists) {
+            return;
+        }
+
+        for (let i = 0; i < categoryLists.length; i++) {
+            let categoryList = categoryLists[i];
+            let categoryListValue = categoryList.innerText.substring(1,3);
+
+            if (clickCategoryValue === categoryListValue) { //클릭한 값과 같을때
+                $('input[value=\"' + clickCategoryValue + '\"]').next().next().removeClass('bi-check-square'); //흰색 버튼 클래스 지우고
+                $('input[value=\"' + clickCategoryValue + '\"]').next().next().addClass('bi-check-square-fill'); //검정 버튼 클래스 생성
+                $('input[value=\"' + clickCategoryValue + '\"]').prop("checked", true); // 밸류가 clickCategoryValue 인 인풋 라디오 체크하기
+
+            } else { //클릭한 값과 다를때 중
+                if(!!$('input[value=\"' + categoryListValue + '\"]').next().next().hasClass('bi-check-square-fill')){
+                    $('input[value=\"' + categoryListValue + '\"]').next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
+                    $('input[value=\"' + categoryListValue + '\"]').next().next().addClass('bi-check-square'); //흰색 버튼 클래스 생성
+                }
+            }
+        }
+    });
+
+    // Android 팝업
+    $('.checkCategoriesAndroid').on('click', function () {
         const clickCategory = this;
         const clickCategoryValue = clickCategory.innerText.substring(1,3);
         let categoryLists = $(".checkCategories");
@@ -105,7 +166,6 @@ $(document).ready(function () {
 
 
     });
-
 });
 
 /**

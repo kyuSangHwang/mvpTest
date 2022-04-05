@@ -40,7 +40,7 @@ public class viewController {
     // Popup
     @GetMapping(value = "/popup")
     public String openPop(){
-        return "/popup/popup";
+        return "popup1";
     }
 
 }
