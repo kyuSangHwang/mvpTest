@@ -31,11 +31,9 @@ $(document).ready(function () {
 
         // Event
         onLeave: function(origin, destination, direction){},
-        afterLoad: function(anchorLink, index,origin, destination, direction){
-
-        },
+        afterLoad: function(anchorLink, index,origin, destination, direction){},
         afterRender: function(){
-            afterRenderTest();
+            afterRenderTreePet();
         },
         afterResize: function(width, height){},
         afterReBuild: function(){},
@@ -46,48 +44,23 @@ $(document).ready(function () {
     });
     //fullPageEnd
 
+    $('.section8-downloadButton-ios').click(function() {
+        setSession();
+    });
 
+    $('.section8-downloadButton-android').click(function() {
+        setSession();
+    });
 
     $('.section2__faq__q').mouseover(function () {
         $('.section2__faq__q__answer').display = 'block';
         $(this).next().stop().slideDown();
-
     });
+
     $('.section2__faq__q').mouseleave(function () {
         $(this).next().stop().slideUp();
     });
 
-
-
-    $('.section8-downloadButton-ios').click(function() {
-        const sessionValue = sessionStorage.getItem('sessionKey');
-
-        $('#section8-popup-ios').load('../resources/templates/popup/popup.html');
-
-        if (!!preventDuplicateBtn && !sessionValue) {
-            preventDuplicateBtn = false;
-            sessionStorage.setItem('sessionKey', 'fuck');
-
-            section8DownloadBtnCnt();
-        } else {
-            return "";
-        }
-
-    });
-    $('.section8-downloadButton-android').click(function() {
-        const sessionValue = sessionStorage.getItem('sessionKey');
-
-        if (!!preventDuplicateBtn && !sessionValue) {
-            preventDuplicateBtn = false;
-            sessionStorage.setItem('sessionKey', 'fuck');
-
-            section8DownloadBtnCnt();
-        } else {
-            return "";
-        }
-    });
-
-    //모달 팝업 띄우기
     const openBtnIos = document.querySelector('.open-ios');
     const openBtnAndroid = document.querySelector('.open-android');
     const modal = document.querySelector('.modal');
@@ -96,6 +69,7 @@ $(document).ready(function () {
     const openModal = function () {
         modal.classList.remove("hidden");
     }
+
     const closeModal = function () {
         modal.classList.add("hidden");
     }
@@ -104,11 +78,6 @@ $(document).ready(function () {
     openBtnAndroid.addEventListener("click", openModal);
     overlay.addEventListener("click", closeModal);
 
-
-
-
-
-    // IoS 팝업
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
         const clickCategoryValue = clickCategory.innerText.substring(1,3);
@@ -134,54 +103,34 @@ $(document).ready(function () {
                 }
             }
         }
-    });
 
-    // Android 팝업
-    $('.checkCategoriesAndroid').on('click', function () {
-        const clickCategory = this;
-        const clickCategoryValue = clickCategory.innerText.substring(1,3);
-        let categoryLists = $(".checkCategories");
-
-        if(!clickCategory || !clickCategoryValue || !categoryLists) {
-            return;
-        }
-
-        for (let i = 0; i < categoryLists.length; i++) {
-            let categoryList = categoryLists[i];
-            let categoryListValue = categoryList.innerText.substring(1,3);
-
-            if (clickCategoryValue === categoryListValue) { //클릭한 값과 같을때
-                $('input[value=\"' + clickCategoryValue + '\"]').next().next().removeClass('bi-check-square'); //흰색 버튼 클래스 지우고
-                $('input[value=\"' + clickCategoryValue + '\"]').next().next().addClass('bi-check-square-fill'); //검정 버튼 클래스 생성
-                $('input[value=\"' + clickCategoryValue + '\"]').prop("checked", true); // 밸류가 clickCategoryValue 인 인풋 라디오 체크하기
-
-            } else { //클릭한 값과 다를때 중
-                if(!!$('input[value=\"' + clickCategoryValue + '\"]').next().next().hasClass('bi-check-square-fill')){
-                    $('input[value=\"' + clickCategoryValue + '\"]').next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
-                    $('input[value=\"' + clickCategoryValue + '\"]').next().next().addClass('bi-check-square'); //흰색 버튼 클래스 생성
-                }
-            }
-        }
-
-
+        addAutoHover();
 
     });
 });
 
 /**
-* section8DownloadBtnCnt: 다운로드 클릭했을 때 클릭횟수 count 하는 함수
-*
-*/
-function section8DownloadBtnCnt() {
+ * setSession: session 에 값 저장, 다운로드 클릭했을 때 클릭횟수 count 하는 함수
+ *
+ */
+function setSession() {
+    const sessionValue = sessionStorage.getItem('sessionKey');
     let downloadClickCnt = 0;
     let lsLength = localStorage.length;
 
-    if (lsLength === 0) {
-        localStorage.setItem(downloadClickCnt, 'customers_' + downloadClickCnt);
-    }
-    else {
-        downloadClickCnt = lsLength;
-        localStorage.setItem(downloadClickCnt, 'customers_' + downloadClickCnt);
+    if (!!preventDuplicateBtn && !sessionValue) {
+        preventDuplicateBtn = false;
+        sessionStorage.setItem('sessionKey', 'fuck');
+
+        if (lsLength === 0) {
+            localStorage.setItem(downloadClickCnt, 'customers_' + downloadClickCnt);
+        } else {
+            downloadClickCnt = lsLength;
+            localStorage.setItem(downloadClickCnt, 'customers_' + downloadClickCnt);
+        }
+
+    } else {
+        return "";
     }
 }
 
@@ -189,9 +138,9 @@ function section8DownloadBtnCnt() {
  * afterRenderTest: fullPage 로드 된 다음에 실행 되는 함수
  *
  */
-function afterRenderTest() {
-    // fullPage navigationTooltips Text Color Change
-    navigationTooltipsTextColorChange();
+function afterRenderTreePet() {
+    // fullPage navigationTooltips Attribute Change
+    navigationTooltipsChange();
 }
 
 /**
@@ -289,16 +238,77 @@ function emailFailHide() {
     emailFail.style.display = "none";
 }
 
-function navigationTooltipsTextColorChange() {
-    const nvgTooltipsList = $("#fp-nav ul li .fp-tooltip.fp-right");
+function navigationTooltipsChange() {
+    const navTooltipsList = $("#fp-nav ul li .fp-tooltip.fp-right");
+    const navToolTipsDiv = $("#fp-nav.fp-right");
+    const navToolTipsDots = $(".fp-right li a span:nth-child(2)");
 
-    if (!!nvgTooltipsList) {
-        for (let nvgTooltipsListAttribute of nvgTooltipsList) {
-            nvgTooltipsListAttribute.style.color = "black";
+    // navigation tool tip text color change
+    if (!!navTooltipsList) {
+        for (let navTooltipsListAttribute of navTooltipsList) {
+            navTooltipsListAttribute.style.color = "black";
+            navTooltipsListAttribute.style.marginRight = "10px";
+        }
+    }
+
+    // navigation tool tip div css addition
+    if (!!navToolTipsDiv && navToolTipsDiv.length === 1 && !!navToolTipsDiv[0]) {
+        navToolTipsDiv[0].style.marginTop = "-200px";
+        navToolTipsDiv[0].style.backgroundColor = "rgba(0,0,0,0.2)";
+        navToolTipsDiv[0].style.borderRadius = "50px";
+    }
+
+    // navigation tool tip dots css addition
+    if (!!navToolTipsDots && navToolTipsDots.length !== 0) {
+        for (let i = 0; i < navToolTipsDots.length; i++) {
+            let navToolTipsDot = navToolTipsDots[i];
+            navToolTipsDot.style.backgroundColor = "white";
         }
     }
 }
 
+/**
+ * deleteAutoHover: active 된 토글에 mouseOver 효과 지우기
+ */
+function deleteAutoHover() {
+    const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
 
+    if (!!activatedToolTip) {
+        activatedToolTip.style.width = "";
+        activatedToolTip.style.fontSize = "";
+        activatedToolTip.style.opacity = "";
+    }
+}
 
+/**
+ * addDeleteAutoHover: scroll 에 따라 active 된 토글에 mouseOver 효과
+ */
+function addDeleteAutoHover() {
+    const currentSectionNumber = document.activeElement.className.slice(-1);
+    const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
+    const navToolTipsTexts = $("#fp-nav ul li a");
 
+    if (!!navToolTipsTexts && navToolTipsTexts.length !== 0) {
+        for (let i = 0; i < navToolTipsTexts.length; i++) {
+            let navToolTipsText = navToolTipsTexts[i];
+            let hasAutoHoverCss = navToolTipsText.hasClass('auto-hover');
+
+            if (!hasAutoHoverCss && i.toString() === currentSectionNumber) {
+                navToolTipsText.removeClass('auto-hover');
+            } else if (!!activatedToolTip) {
+                navToolTipsText.addClass('auto-hover');
+            }
+        }
+    }
+
+    $(".fp-right").addClass("tooltipImage");
+
+}
+
+/**
+ * addAutoHover: 처음 로드 시 active 된 토글에 mouseOver 효과
+ */
+function addAutoHover() {
+    // const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
+    const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
+}
