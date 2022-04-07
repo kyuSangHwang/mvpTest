@@ -42,9 +42,9 @@ function mainHeaderManager(index) {
 
     if (index > 0) {
         $containerLi.css('color', 'black');
-        $headerLogoImg.src="images/header/sampleLogoB.png";
+        $headerLogoImg.src="images/logo/textLogo-black.png";
     } else {
         $containerLi.css('color', 'white');
-        $headerLogoImg.src="images/header/sampleLogoW.png";
+        $headerLogoImg.src="images/logo/textLogo-white.png";
     }
 }

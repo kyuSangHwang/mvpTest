@@ -86,6 +86,9 @@ li{
     transition: width 0.3s ease 0s;
 }
 
+/* 메뉴 숨기기 (삭제금지) */
+/*
 .container-li:nth-child(-n+3){
     display: none;
 }
+*/
