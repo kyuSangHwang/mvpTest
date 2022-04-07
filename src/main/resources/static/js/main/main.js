@@ -146,12 +146,6 @@ $(document).ready(function () {
             neuter = ((charCode - final) / 28 ) % 21; // 중성
             initial = (((charCode - final) / 28 ) - neuter ) / 21; // 초성
 
-            //기본 코드 테스트가 ㅌㅔㅅ-ㅌ- 형식으로 저장됨
-            // chars.push(charInitial[initial], charNeuter[neuter]);
-            // if (charFinal[final] !== '') {
-            //     chars.push(charFinal[final]);
-            //     }
-
             //  테스트라는 문장이 있으면 ㅌ테ㅅ스ㅌ트 형식으로 저장되도록함 (타이핑을 위해서)
             chars.push(charInitial[initial]);
             chars.push(String.fromCharCode( 44032 + (initial * 588) + (neuter  * 28)));
@@ -164,7 +158,6 @@ $(document).ready(function () {
         return chars;
     }
 
-
     // 타이핑할 문장
     let result1 = "반려동물의 삶이 시작되는 곳";
     let result2 = "여러분의 가정입니다";
@@ -175,37 +168,30 @@ $(document).ready(function () {
     for (let i = 0; i < result1.length; i++){
         typing1[i]=result1[i].toKorChars();
     }
+
     for (let i = 0; i < result2.length; i++){
         typing2[i]=result2[i].toKorChars();
     }
 
-    // 출력할 엘리먼트요소 가져옴
-    let resultDiv1 = document.getElementsByClassName("result1")[0];
-    let resultDiv2 = document.getElementsByClassName("result2")[0];
-
-    //
+    let resultDiv1 = document.getElementsByClassName("result1")[0]; // 출력할 엘리먼트요소 가져옴
+    let resultDiv2 = document.getElementsByClassName("result2")[0]; // 출력할 엘리먼트요소 가져옴
     let text = "";
     let i=0;
     let j=0;
-
-    //총글자수
-    let imax1 = typing1.length;
-    let imax2 = typing2.length;
-
-    //setInterval을 이용해 반복적으로 출력
-    let inter = setInterval(typi,150);
+    let iMax1 = typing1.length; // 총글자수
+    let iMax2 = typing2.length; // 총글자수
+    let inter = setInterval(typingText1,150); // setInterval 을 이용해 반복적으로 출력
     let inter2;
 
-    function typi(){
-        //글자수만큼 반복후 종료
+    function typingText1(){
         resultDiv1.classList.add("cursor");
-        if (i <= imax1-1){
-            //각 글자가 초성 중성 종성 순서대로 추가되도록
-            let jmax1 = typing1[i].length;
+        if (i <= iMax1-1){ // 글자수만큼 반복후 종료
+            // 각 글자가 초성 중성 종성 순서대로 추가되도록
+            let jMax1 = typing1[i].length;
             resultDiv1.innerHTML = text + typing1[i][j];
             j++;
-            if (j === jmax1){
-                text+=  typing1[i][j-1];//초성중성종성 순서대로 출력된 글자는 저장 ( 다음 글자와 이어붙이기 위해서 )
+            if (j === jMax1){
+                text+=  typing1[i][j-1]; // 초성중성종성 순서대로 출력된 글자는 저장 ( 다음 글자와 이어붙이기 위해서 )
                 i++;
                 j=0;
             }
@@ -219,22 +205,21 @@ $(document).ready(function () {
                 setTimeout(function(){
                     resultDiv2.classList.add("cursor");
                     setTimeout(function(){
-                        inter2 = setInterval(typi2,150);
+                        inter2 = setInterval(typingText2,150);
                     },400);
                 },300);
             },400);
         }
     }
 
-    function typi2(){
-        //글자수만큼 반복후 종료
-        if (i <= imax2-1){
-            //각 글자가 초성 중성 종성 순서대로 추가되도록
-            let jmax2 = typing2[i].length;
+    function typingText2(){
+        if (i <= iMax2-1){ // 글자수만큼 반복후 종료
+            // 각 글자가 초성 중성 종성 순서대로 추가되도록
+            let jMax2 = typing2[i].length;
             resultDiv2.innerHTML = text + typing2[i][j];
             j++;
-            if (j === jmax2){
-                text+=  typing2[i][j-1];//초성중성종성 순서대로 출력된 글자는 저장 ( 다음 글자와 이어붙이기 위해서 )
+            if (j === jMax2){
+                text+=  typing2[i][j-1]; // 초성중성종성 순서대로 출력된 글자는 저장 ( 다음 글자와 이어붙이기 위해서 )
                 i++;
                 j=0;
             }
@@ -243,18 +228,7 @@ $(document).ready(function () {
         }
     }
 
-
-
-
 });
-
-
-
-
-
-
-
-
 
 /**
  * setSession: session 에 값 저장, 다운로드 클릭했을 때 클릭횟수 count 하는 함수
