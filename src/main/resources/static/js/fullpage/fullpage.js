@@ -2746,6 +2746,7 @@
                     addClass($('a', $('li', $(SECTION_NAV_SEL)[0])[sectionIndex]), ACTIVE);
                 }
             }
+            addDeleteAutoHover();
         }
 
         /**
