@@ -52,13 +52,35 @@ $(document).ready(function () {
         setSession();
     });
 
-    $('.section2__faq__q').mouseover(function () {
-        $('.section2__faq__q__answer').display = 'block';
-        $(this).next().stop().slideDown();
+
+    let answer = document.getElementsByClassName('section2__faq__q__answer');
+
+    $('.accordion1').click(function () {
+        if(window.getComputedStyle(answer[0]).display === "none") {
+            answer[0].style.display = "block";
+            $("#answer1").slideDown();
+            // answer[0].slideDown();
+            // $(this).next().slideDown();
+        } else {
+            $("#answer1").slideUp();
+            // $(this).next().slideUp();
+            // answer[0].slideUp();
+            answer[0].style.display = "none";
+        }
     });
 
-    $('.section2__faq__q').mouseleave(function () {
-        $(this).next().stop().slideUp();
+    $('.accordion2').click(function () {
+        if(window.getComputedStyle(answer[1]).display === "none") {
+            answer[1].style.display = "block";
+            $("#answer2").slideDown();
+            // answer[0].slideDown();
+            // $(this).next().slideDown();
+        } else {
+            $("#answer2").slideUp();
+            // $(this).next().slideUp();
+            // answer[0].slideUp();
+            answer[1].style.display = "none";
+        }
     });
 
     const openBtnIos = document.querySelector('.open-ios');
@@ -405,24 +427,24 @@ function deleteAutoHover() {
  * addDeleteAutoHover: scroll 에 따라 active 된 토글에 mouseOver 효과
  */
 function addDeleteAutoHover() {
-    const currentSectionNumber = document.activeElement.className.slice(-1);
-    const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
-    const navToolTipsTexts = $("#fp-nav ul li a");
-
-    if (!!navToolTipsTexts && navToolTipsTexts.length !== 0) {
-        for (let i = 0; i < navToolTipsTexts.length; i++) {
-            let navToolTipsText = navToolTipsTexts[i];
-            let hasAutoHoverCss = navToolTipsText.hasClass('auto-hover');
-
-            if (!hasAutoHoverCss && i.toString() === currentSectionNumber) {
-                navToolTipsText.removeClass('auto-hover');
-            } else if (!!activatedToolTip) {
-                navToolTipsText.addClass('auto-hover');
-            }
-        }
-    }
-
-    $(".fp-right").addClass("tooltipImage");
+    // const currentSectionNumber = document.activeElement.className.slice(-1);
+    // const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
+    // const navToolTipsTexts = $("#fp-nav ul li a");
+    //
+    // if (!!navToolTipsTexts && navToolTipsTexts.length !== 0) {
+    //     for (let i = 0; i < navToolTipsTexts.length; i++) {
+    //         let navToolTipsText = navToolTipsTexts[i];
+    //         let hasAutoHoverCss = navToolTipsText.hasClass('auto-hover');
+    //
+    //         if (!hasAutoHoverCss && i.toString() === currentSectionNumber) {
+    //             navToolTipsText.removeClass('auto-hover');
+    //         } else if (!!activatedToolTip) {
+    //             navToolTipsText.addClass('auto-hover');
+    //         }
+    //     }
+    // }
+    //
+    // $(".fp-right").addClass("tooltipImage");
 
 }
 

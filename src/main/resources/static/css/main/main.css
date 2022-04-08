@@ -79,35 +79,35 @@ p.cursor {
 }
 
 .section2__slogan {
-    margin-left: 17em;
+    margin-left: 10em;
+    color: white;
 }
 
 /* 큰제목 */
 .section2__slogan__title {
-    font-size: 55px;
+    font-size: 60px;
     font-weight: 700;
-    color: black;
+    color: white;
 }
 
 /* 소제목 */
 .section2__slogan__little-title {
     font-size: 35px;
     font-weight: 350;
-    color: black;
+    color: white;
     margin-bottom: 30px;
-    margin-left: 33px;
 }
 
 /* 설명란 p태그 */
 .section2__slogan__detail-text {
-    margin-left: 4em;
+    font-size: 24px;
 }
 
 /* faq div */
 .section2__faq {
     margin-top: 60px;
     width: 50%;
-    margin-left: 21em;
+    margin-left: 10em;
 }
 
 input[id*="section2__faq__accordion__q"] {
@@ -173,6 +173,35 @@ div[class*="section2__faq__accordion__answer__q"] p {
     display: none;
 }
 
+.flat-btn {
+    display: none;
+}
+
+.accordion-btn {
+    padding: 2px;
+    transition: all .2s ease;
+    background: #fff;
+    border: 4px solid #f2f2f2;
+    border-radius: 2em;
+    box-sizing: border-box;
+    width: 4em;
+}
+ .accordion-btn:after {
+     transition: all .2s ease;
+     background: #f2f2f2;
+     content: "";
+     border-radius: 1em;
+ }
+
+ .accordion-btn:checked {
+     border: 4px solid #7FC6A6;
+ }
+
+.accordion-btn:checked:after {
+    left: 50%;
+    background: #7FC6A6;
+}
+
 .section2-background {
     position: absolute;
     width: 1920px;
@@ -202,10 +231,12 @@ div[class*="section2__faq__accordion__answer__q"] p {
 }
 
 .section8 {
-    color: black;
+    color: white;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
 }
 
 .textCenter {
@@ -216,22 +247,27 @@ div[class*="section2__faq__accordion__answer__q"] p {
 
 /* section8 part */
 .section8-title {
-    margin-top: 370px;
+    margin-top: 200px;
     text-align: center;
 }
 
 .section8-title1 {
-    font-size: 50px;
+    font-size: 68px;
 }
 
 .section8__title__logo {
-    width: 120px;
-    height: 120px;
-    background: blueviolet;
+    width: 250px;
+    height: 250px;
+    margin-top: 40px;
     /* 가운데정렬 */
     position: absolute;
-    left: 47%;
-    transform: translateX(-47%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section8__img {
+    width: 100%;
+    height: 100%;
 }
 
 .section8__title__popup {
@@ -240,21 +276,19 @@ div[class*="section2__faq__accordion__answer__q"] p {
 
 /* section8 다운로드 버튼 & 팝업창 */
 .section8-downloadButton-ios {
-    float: right;
     position: absolute;
-    top: 425px;
+    top: 610px;
     right: 970px;
     cursor: pointer;
-    padding: 10px 63px 10px 63px;
+    height: 7%;
 }
 
 .section8-downloadButton-android {
-    float: right;
     position: absolute;
-    top: 425px;
-    right: 770px;
+    top: 608px;
+    right: 730px;
     cursor: pointer;
-    padding: 10px 25px 10px 25px;
+    height: 7.38%;
 }
 
 .section8__modal-popup__overlay {
@@ -481,13 +515,14 @@ input::placeholder {
 
 /* section8 footer 전체 div */
 .section8-footer {
-    padding: 38px 40px 45px 40px;
+    padding: 20px 40px 20px 40px;
     display: flex;
     justify-content: space-between;
     background: rgba(0,0,0,0.3);
     position: absolute;
-    top: 83%;
+    top: 87%;
     width: 100%;
+    color: white;
 }
 
 .section8-footer-logo {
