@@ -53,33 +53,30 @@ $(document).ready(function () {
     });
 
 
-    let answer = document.getElementsByClassName('section2__faq__q__answer');
 
     $('.accordion1').click(function () {
-        if(window.getComputedStyle(answer[0]).display === "none") {
-            answer[0].style.display = "block";
+        let answer = document.getElementsByClassName('section2__faq__q__answer')[0];
+        let answerDisplay =  window.getComputedStyle(answer).display;
+
+        if (!answer) { return; }
+
+        if(answerDisplay  === "none") {
             $("#answer1").slideDown();
-            // answer[0].slideDown();
-            // $(this).next().slideDown();
         } else {
             $("#answer1").slideUp();
-            // $(this).next().slideUp();
-            // answer[0].slideUp();
-            answer[0].style.display = "none";
         }
     });
 
     $('.accordion2').click(function () {
-        if(window.getComputedStyle(answer[1]).display === "none") {
-            answer[1].style.display = "block";
+        let answer = document.getElementsByClassName('section2__faq__q__answer')[1];
+        let answerDisplay =  window.getComputedStyle(answer).display;
+
+        if (!answer) { return; }
+
+        if(answerDisplay === "none") {
             $("#answer2").slideDown();
-            // answer[0].slideDown();
-            // $(this).next().slideDown();
         } else {
             $("#answer2").slideUp();
-            // $(this).next().slideUp();
-            // answer[0].slideUp();
-            answer[1].style.display = "none";
         }
     });
 
