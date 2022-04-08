@@ -1775,8 +1775,8 @@
             //avoid firing it twice (as it does also on scroll)
             activateMenuAndNav(v.anchorLink, v.sectionIndex);
             mainHeaderManager(v.sectionIndex);
-            mainAnimation(v.sectionIndex);
-            categoryBookMarkAnimation(v.sectionIndex);
+            /*mainAnimation(v.sectionIndex);
+            categoryBookMarkAnimation(v.sectionIndex);*/
         }
 
         /**
@@ -2746,7 +2746,7 @@
                     addClass($('a', $('li', $(SECTION_NAV_SEL)[0])[sectionIndex]), ACTIVE);
                 }
             }
-            addDeleteAutoHover();
+            // addDeleteAutoHover();
         }
 
         /**
