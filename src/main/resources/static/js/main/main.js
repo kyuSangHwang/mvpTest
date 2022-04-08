@@ -190,7 +190,6 @@ $(document).ready(function () {
     for (let i = 0; i < result1.length; i++){
         typing1[i]=result1[i].toKorChars();
     }
-
     for (let i = 0; i < result2.length; i++){
         typing2[i]=result2[i].toKorChars();
     }
@@ -202,7 +201,7 @@ $(document).ready(function () {
     let j=0;
     let iMax1 = typing1.length; // 총글자수
     let iMax2 = typing2.length; // 총글자수
-    let inter = setInterval(typingText1,150); // setInterval 을 이용해 반복적으로 출력
+    let inter = setInterval(typingText1,70); // setInterval 을 이용해 반복적으로 출력
     let inter2;
 
     function typingText1(){
@@ -227,7 +226,7 @@ $(document).ready(function () {
                 setTimeout(function(){
                     resultDiv2.classList.add("cursor");
                     setTimeout(function(){
-                        inter2 = setInterval(typingText2,150);
+                        inter2 = setInterval(typingText2,70);
                     },400);
                 },300);
             },400);

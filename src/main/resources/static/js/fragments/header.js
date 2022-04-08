@@ -40,11 +40,11 @@ function mainHeaderManager(index) {
     const $containerLi = $('#header-wrap');
     const $headerLogoImg = $('.container-logo-img')[0];
 
-    if (index > 0) {
+    if (index > 0 && index < 7) {
         $containerLi.css('color', 'black');
-        $headerLogoImg.src="images/logo/textLogo-black.png";
+        $headerLogoImg.src="images/logo/treePet/mainLogo-mix-origin-black.png";
     } else {
         $containerLi.css('color', 'white');
-        $headerLogoImg.src="images/logo/textLogo-white.png";
+        $headerLogoImg.src="images/logo/treePet/mainLogo-mix-origin-white.png";
     }
 }

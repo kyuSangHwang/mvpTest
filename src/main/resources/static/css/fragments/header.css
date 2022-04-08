@@ -19,7 +19,7 @@ li{
     left: 0;
     margin: 0 auto;
     z-index: 3;
-    padding: 1.5rem 3rem 0px;
+    padding: 2.4rem 3rem 0px;
     box-sizing: border-box;
     font-size: 0px;
 }
@@ -36,6 +36,78 @@ li{
 }
 
 .container-ul {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+
+.container-li {
+    /*float: left;
+    position: relative;
+    display: block;
+    !* width: calc(12.5vw - 4rem); *!
+    max-width: calc(240px - 4rem);
+    min-width: 35px;
+    padding-top: 13px;
+    padding-bottom: 3px;
+    height: 33px;
+    margin-right: 1rem;
+    box-sizing: border-box;*/
+
+    float: left;
+    position: relative;
+    display: block;
+    width: calc(12.5vw - 11rem);
+    max-width: calc(240px - 13rem);
+    min-width: 35px;
+    margin-right: 1rem;
+    box-sizing: border-box;
+
+}
+
+.container-li a {
+display: block;
+font-size: 20px;
+font-weight: bold;
+text-decoration: none;
+cursor: pointer;
+}
+
+.link-icon {
+position: relative;
+display: inline-block;
+width: auto;
+font-size: 14px;
+font-weight: 500;
+color: #333;
+margin-right: 10px;
+padding-top: 35px;
+background-size: contain;
+}
+
+.instagram {
+
+}
+
+.link-icon.instagram {
+background-image: url(../../images/logo/sns/instagram/instagram-logo-color.png);
+background-repeat: no-repeat;
+}
+
+.link-icon.facebook {
+background-image: url(../../images/logo/sns/facebook/facebook-logo-color.png);
+background-repeat: no-repeat;
+}
+
+.link-icon.band {
+background-image: url(../../images/logo/sns/band/band-logo-color.png);
+background-repeat: no-repeat;
+}
+
+/* 삭제금지 */
+/*.container-ul {
     float: right;
     margin: 0px;
     padding: 0px;
@@ -61,7 +133,7 @@ li{
     display: block;
     font-size: 20px;
     font-weight: bold;
-    /*color: rgb(255, 255, 255);*/
+    !*color: rgb(255, 255, 255);*!
     text-decoration: none;
     cursor: pointer;
     height: 29px;
@@ -84,7 +156,7 @@ li{
     width: 100%;
     opacity: 1;
     transition: width 0.3s ease 0s;
-}
+}*/
 
 /* 메뉴 숨기기 (삭제금지) */
 /*
