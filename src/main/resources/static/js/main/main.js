@@ -62,6 +62,7 @@ $(document).ready(function () {
 
         if(answerDisplay  === "none") {
             $("#answer1").slideDown();
+            $("#answer2").slideUp();
         } else {
             $("#answer1").slideUp();
         }
@@ -75,6 +76,7 @@ $(document).ready(function () {
 
         if(answerDisplay === "none") {
             $("#answer2").slideDown();
+            $("#answer1").slideUp();
         } else {
             $("#answer2").slideUp();
         }

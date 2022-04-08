@@ -110,43 +110,6 @@ p.cursor {
     margin-left: 10em;
 }
 
-input[id*="section2__faq__accordion__q"] {
-    display: none;
-}
-
-label[for*="section2__faq__accordion__q"] {
-    display: block;
-    padding: 10px;
-    border: 1px solid black;
-    color: white;
-    font-weight: 500;
-    background: #551cee;
-    cursor: pointer;
-}
-
-label[for*="section2__faq__accordion__q"] em {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    display: inline-block;
-    background: url("images/main/arrow-down-circle.svg") 0 0 no-repeat;
-}
-
-div[class*="section2__faq__accordion__answer__q"] {
-    max-height: 0;
-    transition: all .35s;
-    overflow: hidden;
-    background: #ebf8ff;
-}
-
-div[class*="section2__faq__accordion__answer__q"] p {
-    display: inline-block;
-    padding: 10px;
-}
-
 /* faq */
 .section2__faq__title {
     font-size: 35px;
@@ -173,34 +136,6 @@ div[class*="section2__faq__accordion__answer__q"] p {
     display: none;
 }
 
-.flat-btn {
-    display: none;
-}
-
-.accordion-btn {
-    padding: 2px;
-    transition: all .2s ease;
-    background: #fff;
-    border: 4px solid #f2f2f2;
-    border-radius: 2em;
-    box-sizing: border-box;
-    width: 4em;
-}
- .accordion-btn:after {
-     transition: all .2s ease;
-     background: #f2f2f2;
-     content: "";
-     border-radius: 1em;
- }
-
- .accordion-btn:checked {
-     border: 4px solid #7FC6A6;
- }
-
-.accordion-btn:checked:after {
-    left: 50%;
-    background: #7FC6A6;
-}
 
 .section2-background {
     position: absolute;
@@ -274,21 +209,37 @@ div[class*="section2__faq__accordion__answer__q"] p {
 
 }
 
+.section8-downloadButton-joint:hover {
+    border: 2px solid black;
+}
+
 /* section8 다운로드 버튼 & 팝업창 */
 .section8-downloadButton-ios {
     position: absolute;
     top: 610px;
     right: 970px;
     cursor: pointer;
-    height: 7%;
+    height: 4.5%;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 10px 20px 10px 20px;
+}
+.section8-downloadButton-ios:hover {
+    border: 2px solid black;
 }
 
 .section8-downloadButton-android {
     position: absolute;
-    top: 608px;
-    right: 730px;
+    top: 610px;
+    right: 720px;
     cursor: pointer;
-    height: 7.38%;
+    height: 4.5%;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 10px 20px 10px 20px;
+}
+.section8-downloadButton-android:hover {
+    border: 2px solid black;
 }
 
 .section8__modal-popup__overlay {
@@ -528,6 +479,7 @@ input::placeholder {
 .section8-footer-logo {
     display: flex;
     align-items: center;
+    margin-left: 40px;
 }
 
 /* section8 footer Logo div */
