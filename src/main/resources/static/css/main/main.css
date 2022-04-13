@@ -6,12 +6,12 @@ body {
     letter-spacing: -0.04em;
 }
 
-.luck {
+.container-01__main-text {
     text-align: center;
     margin-top: -180px;
 }
 
-p.result1, p.result2 {
+p.main-text-01, p.main-text-02 {
     display: inline-block;
     font-size: 80px;
     height: 100px;
@@ -42,7 +42,7 @@ p.cursor {
     width: 70%;
     left: 33%;
     transform: translateX(-50%);
-    top: 13em;
+    top: 8.8em;
 }
 
 /* 위에서 애라로 내려오는 애니메이션 css */
@@ -55,11 +55,6 @@ p.cursor {
         opacity: 1;
         transform: translateZ(0);
     }
-}
-
-.fadeInDown {
-    position: relative;
-    animation: fadeInDown 10s;
 }
 
 @keyframes fadeInUp {
@@ -85,9 +80,10 @@ p.cursor {
 
 /* 큰제목 */
 .section2__slogan__title {
-    font-size: 60px;
-    font-weight: 700;
-    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    color: ghostwhite;
+    text-shadow: #fc0 1px 0 2px;
 }
 
 /* 소제목 */
@@ -128,14 +124,16 @@ p.cursor {
     background: beige;
     cursor: pointer;
     border-radius: 20px;
+    opacity: 0.9;
 }
 
 /* faq q1 대답 */
 .section2__faq__q__answer {
     padding: 10px 30px 10px 30px;
-    background: white;
+    background: ghostwhite;
     display: none;
     border-radius: 20px;
+    opacity: 0.88;
 }
 
 .button-cover {
@@ -632,20 +630,20 @@ input::placeholder {
 
 /* section8 footer 전체 div */
 .section8-footer {
-    padding: 20px 40px 20px 40px;
+    padding: 35px 40px 35px 40px;
     display: flex;
     justify-content: space-between;
     background: rgba(0,0,0,0.3);
     position: absolute;
-    top: 87%;
+    top: 84%;
     width: 100%;
-    color: white;
+    color: ghostwhite;
 }
 
 .section8-footer-logo {
     display: flex;
     align-items: center;
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 /* section8 footer Logo div */
@@ -661,14 +659,14 @@ input::placeholder {
 /* section8 연락할 곳 contact us p */
 .section8-footer-contact-title {
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: bold;
 }
 
 /* section8 연락할 곳 핸드폰 p */
 .section8-footer-contact-phone {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 /* section8 연락할 곳 이메일 p */
@@ -684,14 +682,14 @@ input::placeholder {
 /* section8 회사소개 제목 */
 .section8-footer-companyInfo-title {
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: bold;
 }
 
 /* section8 회사소개 대표자 p */
 .section8-footer-representative {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 /* section8 회사소개 주소 p */
@@ -791,5 +789,5 @@ input::placeholder {
 }
 
 .tooltipImage{
-    background-image: url("/images/main/toolTip/tp_tootip.png")
+    background-image: url("/images/main/toolTip/tp_tootip.png");
 }
