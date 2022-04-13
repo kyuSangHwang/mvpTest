@@ -138,20 +138,6 @@ p.cursor {
     border-radius: 20px;
 }
 
-/**/
-
-
-
-
-
-
-
-
-
-
-
-
-
 .button-cover {
     height: 100px;
     margin: 20px;
@@ -256,18 +242,6 @@ p.cursor {
 #button-1 .layer {
     transition: 0.3s ease all;
 }
-
-
-
-
-
-
-
-
-
-/**/
-
-
 
 .section2-background {
     position: absolute;
@@ -593,26 +567,67 @@ input::placeholder {
     box-shadow: 0 4px 16px rgba(0,79,255,0.9);
 }
 
-/* 이메일 성공 텍스트 */
-.emailSuccess {
-    color: blue;
-    margin-top: 73px;
+.speechBubble {
+    color: black;
+    font-size: 19px;
+}
+
+.speechBubble1 {
     position: absolute;
-    top: 73%;
-    left: 50%;
+    background-image: url("../../images/main/popup/speechBubble/speechBubble-02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 100px;
+    margin: 150px 0px 0px -20px;
+    text-align: center;
     transform: translate(-50%,-50%);
+    display: none;
+    color: red;
+
+
+}
+
+.speechBubble2 {
+    position: absolute;
+    background-image: url("../../images/main/popup/speechBubble/speechBubble-01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 100px;
+    margin: 150px 0px 0px -20px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    display: none;
+    color: blue;
+}
+
+.speechBubble1-1 {
+    position: absolute;
+    display: none;
+    margin-top: 30px;
+    margin-left: -104px;
+    font-size: 18px;
+}
+
+.speechBubble1-2 {
+    position: absolute;
+    display: none;
+    margin-top: 18px;
+    margin-right: 12px;
+}
+
+.speechBubble1-3 {
+    margin-top: 43px;
+    margin-left: -20px;
+    margin-right: -10px;
     display: none;
 }
 
-/* 이메일 실패 텍스트 */
-.emailFail {
-    color: red;
-    margin-top: 73px;
-    position: absolute;
-    top: 73%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.speechBubble2-1 {
     display: none;
+    margin-top: 30px;
+    margin-right: 10px;
 }
 
 /* section8 footer 전체 div */

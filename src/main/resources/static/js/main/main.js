@@ -99,6 +99,7 @@ $(document).ready(function () {
     openBtnAndroid.addEventListener("click", openModal);
     overlay.addEventListener("click", closeModal);
 
+
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
         const clickCategoryValue = clickCategory.innerText.substring(1,3);
@@ -124,6 +125,9 @@ $(document).ready(function () {
                 }
             }
         }
+
+        optionHide();
+
 
         addAutoHover();
     });
@@ -289,13 +293,14 @@ function afterRenderTreePet() {
  *
  */
 function sendEmail() {
-
 // 라디오 버튼을 클릭했을때 값을 받아온다
     const optionVal = $('input[name="option"]:checked').val();
 
     // 받아온 값이 ‘ ’ (공란) 이라면
-    if(optionVal==null){
-        alert("교배/입양/분양 중 원하시는 서비스를 선택해주세요");
+    if (optionVal == null) {
+        optionSelectShow();
+        setTimeout(bubbleHide, 7000);
+
     } else {
         const fullEmail = $("#email");
 
@@ -306,7 +311,7 @@ function sendEmail() {
 
         const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
 
-        if(emailCheck.test(templateParams.email)) {
+        if (emailCheck.test(templateParams.email)) {
 
             emailjs.init("oheTEu0jy6XxN5NCQ");
 
@@ -321,7 +326,7 @@ function sendEmail() {
                         location.reload();
                     }
                 })
-            },function () {
+            }, function () {
                 location.reload();
             })
 
@@ -329,7 +334,7 @@ function sendEmail() {
             reset();
             //이메일 보내기 실패 숨기기
             emailFailHide();
-                //사전예약이 완료되었습니다 아래에 띄우는 것
+            //사전예약이 완료되었습니다 아래에 띄우는 것
             emailSuccessShow();
 
             return;
@@ -355,28 +360,72 @@ function reset() {
     }
 }
 
+
+// 실패한 말풍선 시간 지나면 사라지게
+function bubbleHide() {
+    let optionSelectH = $("div.speechBubble1")[0];
+
+    optionSelectH.style.display = 'none';
+}
+
+// 옵션 말풍선 보여주기
+function optionSelectShow() {
+    let optionSelectBubble = $("div.speechBubble1")[0];
+    let optionSelectText = $("p.speechBubble1-1")[0];
+
+    optionSelectBubble.style.display = "inline-block";
+    optionSelectText.style.display = "inline-block";
+}
+
+// 옵션 말풍선 사라지기
+function optionSelectHide() {
+    let optionSelectBubble = $("div.speechBubble1")[0];
+    let optionSelectText = $("p.speechBubble1-1")[0];
+
+    optionSelectBubble.style.display = "none";
+    optionSelectText.style.display = "none";
+}
+
 //이메일 성공 텍스트 보여주기
 function emailSuccessShow() {
-    const emailSuccess = document.getElementById('emailSuccess');
-    emailSuccess.style.display = "block";
+    let emailSuccessBubble = $("div.speechBubble2")[0];
+    let emailSuccessText = $("p.speechBubble2-1")[0];
+
+    emailSuccessBubble.style.display = "inline-block";
+    emailSuccessText.style.display = "inline-block";
 }
 
 //이메일 실패 텍스트 보여주기
 function emailFailShow() {
-    const emailFail = document.getElementById('emailFail');
-    emailFail.style.display = "block";
+    let emailFailBubble = $("div.speechBubble1")[0];
+    let emailFailText1 = $("p.speechBubble1-2")[0];
+    let emailFailText2 = $("p.speechBubble1-3")[0];
+
+    emailFailBubble.style.display = "inline-block";
+    emailFailText1.style.display = "inline-block";
+    emailFailText2.style.display = "inline-block";
+
+    setTimeout(bubbleHide, 7000);
 }
 
 //이메일 성공 텍스트 숨기기
 function emailSuccessHide() {
-    const emailSuccess = document.getElementById('emailSuccess');
-    emailSuccess.style.display = "none";
+    let emailSuccessBubble = $("div.speechBubble2")[0];
+    let emailSuccessText = $("p.speechBubble2-1")[0];
+
+    emailSuccessBubble.style.display = "none";
+    emailSuccessText.style.display = "none";
 }
 
 //이메일 실패 텍스트 숨기기
 function emailFailHide() {
-    const emailFail = document.getElementById('emailFail');
-    emailFail.style.display = "none";
+    let emailFailBubble = $("div.speechBubble1")[0];
+    let emailFailText1 = $("p.speechBubble1-2")[0];
+    let emailFailText2 = $("p.speechBubble1-3")[0];
+
+    emailFailBubble.style.display = "none";
+    emailFailText1.style.display = "none";
+    emailFailText2.style.display = "none";
 }
 
 function navigationTooltipsChange() {
@@ -453,3 +502,10 @@ function addAutoHover() {
     // const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
     const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
 }
+
+function optionHide() {
+    if( $('input[name="option"]').prop("checked", true) ) {
+        optionSelectHide();
+    }
+}
+
