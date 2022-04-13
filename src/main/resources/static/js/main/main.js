@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         // Event
         onLeave: function(origin, destination, direction){},
-        afterLoad: function(aninitialrLink, index,origin, destination, direction){},
+        afterLoad: function(anchorLink, index, origin, destination, direction){},
         afterRender: function(){
             afterRenderTreePet();
         },
@@ -184,21 +184,21 @@ $(document).ready(function () {
     }
 
     // 타이핑할 문장
-    let result1 = "반려동물의 삶이 시작되는 곳";
-    let result2 = "여러분의 가정입니다";
-    let typing1 = result1.split(''); // 한글자씩자름
-    let typing2 = result2.split(''); // 한글자씩자름
+    let mainText01 = "반려동물의 삶이 시작되는 곳";
+    let mainText02 = "여러분의 가정입니다";
+    let typing1 = mainText01.split(''); // 한글자씩자름
+    let typing2 = mainText02.split(''); // 한글자씩자름
 
     // 각글자 초성,중성,종성으로 나눔
-    for (let i = 0; i < result1.length; i++){
-        typing1[i]=result1[i].toKorChars();
+    for (let i = 0; i < mainText01.length; i++){
+        typing1[i]=mainText01[i].toKorChars();
     }
-    for (let i = 0; i < result2.length; i++){
-        typing2[i]=result2[i].toKorChars();
+    for (let i = 0; i < mainText02.length; i++){
+        typing2[i]=mainText02[i].toKorChars();
     }
 
-    let resultDiv1 = document.getElementsByClassName("result1")[0]; // 출력할 엘리먼트요소 가져옴
-    let resultDiv2 = document.getElementsByClassName("result2")[0]; // 출력할 엘리먼트요소 가져옴
+    let resultDiv1 = document.getElementsByClassName("main-text-01")[0]; // 출력할 엘리먼트요소 가져옴
+    let resultDiv2 = document.getElementsByClassName("main-text-02")[0]; // 출력할 엘리먼트요소 가져옴
     let text = "";
     let i=0;
     let j=0;
@@ -492,7 +492,6 @@ function addDeleteAutoHover() {
     // }
     //
     // $(".fp-right").addClass("tooltipImage");
-
 }
 
 /**
@@ -502,6 +501,65 @@ function addAutoHover() {
     // const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
     const activatedToolTip = $("#fp-nav ul li a.active+.fp-tooltip")[0];
 }
+
+/**
+ * mainAnimation: fullPage index 마다 Animation 효과 주기
+ * @Param index : fullPage section index
+ */
+function mainAnimation(index) {
+
+    if (!index || index === 1 || index === 2 || index === 8) {
+        return "";
+    } else if (index === 3) {
+        animateCSS('.index-03-icon','fadeInLeft');
+        animateCSS('.index-03-h','fadeInLeft');
+        animateCSS('.index-03-span','fadeInLeft');
+        animateCSS('.index-03-image','fadeInRight');
+    } else if (index === 4) {
+        animateCSS('.index-04-image','fadeInLeft');
+        animateCSS('.index-04-icon','fadeInRight');
+        animateCSS('.index-04-h','fadeInRight');
+        animateCSS('.index-04-span','fadeInRight');
+    } else if (index === 5) {
+        animateCSS('.index-05-icon','fadeInLeft');
+        animateCSS('.index-05-h','fadeInLeft');
+        animateCSS('.index-05-span','fadeInLeft');
+        animateCSS('.index-05-image','fadeInRight');
+    } else if (index === 6) {
+        animateCSS('.index-06-image','fadeInLeft');
+        animateCSS('.index-06-icon','fadeInRight');
+        animateCSS('.index-06-h','fadeInRight');
+        animateCSS('.index-06-span','fadeInRight');
+    } else if (index === 7) {
+        animateCSS('.index-07-icon','fadeInLeft');
+        animateCSS('.index-07-h','fadeInLeft');
+        animateCSS('.index-07-span','fadeInLeft');
+        animateCSS('.index-07-image','fadeInRight');
+    }
+
+}
+
+/**
+ * animateCSS: fullPage index 마다 Animation 효과 주기
+ * @Param element : 선택자
+ * @Param animation : 애니매이션 효과 명
+ * @Param prefix : CSS 효과 앞에 붙는 접두사
+ */
+const animateCSS = (element, animation, prefix = 'animate__') =>
+    new Promise((resolve, reject) => {
+        const animationName = `${prefix}${animation}`;
+        const node = document.querySelector(element);
+
+        node.classList.add(`${prefix}animated`, animationName);
+
+        function handleAnimationEnd(event) {
+            event.stopPropagation();
+            node.classList.remove(`${prefix}animated`, animationName);
+            resolve('Animation ended');
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd, { once: true });
+    });
 
 function optionHide() {
     if( $('input[name="option"]').prop("checked", true) ) {
