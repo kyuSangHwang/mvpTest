@@ -44,6 +44,7 @@ $(document).ready(function () {
     });
     //fullPageEnd
 
+
     $('.section8-downloadButton-ios').click(function() {
         setSession();
     });
@@ -99,7 +100,6 @@ $(document).ready(function () {
     openBtnAndroid.addEventListener("click", openModal);
     overlay.addEventListener("click", closeModal);
 
-
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
         const clickCategoryValue = clickCategory.innerText.substring(1,3);
@@ -127,22 +127,8 @@ $(document).ready(function () {
         }
 
         optionHide();
-
-
         addAutoHover();
     });
-
-    const $section = $('.section');
-    const $offset = 944;
-    const $sectionOST = $section.offset().top - $offset;
-
-    $(window).scroll(function () {
-        if($(this).scrollTop() > $sectionOST) {
-            $section.find('img').addClass('animate');
-            alert("안녕");
-
-        }
-    })
 
     String.prototype.toKorChars = function() {
         let charInitial = [ 'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ' ];
@@ -336,6 +322,9 @@ function sendEmail() {
             emailFailHide();
             //사전예약이 완료되었습니다 아래에 띄우는 것
             emailSuccessShow();
+
+            $('input[name="option"]').prop("checked", true).next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
+            $('input[name="option"]').prop("checked", true).next().next().addClass('bi-check-square'); //흰 버튼 클래스 생성
 
             return;
 
