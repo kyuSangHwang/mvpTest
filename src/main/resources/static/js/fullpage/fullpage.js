@@ -1775,8 +1775,9 @@
             //avoid firing it twice (as it does also on scroll)
             activateMenuAndNav(v.anchorLink, v.sectionIndex);
             mainHeaderManager(v.sectionIndex);
-            /*mainAnimation(v.sectionIndex);
-            categoryBookMarkAnimation(v.sectionIndex);*/
+            /* customFunction by KS */
+            mainAnimation(v.sectionIndex+1);
+            /*categoryBookMarkAnimation(v.sectionIndex);*/
         }
 
         /**
