@@ -26,6 +26,8 @@
     <!--hover.css-->
     <link rel="stylesheet" href="css/hover/hover.css" media="all">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!--animation.css-->
+    <link rel="stylesheet" href="css/animation/animation.css">
     <!--jquery-->
     <script type="text/javascript" src="js/jquery/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
@@ -54,10 +56,11 @@
 
 <div id="fullPage">
     <div name="section1" class="section mainBackground section1-Background">
-        <div class="luck">
-            <p class="result1"></p> <br>
-            <p class="result2"></p> <br>
-            <p class="result3"></p>
+        <div class="section1__container-01">
+            <div class="container-01__main-text">
+                <p class="main-text-01"></p> <br>
+                <p class="main-text-02"></p> <br>
+            </div>
         </div>
     </div>
 
@@ -73,7 +76,17 @@
             <div class="section2__faq">
                 <div>
                     <div class="section2__faq__q accordion1" >&nbsp;&nbsp;&nbsp;&nbsp;Q1. 가정 교배에 초점을 두는 이유?</div>
-                    <div class="section2__faq__q__answer" id="answer1"><p>반려동물 입양 방법에는 펫샵, 유기동물, 브리더, 가정 등 여러 입양방법이 있습니다. 하지만 각 입양방법마다 단점들이 존재합니다. 펫샵은 강아지공장을 통해 반려동물을 유통한다는 윤리적인 문제점이, 브리더는 윤리적이지만 비싸고, 공급측면에서 수요를 따라갈 수 없습니다. 이와 더불어 유기동물은 이미 아픔을 겪었기 때문에 아이들에게도, 새로운 보호자에게도 부담될 수 있습니다. 이에 제일 적합한 방법으로 가정을 통한 입양을 제안할 수 있지만 플랫폼 없이는 많은 제약이 따릅니다. 그래서 트리펫은 제안하고자 합니다. 가정교배의 불편함을 해소하고, 입양을 하기 위해서는 보호자로써 자격검증을 필수로 받아야하는 새로운 반려문화가 형성될 수 있도록 변화시키겠습니다.</p></div>
+                    <div class="section2__faq__q__answer" id="answer1">
+                        <p>반려동물 입양 방법에는 펫샵, 유기동물, 브리더, 가정 등 여러 입양방법이 있지만 <br>
+                            각 입양방법마다 단점들이 존재합니다. 펫샵은 강아지공장을 통해 반려동물을 <br>
+                            유통한다는 윤리적인 문제점이, 브리더는 윤리적이지만 비싸고, <br>
+                            공급측면에서 수요를 따라갈 수 없습니다. 이와 더불어 유기동물은 <br>
+                            이미 아픔을 겪었기 때문에 아이들에게도, 새로운 보호자에게도 부담될 수 있습니다. <br>
+                            이에 제일 적합한 방법으로 가정을 통한 입양을 제안할 수 있지만 <br>
+                            플랫폼 없이는 많은 제약이 따릅니다. 그래서 트리펫은 제안하고자 합니다. <br>
+                            가정교배의 불편함을 해소하고, 입양을 하기 위해서는 보호자로써 자격검증을 <br>
+                            필수로 받아야하는 새로운 반려문화가 형성될 수 있도록 변화시키겠습니다.</p>
+                    </div>
                 </div>
                 <div>
                     <div class="section2__faq__q accordion2">&nbsp;&nbsp;&nbsp;&nbsp;Q2. 서비스를 시작하게 된 동기?</div>
@@ -86,21 +99,21 @@
     <div name="section3" class="section" id="section3">
         <div class="section-services">
             <div class="services-information">
-                <img src="images/main/servicePages/icons/service-01-icon-01.png" alt="Phone Icon 01" class="information-icon">
-                <h3 class="information-title">상대방과의 매칭,<br>지역부터 조건까지<br>쉽고 빠르게</h3>
-                <span class="information-content"><strong>필터를 통해 조건에 맞는 매칭상대</strong>와<br><strong>간편하고 안전하게 전자계약서</strong>로 인연을 시작하세요.</span>
+                <img src="images/main/servicePages/icons/service-01-icon-01.png" alt="Phone Icon 01" class="information-icon index-03-icon">
+                <h3 class="information-title index-03-h">상대방과의 매칭,<br>지역부터 조건까지<br>쉽고 빠르게</h3>
+                <span class="information-content index-03-span"><strong>필터를 통해 조건에 맞는 매칭상대</strong>와<br><strong>간편하고 안전하게 전자계약서</strong>로 인연을 시작하세요.</span>
             </div>
-            <img src="images/main/servicePages/moblieLbs.png" alt="Phone 01" class="services-img-right">
+            <img src="images/main/servicePages/moblieLbs.png" alt="Phone 01" class="services-img-right index-03-image">
         </div>
     </div>
 
     <div name="section4" class="section">
         <div class="section-services">
-            <img src="images/main/servicePages/mobileAdoptListVerification.png" alt="Phone 05" class="services-img-left">
+            <img src="images/main/servicePages/mobileAdoptListVerification.png" alt="Phone 05" class="services-img-left index-04-image">
             <div class="services-information">
-                <img src="images/main/servicePages/icons/service-02-icon-01.png" alt="Phone Icon 05" class="information-icon">
-                <h3 class="information-title">가족을 찾기위한 올바른 입양<br>가족이 되기위한 필수검증</h3>
-                <span class="information-content"><strong>가정에서 태어난 반려동물로 가족을 맞이하는 새로운 입양방법</strong><br>가족이 되기 위해 <strong>예비보호자의 검증은 선택이 아닌 필수</strong>입니다.</span>
+                <img src="images/main/servicePages/icons/service-02-icon-01.png" alt="Phone Icon 05" class="information-icon index-04-icon">
+                <h3 class="information-title index-04-h">가족을 찾기위한 올바른 입양<br>가족이 되기위한 필수검증</h3>
+                <span class="information-content index-04-span"><strong>가정에서 태어난 반려동물로 가족을 맞이하는 새로운 입양방법</strong><br>가족이 되기 위해 <strong>예비보호자의 검증은 선택이 아닌 필수</strong>입니다.</span>
             </div>
         </div>
     </div>
@@ -108,21 +121,21 @@
     <div name="section5" class="section">
         <div class="section-services">
             <div class="services-information">
-                <img src="images/main/servicePages/icons/service-03-icon-01.png" alt="Phone Icon 01" class="information-icon">
-                <h3 class="information-title fadeInDown">반려동물 등록과 동시에,<br>우리 아이의 족보 생성</h3>
-                <span class="information-content"><strong>반려동물 등록과 동시에 족보까지 생성!</strong><br>우리 아이 가족의 출생지,질병이력 등<br><strong>다양한 정보들을 확인</strong>해보세요.</span>
+                <img src="images/main/servicePages/icons/service-03-icon-01.png" alt="Phone Icon 01" class="information-icon index-05-icon">
+                <h3 class="information-title index-05-h">반려동물 등록과 동시에,<br>우리 아이의 족보 생성</h3>
+                <span class="information-content index-05-span"><strong>반려동물 등록과 동시에 족보까지 생성!</strong><br>우리 아이 가족의 출생지,질병이력 등<br><strong>다양한 정보들을 확인</strong>해보세요.</span>
             </div>
-            <img src="images/main/servicePages/moblieFamilyTree.png" alt="Phone 01" class="services-img-right">
+            <img src="images/main/servicePages/moblieFamilyTree.png" alt="Phone 01" class="services-img-right index-05-image">
         </div>
     </div>
 
     <div name="section6" class="section">
         <div class="section-services">
-            <img src="images/main/servicePages/moblieInformation.png" alt="Phone 05" class="services-img-left">
+            <img src="images/main/servicePages/moblieInformation.png" alt="Phone 05" class="services-img-left index-06-image">
             <div class="services-information">
-                <img src="images/main/servicePages/icons/service-04-icon-01.png" alt="Phone Icon 05" class="information-icon">
-                <h3 class="information-title">교배는 안전하게,<br>양육은 정확하게,<br>놀이는 신나게</h3>
-                <span class="information-content"><strong>이렇게만 하면 나도 1등 집사!</strong><br>다양한 컨텐츠를 <strong>생애 주기</strong>에 맞게 알려드려요.</span>
+                <img src="images/main/servicePages/icons/service-04-icon-01.png" alt="Phone Icon 05" class="information-icon index-06-icon">
+                <h3 class="information-title index-06-h">교배는 안전하게,<br>양육은 정확하게,<br>놀이는 신나게</h3>
+                <span class="information-content index-06-span"><strong>이렇게만 하면 나도 1등 집사!</strong><br>다양한 컨텐츠를 <strong>생애 주기</strong>에 맞게 알려드려요.</span>
             </div>
         </div>
     </div>
@@ -130,11 +143,11 @@
     <div name="section7" class="section" id="section7">
         <div class="section-services">
             <div class="services-information">
-                <img src="images/main/servicePages/icons/service-05-icon-01.png" alt="Phone Icon 01" class="information-icon">
-                <h3 class="information-title">보호자도 만족하고<br>우리 아이도 만족하는<br>나만의  비서</h3>
-                <span class="information-content"><strong>AI 추천 엔진 나만의 비서</strong>가<br>말 못 하는 반려동물의 건강과 행복을 위해<br><strong>생애주기에 꼭 필요한 제품을 추천</strong>해드립니다.</span>
+                <img src="images/main/servicePages/icons/service-05-icon-01.png" alt="Phone Icon 01" class="information-icon index-07-icon">
+                <h3 class="information-title index-07-h">보호자도 만족하고<br>우리 아이도 만족하는<br>나만의  비서</h3>
+                <span class="information-content index-07-span"><strong>AI 추천 엔진 나만의 비서</strong>가<br>말 못 하는 반려동물의 건강과 행복을 위해<br><strong>생애주기에 꼭 필요한 제품을 추천</strong>해드립니다.</span>
             </div>
-            <img src="images/main/servicePages/moblieStore.png" alt="Phone 01" class="services-img-right">
+            <img src="images/main/servicePages/moblieStore.png" alt="Phone 01" class="services-img-right index-07-image">
         </div>
     </div>
 
