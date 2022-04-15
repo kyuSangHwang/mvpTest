@@ -317,6 +317,12 @@ p.cursor {
     border: 2px solid black;
 }
 
+.section1__container-02 {
+    text-align: center;
+    margin-right: 460px;
+    padding-top: 50px;
+}
+
 /* section8 다운로드 버튼 & 팝업창 */
 .section8-downloadButton-ios {
     position: absolute;
@@ -328,7 +334,7 @@ p.cursor {
     border-radius: 40px;
     padding: 10px 20px 10px 20px;
 }
-.section8-downloadButton-ios:hover {
+.section8-downloadButton-ios:hover, .section1-downloadButton-ios:hover {
     border: 2px solid black;
 }
 
@@ -342,11 +348,30 @@ p.cursor {
     border-radius: 40px;
     padding: 10px 20px 10px 20px;
 }
-.section8-downloadButton-android:hover {
+.section8-downloadButton-android:hover, .section1-downloadButton-android:hover {
     border: 2px solid black;
 }
 
-.section8__modal-popup__overlay {
+.section1-downloadButton-ios {
+    position: absolute;
+    cursor: pointer;
+    height: 4.5%;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 10px 20px 10px 20px;
+}
+
+.section1-downloadButton-android {
+    position: absolute;
+    cursor: pointer;
+    height: 4.5%;
+    border: 2px solid white;
+    border-radius: 40px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 250px;
+}
+
+.section8__modal-popup__overlay, .section1__modal-popup__overlay {
     position: absolute;
     top: 0;
     left: 0;

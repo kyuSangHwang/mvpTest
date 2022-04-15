@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="css/fragments/footer.css">
     <!--EmailJS-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <!--fullpage-->
+    <!--fullPage-->
     <link rel="stylesheet" href="css/fullpage/fullpage.css">
     <script type="text/javascript" src="js/fullpage/fullpage.js"></script>
     <script type="text/javascript" src="js/fullpage/scrolloverflow.js"></script>
@@ -63,6 +63,21 @@
             </div>
         </div>
 
+        <div class="section1__container-02">
+            <img  src="images/downloadBadge/app-store-badge-white-0333.png"
+                  class="section1-downloadButton-ios open-ios"
+                  onmouseover="this.src='images/downloadBadge/app-store-badge-black-0333.png'"
+                  onmouseout="this.src='images/downloadBadge/app-store-badge-white-0333.png'">
+            <img  src="images/downloadBadge/google-play-badge-white-0111.png"
+                  class="section1-downloadButton-android open-android"
+                  onmouseover="this.src='images/downloadBadge/google-play-badge-black-0111.png'"
+                  onmouseout="this.src='images/downloadBadge/google-play-badge-white-0111.png'">
+        </div>
+
+        <div class="modal hidden">
+            <div class="section1__modal-popup__overlay"></div>
+            <div th:include="popup/popup"></div>
+        </div>
 
     </div>
 

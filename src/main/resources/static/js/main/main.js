@@ -44,16 +44,32 @@ $(document).ready(function () {
     });
     //fullPageEnd
 
-
-    $('.section8-downloadButton-ios').click(function() {
+    $('.section1-downloadButton-ios, .section1-downloadButton-android, .section8-downloadButton-ios, .section8-downloadButton-android').click(function() {
         setSession();
+
+        let sectionNumber = this.classList.value.split("-")[0].split("n")[1];
+
+        if (!!sectionNumber) {
+            openPopup(sectionNumber);
+        }
+
     });
 
-    $('.section8-downloadButton-android').click(function() {
-        setSession();
+    $('.section1__modal-popup__overlay, .section8__modal-popup__overlay').click(function() {
+        let sectionNumber = this.classList.value.split("-")[0].split("_")[0].split("n")[1];
+        
+        // closePopup(sectionNumber);
+
+        const modal = $('.modal');
+
+        if (sectionNumber === "1") {
+            modal[0].classList.add("hidden");
+        } else if (sectionNumber === "8") {
+            modal[1].classList.add("hidden");
+        }
+        
     });
-
-
+    
 
     $('.accordion1').click(function () {
         let answer = document.getElementsByClassName('section2__faq__q__answer')[0];
@@ -83,22 +99,31 @@ $(document).ready(function () {
         }
     });
 
-    const openBtnIos = document.querySelector('.open-ios');
-    const openBtnAndroid = document.querySelector('.open-android');
-    const modal = document.querySelector('.modal');
-    const overlay = modal.querySelector('.section8__modal-popup__overlay');
+    /*const openBtnIos = document.querySelectorAll('.open-ios');
+    const openBtnAndroid = document.querySelectorAll('.open-android');
+    const modal = document.querySelectorAll('.modal');
+    const overlay1 = modal[0].querySelector('.section1__modal-popup__overlay');
+    const overlay2 = modal[1].querySelector('.section8__modal-popup__overlay');
 
-    const openModal = function () {
-        modal.classList.remove("hidden");
-    }
+    openBtnIos[0].addEventListener("click", function() {
+        modal[0].classList.remove("hidden");
+    });
+    openBtnAndroid[0].addEventListener("click", function() {
+        modal[0].classList.remove("hidden");
+    });
+    overlay1.addEventListener("click", function() {
+        modal[0].classList.add("hidden");
+    });
 
-    const closeModal = function () {
-        modal.classList.add("hidden");
-    }
-
-    openBtnIos.addEventListener("click", openModal);
-    openBtnAndroid.addEventListener("click", openModal);
-    overlay.addEventListener("click", closeModal);
+    openBtnIos[1].addEventListener("click", function() {
+        modal[1].classList.remove("hidden");
+    });
+    openBtnAndroid[1].addEventListener("click", function() {
+        modal[1].classList.remove("hidden");
+    });
+    overlay2.addEventListener("click", function() {
+        modal[1].classList.add("hidden");
+    });*/
 
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
@@ -554,5 +579,20 @@ function optionHide() {
     if( $('input[name="option"]').prop("checked", true) ) {
         optionSelectHide();
     }
+}
+
+function openPopup(sectionNumber) {
+    const openBtnIos = $('.open-ios');
+    const openBtnAndroid = $('.open-android');
+    const modal = $('.modal');
+    const overlaySection1 = $('.section1__modal-popup__overlay');
+    const overlaySection8 = $('.section8__modal-popup__overlay');
+
+    if (sectionNumber === "1") {
+        modal[0].classList.remove("hidden");
+    } else if (sectionNumber === "8") {
+        modal[1].classList.remove("hidden");
+    }
+
 }
 
