@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+<header th:fragment="header">
+    <nav class="header-container">
+        <a href="/">
+            <img class="container-logo-img" src="images/logo/treePet/mainLogo-mix-origin-white.png" alt="TREEPET"/>
+        </a>
+        <ul class="container-ul">
+            <li class="container-li">
+                <a onclick="companyInfo()"> 회사소개 </a>
+            </li>
+
+            <li class="container-li">
+                <a onclick="howToUseInfo()"> 이용밥법 </a>
+            </li>
+
+            <li class="container-li">
+                <a onclick="contactUsInfo()"> Contact us </a>
+            </li>
+
+            <li class="container-li">
+                <a onclick="treePetInfo()">TREEPET</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>
