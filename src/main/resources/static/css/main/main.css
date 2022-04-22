@@ -286,12 +286,19 @@ p.cursor {
 
 /* section8 part */
 .section8-title {
-    margin-top: 200px;
     text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10rem;
 }
 
 .section8-title1 {
     font-size: 68px;
+    margin-bottom: 13rem;
 }
 
 .section8__title__logo {
@@ -302,6 +309,7 @@ p.cursor {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 3rem;
 }
 
 .section8__img {
@@ -380,6 +388,22 @@ p.cursor {
     background: rgba(0,0,0,.6);
 }
 
+.section8__download {
+    cursor: pointer;
+    height: 4.5rem;
+    border: 2px solid white;
+    border-radius: 23px;
+    padding: 10px 20px 10px 20px;
+}
+
+.section8__download:hover {
+    cursor: pointer;
+    height: 4.5rem;
+    border: 2px solid black;
+    border-radius: 23px;
+    padding: 10px 20px 10px 20px;
+}
+
 .hidden {
     display: none;
 }
@@ -453,7 +477,7 @@ input[id*="popup"]:checked + label + div {
 }
 
 .section8-popup-box-text1 {
-    margin-top: -14%;
+    margin-top: 22%;
     color: sienna;
     text-align: center;
     font-size: 40px;
@@ -464,14 +488,14 @@ input[id*="popup"]:checked + label + div {
     color: sienna;
     text-align: center;
     font-size: 22px;
-    margin-top: 50px;
+    margin-top: 35px;
     position: relative;
 }
 
 /* radio 옵션 전체 div */
 .section8-popup-box-option {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 35px;
     color: maroon;
     position: relative;
 }
@@ -503,13 +527,13 @@ input[id*="popup"]:checked + label + div {
     color: darkgray;
     text-align: center;
     font-size: 16px;
-    margin-top: 50px;
+    margin-top: 35px;
     position: relative;
 }
 
 .section8-popup-modal-btn {
     position: relative;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .section8-popup-modal-btn-click {
@@ -607,8 +631,6 @@ input::placeholder {
     transform: translate(-50%,-50%);
     display: none;
     color: red;
-
-
 }
 
 .speechBubble2 {
@@ -815,4 +837,29 @@ input::placeholder {
 
 .tooltipImage{
     background-image: url("/images/main/toolTip/tp_tootip.png");
+}
+
+#ios img {
+    position: absolute;
+    left: 38.5%;
+    top: 69%;
+    margin-left: -75px;
+    margin-top: -100px;
+}
+
+#android img {
+    position: absolute;
+    left: 54.5%;
+    top: 69%;
+    margin-left: -75px;
+    margin-top: -100px;
+}
+
+#ios > #iosBlack, #android > #androidBlack {
+    opacity: 0;
+    transition: opacity 1s
+}
+
+#ios:hover > #iosBlack, #android:hover > #androidBlack {
+    opacity: 1;
 }
