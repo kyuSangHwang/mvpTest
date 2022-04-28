@@ -44,32 +44,9 @@ $(document).ready(function () {
     });
     //fullPageEnd
 
-    $('.section1-downloadButton-ios, .section1-downloadButton-android, .section8-downloadButton-ios, .section8-downloadButton-android').click(function() {
+    $(".openPop1, .openPop2").click(function() {
         setSession();
-
-        /*let sectionNumber = this.classList.value.split("-")[0].split("n")[1];
-
-        if (!!sectionNumber) {
-            openPopup(sectionNumber);
-        }*/
-
     });
-
-    $('.section1__modal-popup__overlay, .section8__modal-popup__overlay').click(function() {
-        let sectionNumber = this.classList.value.split("-")[0].split("_")[0].split("n")[1];
-        
-        // closePopup(sectionNumber);
-
-       /* const modal = $('.modal');
-
-        if (sectionNumber === "1") {
-            modal[0].classList.add("hidden");
-        } else if (sectionNumber === "8") {
-            modal[0].classList.add("hidden");
-        }*/
-        
-    });
-    
 
     $('.accordion1').click(function () {
         let answer = document.getElementsByClassName('section2__faq__q__answer')[0];
@@ -98,32 +75,6 @@ $(document).ready(function () {
             $("#answer2").slideUp();
         }
     });
-
-    /*const openBtnIos = document.querySelectorAll('.open-ios');
-    const openBtnAndroid = document.querySelectorAll('.open-android');
-    const modal = document.querySelectorAll('.modal');
-    const overlay1 = modal[0].querySelector('.section1__modal-popup__overlay');
-    const overlay2 = modal[1].querySelector('.section8__modal-popup__overlay');
-
-    openBtnIos[0].addEventListener("click", function() {
-        modal[0].classList.remove("hidden");
-    });
-    openBtnAndroid[0].addEventListener("click", function() {
-        modal[0].classList.remove("hidden");
-    });
-    overlay1.addEventListener("click", function() {
-        modal[0].classList.add("hidden");
-    });
-
-    openBtnIos[1].addEventListener("click", function() {
-        modal[1].classList.remove("hidden");
-    });
-    openBtnAndroid[1].addEventListener("click", function() {
-        modal[1].classList.remove("hidden");
-    });
-    overlay2.addEventListener("click", function() {
-        modal[1].classList.add("hidden");
-    });*/
 
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
@@ -164,7 +115,7 @@ $(document).ready(function () {
         let cnt = str.length;
         let chars = [];
         let charCode;
-        
+
         for (let i = 0; i < cnt; i++) {
             charCode = str.charCodeAt(i);
             if (charCode === 32) {
@@ -263,11 +214,15 @@ $(document).ready(function () {
         }
     }
 
-    $('.openPop').click(function(e){
+    $('.openPop1').click(function(e){
         e.preventDefault();
-        $('#exampleModal').modal("show");
+        $('.exampleModal1').modal("show");
     });
 
+    $('.openPop2').click(function(e){
+        e.preventDefault();
+        $('.exampleModal2').modal("show");
+    });
 });
 
 /**
@@ -281,7 +236,7 @@ function setSession() {
 
     if (!!preventDuplicateBtn && !sessionValue) {
         preventDuplicateBtn = false;
-        sessionStorage.setItem('sessionKey', 'fuck');
+        sessionStorage.setItem('sessionKey', 'I_LOVE_TREEPET');
 
         if (lsLength === 0) {
             localStorage.setItem(downloadClickCnt, 'customers_' + downloadClickCnt);
@@ -306,69 +261,40 @@ function afterRenderTreePet() {
 
 /**
  * sendEmail: 다운로드(사전예약) 클릭 시 팝업의 신청하기 버튼 클릭했을 떄 실행되는 함동
- *
+ * emailJs, carvekiss@gmail.com 의 계정이 지금 412 Error (Precondition Failed) 가 나서 규상이 개인 계정(kyusang.dev@gmail.com)으로 등록해 놓음
  */
 function sendEmail() {
-// 라디오 버튼을 클릭했을때 값을 받아온다
     const optionVal = $('input[name="option"]:checked').val();
+    const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
+    const optionName = $('input[name="option"]');
+    const templateParams = { category: optionVal, email: $("#email").val() };
 
-    // 받아온 값이 ‘ ’ (공란) 이라면
-    if (optionVal == null) {
+    if (optionVal == null) { // 원하는 서비스를 선택하지 않았을 떄
         optionSelectShow();
         setTimeout(bubbleHide, 7000);
-
     } else {
-        const fullEmail = $("#email");
-
-        const templateParams = {
-            category: optionVal,
-            email: fullEmail.val()
-        };
-
-        const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
+        emailjs.init("Tjcml_agXaoWOkkUh");
 
         if (emailCheck.test(templateParams.email)) {
-
-            emailjs.init("oheTEu0jy6XxN5NCQ");
-
-            emailjs.send('service_n432v57', 'template_4p7abob', templateParams).then(function (response) {
-                Swal.fire({
-                    title: '사전 신청되었습니다.!',
-                    text: '사전 신청해주신 보호자님께 가장 먼저 알려드릴께요!',
-                    icon: 'success',
-                    confirmButtonText: '확인'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        location.reload();
-                    }
-                })
-            }, function () {
-                location.reload();
+            emailjs.send('service_c1hgsck', 'template_f05mzvu', templateParams).then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            },function (error) {
+                console.log('FAILED...', error);
             })
 
-            //이메일 성공시
             reset();
-            //이메일 보내기 실패 숨기기
-            emailFailHide();
-            //사전예약이 완료되었습니다 아래에 띄우는 것
-            emailSuccessShow();
+            emailFailHide(); // 이메일 보내기 실패 숨기기
+            emailSuccessShow(); // 사전예약이 완료되었습니다 아래에 띄우는 것
 
-            $('input[name="option"]').prop("checked", true).next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
-            $('input[name="option"]').prop("checked", true).next().next().addClass('bi-check-square'); //흰 버튼 클래스 생성
-
-            return;
+            optionName.prop("checked", true).next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
+            optionName.prop("checked", true).next().next().addClass('bi-check-square'); //흰 버튼 클래스 생성
 
         } else {
             reset();
-            //이메일 보내기 성공 숨기기
-            emailSuccessHide();
-            //이메일형식이 다릅니다 아래에 띄우는 것
-            emailFailShow();
-
-            return;
+            emailSuccessHide(); // 이메일 보내기 성공 숨기기
+            emailFailShow(); // 이메일형식이 다릅니다 아래에 띄우는 것
         }
     }
-
 }
 
 //input 텍스트 초기화 ('')
@@ -584,20 +510,5 @@ function optionHide() {
     if( $('input[name="option"]').prop("checked", true) ) {
         optionSelectHide();
     }
-}
-
-function openPopup(sectionNumber) {
-    const openBtnIos = $('.open-ios');
-    const openBtnAndroid = $('.open-android');
-    const modal = $('.modal');
-    const overlaySection1 = $('.section1__modal-popup__overlay');
-    const overlaySection8 = $('.section8__modal-popup__overlay');
-
-    if (sectionNumber === "1") {
-        modal[0].classList.remove("hidden");
-    } else if (sectionNumber === "8") {
-        modal[0].classList.remove("hidden");
-    }
-
 }
 

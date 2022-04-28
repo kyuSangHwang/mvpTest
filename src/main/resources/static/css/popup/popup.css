@@ -1,0 +1,307 @@
+
+#popup {
+    float: right;
+    position: absolute;
+    top: 570px;
+    right: 145px;
+}
+
+input[id*="popup"] {
+    display: none;
+}
+
+input[id*="popup"] + label {
+    display: inline-block;
+    background: #5B67CA;
+    border: 3px solid black;
+    border-radius: 35px;
+    background-color: transparent;
+    color: black;
+    font-size: 40px;
+}
+
+input[id*="popup"] + label + div {
+    position: fixed;
+    /*top: 600;*/
+    /*left: 2250;*/
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.section8-popup-box {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 652px;
+    height: 814px;
+    background-image: url("../../images/main/popup/popup-06.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.section8-popup-box img {
+    margin-left: 30%;
+}
+
+input[id*="popup"] + label + div > label {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: 1;
+}
+
+input[id*="popup"] + label + div {
+    opacity:0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+input[id*="popup"]:checked + label + div {
+    opacity: 1;
+    visibility: visible;
+}
+
+.section8-popup-box-text1 {
+    margin-top: 22%;
+    color: sienna;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+}
+
+.section8-popup-box-text2 {
+    color: sienna;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 35px;
+    position: relative;
+}
+
+/* radio 옵션 전체 div */
+.section8-popup-box-option {
+    text-align: center;
+    margin-top: 35px;
+    color: maroon;
+    position: relative;
+}
+
+/* 각 라디오 버튼 마다 div */
+.section8-popup-box-option-div {
+    display: inline;
+    font-size: 19px;
+}
+
+.section8-popup-box-option-text {
+    display: inline-block;
+    font-size: 19px;
+}
+
+/* 교배 radio */
+.section8-popup-box-option1 {
+    opacity: 0;
+}
+
+/* 입양 radio */
+.section8-popup-box-option2 {
+    margin-left: -5px;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.section8-popup-box-text3 {
+    color: darkgray;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 35px;
+    position: relative;
+}
+
+.section8-popup-modal-btn {
+    position: relative;
+    margin-top: -15px;
+}
+
+.section8-popup-modal-btn-click {
+    position: relative;
+    left: 52%;
+    top: -44px;
+    font-size: 23px;
+    width: 25%;
+    height: 44px;
+    background-color: mistyrose;
+    color: maroon;
+    border-radius: 40px;
+    border: solid 1px mistyrose;
+}
+
+.section8-popup-modal-btn-text {
+    position: absolute;
+    width: 70%;
+}
+
+.section8-popup-modal-btn-text-email {
+    width: 70%;
+    margin-top: 2.7%;
+    margin-left: 25.5%;
+    height: 42px;
+    font-size: 20px;
+    background: cornsilk;
+    border-radius: 40px;
+    text-align: center;
+    border: solid 1px cornsilk;
+    color: black;
+}
+
+input::placeholder {
+    color: sienna;
+}
+
+.popupSuccess {
+    display: none;
+    background-color: #5B67CA;
+    padding: 20px;
+    z-index: 3;
+    width: 300px;
+    height: 222px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 사전 예약 완료 텍스트 */
+.popupSuccessText {
+    color: white;
+    font-size: 20px;
+}
+
+/* 사전 예약 완료 버튼 */
+.popupSuccessBtn {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background: #004fff;
+    color: white;
+    font-size: 16px;
+    /* 박스쉐도우 : x축 y축 블러값 */
+    box-shadow: 0 4px 16px rgba(0,79,255,0.3);
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.popupSuccessBtn:focus {
+    outline: 0;
+}
+
+.popupSuccessBtn:hover {
+    box-shadow: 0 4px 16px rgba(0,79,255,0.9);
+}
+
+.speechBubble {
+    color: black;
+    font-size: 18px;
+}
+
+.speechBubble1 {
+    position: absolute;
+    background-image: url("../../images/main/popup/speechBubble/speechBubble-02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 100px;
+    margin: 150px 0px 0px -18px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    display: none;
+    color: red;
+}
+
+.speechBubble2 {
+    position: absolute;
+    background-image: url("../../images/main/popup/speechBubble/speechBubble-01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 100px;
+    margin: 150px 0px 0px -20px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    display: none;
+    color: blue;
+}
+
+.speechBubble1-1 {
+    position: absolute;
+    display: none;
+    margin-top: 30px;
+    margin-left: -104px;
+}
+
+.speechBubble1-2 {
+    position: absolute;
+    display: none;
+    margin-top: 15px;
+    margin-right: 12px;
+}
+
+.speechBubble1-3 {
+    margin-top: 43px;
+    margin-left: -20px;
+    margin-right: -10px;
+    display: none;
+}
+
+.speechBubble2-1 {
+    display: none;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+#ios1 img {
+    position: absolute;
+    left: 38.5%;
+    top: 69%;
+    margin-left: -75px;
+    margin-top: -100px;
+}
+
+#ios2 img {
+    position: absolute;
+    left: 38.5%;
+    top: 69%;
+    margin-left: -75px;
+    margin-top: -100px;
+}
+
+#android1 img {
+    position: absolute;
+    left: 54.5%;
+    top: 69%;
+    margin-left: -75px;
+    margin-top: -100px;
+}
+
+#android2 img {
+    position: absolute;
+    left: 54.5%;
+    top: 69%;
+    margin-left: -75px;
+    margin-top: -100px;
+}
+
+#ios1 > #iosBlack1, #android1 > #androidBlack1, #ios2 > #iosBlack2, #android2 > #androidBlack2 {
+    opacity: 0;
+    transition: opacity 1s
+}
+
+#ios1:hover > #iosBlack1, #android1:hover > #androidBlack1, #ios2:hover > #iosBlack2, #android2:hover > #androidBlack2 {
+    opacity: 1;
+}
