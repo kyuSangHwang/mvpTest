@@ -130,10 +130,10 @@ input[id*="popup"]:checked + label + div {
 .section8-popup-modal-btn-click {
     position: relative;
     left: 52%;
-    top: -44px;
+    top: -42px;
     font-size: 23px;
     width: 25%;
-    height: 44px;
+    height: 42px;
     background-color: mistyrose;
     color: maroon;
     border-radius: 40px;

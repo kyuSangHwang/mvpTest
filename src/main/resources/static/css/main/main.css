@@ -331,34 +331,107 @@ p.cursor {
     padding-top: 50px;
 }
 
-/* section8 다운로드 버튼 & 팝업창 */
-.section8-downloadButton-ios {
+.section8-downloadButton1 {
     position: absolute;
+    border: 2px solid white;
     top: 610px;
     right: 970px;
-    cursor: pointer;
-    height: 4.5%;
-    border: 2px solid white;
-    border-radius: 40px;
-    padding: 10px 20px 10px 20px;
-}
-.section8-downloadButton-ios:hover, .section1-downloadButton-ios:hover {
-    border: 2px solid black;
+    border-radius: 69px;
+    width: 255px;
+    height: 65px;
 }
 
-.section8-downloadButton-android {
+.section8-downloadButton1-img {
+    width: 210px;
+    margin-left: 26px;
+    margin-top: 9px;
+}
+
+.section8-downloadButton2 {
     position: absolute;
-    top: 610px;
-    right: 720px;
-    cursor: pointer;
-    height: 4.5%;
     border: 2px solid white;
-    border-radius: 40px;
-    padding: 10px 20px 10px 20px;
+    top: 610px;
+    right: 680px;
+    border-radius: 69px;
+    width: 255px;
+    height: 65px;
 }
-.section8-downloadButton-android:hover, .section1-downloadButton-android:hover {
+
+/* section8 다운로드 버튼 & 팝업창 */
+/*.section8-downloadButton-ios {*/
+/*    position: absolute;*/
+/*    top: 610px;*/
+/*    right: 970px;*/
+/*    cursor: pointer;*/
+/*    height: 4.5%;*/
+/*    border: 2px solid white;*/
+/*    border-radius: 40px;*/
+/*    padding: 10px 20px 10px 20px;*/
+/*}*/
+/*.section8-downloadButton-ios {*/
+/*    cursor: pointer;*/
+/*    width: 80%;*/
+/*    padding: 10px 20px 10px 25px;*/
+/*}*/
+
+.section8-downloadButton-ios {
+    cursor: pointer;
+    width: 77%;
+    padding: 10px 20px 10px 25px;
+    z-index: 1;
+}
+
+
+
+
+/*.section8-downloadButton-ios:hover, .section1-downloadButton-ios:hover {*/
+/*    border: 2px solid black;*/
+/*}*/
+
+.section8-downloadButton1:hover, .section1-downloadButton-ios:hover {
     border: 2px solid black;
+    /*content: url("../../images/downloadBadge/app-store-badge-black-0333.png");*/
+    background-image: url("../../images/downloadBadge/app-store-badge-black-0333.png");
+    background-size: 196px 49px;
+    background-repeat:no-repeat;
+    background-position: 43% 60%;
+    z-index: 2 !important;
+    /*width: 18.3%;*/
+    /*height: 7.3%;*/
+    /*padding: 10px 25px 10px 25px;*/
+    /*background-image: url("../../images/downloadBadge/app-store-badge-black-0333.png");*/
 }
+
+/*.section8-downloadButton-android {*/
+/*    position: absolute;*/
+/*    top: 610px;*/
+/*    right: 720px;*/
+/*    cursor: pointer;*/
+/*    height: 4.5%;*/
+/*    border: 2px solid white;*/
+/*    border-radius: 40px;*/
+/*    padding: 10px 20px 10px 20px;*/
+/*}*/
+.section8-downloadButton-android {
+    cursor: pointer;
+    width: 80%;
+    padding: 10px 20px 10px 25px;
+}
+
+/*.section8-downloadButton-android:hover, .section1-downloadButton-android:hover {*/
+/*    border: 2px solid black;*/
+/*}*/
+.section8-downloadButton2:hover, .section1-downloadButton-android:hover {
+    border: 2px solid black;
+    /*content: url("../../images/downloadBadge/google-play-badge-black-0111.png");*/
+    /*width: 18.3%;*/
+    /*height: 7.3%;*/
+    /*padding: 10px 25px 10px 25px;*/
+}
+
+
+
+
 
 .section1-downloadButton-ios {
     position: absolute;

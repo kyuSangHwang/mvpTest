@@ -54,6 +54,35 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <script type="text/javascript" src="js/bootstrap/bootstrap.bundle.js"></script>
 
+
+    <style>
+        #modal1:nth-child(1) button {
+            position: relative;
+            left: 90%;
+            top: -42px;
+            font-size: 23px;
+            width: 25%;
+            height: 42px;
+            background-color: mistyrose;
+            color: maroon;
+            border-radius: 40px;
+            border: solid 1px mistyrose;
+        }
+
+        #modal1:nth-child(1) > input:last-of-type {
+            width: 70%;
+            margin-top: 2.7%;
+            margin-left: 28.5%;
+            height: 42px;
+            font-size: 20px;
+            background: cornsilk;
+            border-radius: 40px;
+            text-align: center;
+            border: solid 1px cornsilk;
+            color: black;
+        }
+    </style>
+
 </head>
 <body>
 <header th:include="fragments/header ::header" id="header-wrap"></header>
@@ -83,7 +112,7 @@
         <div class="modal fade exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content" style="margin-bottom: 8rem;">
-                    <div th:include="popup/popup"></div>
+                    <div th:include="popup/popup" id="modal1"></div>
                 </div>
             </div>
         </div>
@@ -187,25 +216,17 @@
                 </div>
 
                 <div class="section8-title__modal-button">
-                    <button type="button" id="ios2" class="btn openPop2" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" id="ios2" class="btn openPop1" data-toggle="modal" data-target="#exampleModal">
                         <img id="iosWhite2" src="images/downloadBadge/app-store-badge-white-0333.png" class="section8__download" width="248px" height="72px">
                         <img id="iosBlack2" src="images/downloadBadge/app-store-badge-black-0333.png" class="section8__download" width="248px" height="72px">
                     </button>
 
-                    <button type="button" id="android2" class="btn openPop2" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" id="android2" class="btn openPop1" data-toggle="modal" data-target="#exampleModal">
                         <img id="androidWhite2" src="images/downloadBadge/google-play-badge-white-0111.png" class="section8__download" width="248px">
                         <img id="androidBlack2" src="images/downloadBadge/google-play-badge-black-0111.png" class="section8__download" width="248px">
                     </button>
                 </div>
 
-                <!-- Modal -->
-                <div class="modal fade exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content" style="margin-bottom: 8rem;">
-                            <div th:include="popup/popup"></div>
-                        </div>
-                    </div>
-                </div>
 
 
             </div>
