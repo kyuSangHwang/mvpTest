@@ -264,12 +264,13 @@ function afterRenderTreePet() {
  * emailJs, carvekiss@gmail.com 의 계정이 지금 412 Error (Precondition Failed) 가 나서 규상이 개인 계정(kyusang.dev@gmail.com)으로 등록해 놓음
  */
 function sendEmail() {
-    const optionVal = $('input[name="option"]:checked').val();
+    let optionVal = $('input[name="option"]:checked').val();
     const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
     const optionName = $('input[name="option"]');
     const templateParams = { category: optionVal, email: $("#email").val() };
 
     if (optionVal == null) { // 원하는 서비스를 선택하지 않았을 떄
+        emailSuccessHide();
         optionSelectShow();
         setTimeout(bubbleHide, 7000);
     } else {
@@ -289,10 +290,15 @@ function sendEmail() {
             optionName.prop("checked", true).next().next().removeClass('bi-check-square-fill'); //검정 버튼 클래스 지우고
             optionName.prop("checked", true).next().next().addClass('bi-check-square'); //흰 버튼 클래스 생성
 
+
+            optionVal = $('input[name="option"]:checked').prop('checked', false); //사전예약 성공 시 옵션값 체크 풀기
+
+
         } else {
             reset();
             emailSuccessHide(); // 이메일 보내기 성공 숨기기
             emailFailShow(); // 이메일형식이 다릅니다 아래에 띄우는 것
+
         }
     }
 }
