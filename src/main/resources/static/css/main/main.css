@@ -156,9 +156,7 @@ p.cursor {
     padding: 5px;
 }
 
-
-.knobs,
-.layer {
+.knobs, .layer {
     position: absolute;
     top: 0;
     right: 0;
@@ -175,8 +173,7 @@ p.cursor {
     overflow: hidden;
 }
 
-.button.r,
-.button.r .layer {
+.button.r, .button.r .layer {
     border-radius: 100px;
 }
 
@@ -317,10 +314,6 @@ p.cursor {
     height: 100%;
 }
 
-.section8__title__popup {
-
-}
-
 .section8-downloadButton-joint:hover {
     border: 2px solid black;
 }
@@ -381,9 +374,6 @@ p.cursor {
     z-index: 1;
 }
 
-
-
-
 /*.section8-downloadButton-ios:hover, .section1-downloadButton-ios:hover {*/
 /*    border: 2px solid black;*/
 /*}*/
@@ -396,42 +386,17 @@ p.cursor {
     background-repeat:no-repeat;
     background-position: 43% 60%;
     z-index: 2 !important;
-    /*width: 18.3%;*/
-    /*height: 7.3%;*/
-    /*padding: 10px 25px 10px 25px;*/
-    /*background-image: url("../../images/downloadBadge/app-store-badge-black-0333.png");*/
 }
 
-/*.section8-downloadButton-android {*/
-/*    position: absolute;*/
-/*    top: 610px;*/
-/*    right: 720px;*/
-/*    cursor: pointer;*/
-/*    height: 4.5%;*/
-/*    border: 2px solid white;*/
-/*    border-radius: 40px;*/
-/*    padding: 10px 20px 10px 20px;*/
-/*}*/
 .section8-downloadButton-android {
     cursor: pointer;
     width: 80%;
     padding: 10px 20px 10px 25px;
 }
 
-/*.section8-downloadButton-android:hover, .section1-downloadButton-android:hover {*/
-/*    border: 2px solid black;*/
-/*}*/
 .section8-downloadButton2:hover, .section1-downloadButton-android:hover {
     border: 2px solid black;
-    /*content: url("../../images/downloadBadge/google-play-badge-black-0111.png");*/
-    /*width: 18.3%;*/
-    /*height: 7.3%;*/
-    /*padding: 10px 25px 10px 25px;*/
 }
-
-
-
-
 
 .section1-downloadButton-ios {
     position: absolute;

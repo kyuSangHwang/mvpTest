@@ -44,18 +44,6 @@ li{
 }
 
 .container-li {
-    /*float: left;
-    position: relative;
-    display: block;
-    !* width: calc(12.5vw - 4rem); *!
-    max-width: calc(240px - 4rem);
-    min-width: 35px;
-    padding-top: 13px;
-    padding-bottom: 3px;
-    height: 33px;
-    margin-right: 1rem;
-    box-sizing: border-box;*/
-
     float: left;
     position: relative;
     display: block;
@@ -64,103 +52,39 @@ li{
     min-width: 35px;
     margin-right: 1rem;
     box-sizing: border-box;
-
-}
-
-.container-li a {
-display: block;
-font-size: 20px;
-font-weight: bold;
-text-decoration: none;
-cursor: pointer;
-}
-
-.link-icon {
-position: relative;
-display: inline-block;
-width: auto;
-font-size: 14px;
-font-weight: 500;
-color: #333;
-margin-right: 10px;
-padding-top: 35px;
-background-size: contain;
-}
-
-.instagram {
-
-}
-
-.link-icon.instagram {
-background-image: url(../../images/logo/sns/instagram/instagram-logo-color.png);
-background-repeat: no-repeat;
-}
-
-.link-icon.facebook {
-background-image: url(../../images/logo/sns/facebook/facebook-logo-color.png);
-background-repeat: no-repeat;
-}
-
-.link-icon.band {
-background-image: url(../../images/logo/sns/band/band-logo-color.png);
-background-repeat: no-repeat;
-}
-
-/* 삭제금지 */
-/*.container-ul {
-    float: right;
-    margin: 0px;
-    padding: 0px;
-    padding-inline-start: 0px;
-    list-style-type: none;
-}
-
-.container-li {
-    float: left;
-    position: relative;
-    display: block;
-    width: calc(12.5vw - 4rem);
-    max-width: calc(240px - 4rem);
-    min-width: 100px;
-    padding-top: 15px;
-    padding-bottom: 3px;
-    height: 33px;
-    margin-right: 4rem;
-    box-sizing: border-box;
 }
 
 .container-li a {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    !*color: rgb(255, 255, 255);*!
     text-decoration: none;
     cursor: pointer;
-    height: 29px;
 }
 
-.container-li:after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 0px;
-    margin: 5px 0 0;
-    opacity: 2;
-    background-color: rgb(255, 255, 255);
-    height: 4px;
-    transition: width 0.3s ease 0.1s;
+.link-icon {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 10px;
+    padding-top: 35px;
+    background-size: contain;
 }
 
-.container-li:hover:after{
-    width: 100%;
-    opacity: 1;
-    transition: width 0.3s ease 0s;
-}*/
-
-/* 메뉴 숨기기 (삭제금지) */
-/*
-.container-li:nth-child(-n+3){
-    display: none;
+.link-icon.instagram {
+    background-image: url(../../images/logo/sns/instagram/instagram-logo-color.png);
+    background-repeat: no-repeat;
 }
-*/
+
+.link-icon.facebook {
+    background-image: url(../../images/logo/sns/facebook/facebook-logo-color.png);
+    background-repeat: no-repeat;
+}
+
+.link-icon.band {
+    background-image: url(../../images/logo/sns/band/band-logo-color.png);
+    background-repeat: no-repeat;
+}
