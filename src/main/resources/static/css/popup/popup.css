@@ -246,3 +246,8 @@ input::placeholder {
     border: solid 1px cornsilk;
     color: black;
 }
+
+/* 반응형 모바일 세로 기준 */
+@media only screen and (max-width: 575px) {
+
+}
