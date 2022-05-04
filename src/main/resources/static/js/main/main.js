@@ -315,8 +315,10 @@ function reset() {
 // 실패한 말풍선 시간 지나면 사라지게
 function bubbleHide() {
     let optionSelectH = $("div.speechBubble1")[0];
+    let optionSelectH1 = $("div.speechBubble2")[0];
 
     optionSelectH.style.display = 'none';
+    optionSelectH1.style.display = 'none';
 }
 
 // 옵션 말풍선 보여주기
@@ -344,6 +346,8 @@ function emailSuccessShow() {
 
     emailSuccessBubble.style.display = "inline-block";
     emailSuccessText.style.display = "inline-block";
+
+    setTimeout(bubbleHide, 7000);
 }
 
 //이메일 실패 텍스트 보여주기

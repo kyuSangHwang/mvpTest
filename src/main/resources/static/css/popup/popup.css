@@ -6,29 +6,6 @@
     right: 145px;
 }
 
-input[id*="popup"] {
-    display: none;
-}
-
-input[id*="popup"] + label {
-    display: inline-block;
-    background: #5B67CA;
-    border: 3px solid black;
-    border-radius: 35px;
-    background-color: transparent;
-    color: black;
-    font-size: 40px;
-}
-
-input[id*="popup"] + label + div {
-    position: fixed;
-    /*top: 600;*/
-    /*left: 2250;*/
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-}
-
 .section8-popup-box {
     position: absolute;
     top: 42%;
@@ -44,27 +21,6 @@ input[id*="popup"] + label + div {
 
 .section8-popup-box img {
     margin-left: 30%;
-}
-
-input[id*="popup"] + label + div > label {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.9);
-    z-index: 1;
-}
-
-input[id*="popup"] + label + div {
-    opacity:0;
-    visibility: hidden;
-    transition: all 0.5s;
-}
-
-input[id*="popup"]:checked + label + div {
-    opacity: 1;
-    visibility: visible;
 }
 
 .section8-popup-box-text1 {
@@ -160,49 +116,6 @@ input[id*="popup"]:checked + label + div {
 
 input::placeholder {
     color: sienna;
-}
-
-.popupSuccess {
-    display: none;
-    background-color: #5B67CA;
-    padding: 20px;
-    z-index: 3;
-    width: 300px;
-    height: 222px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* 사전 예약 완료 텍스트 */
-.popupSuccessText {
-    color: white;
-    font-size: 20px;
-}
-
-/* 사전 예약 완료 버튼 */
-.popupSuccessBtn {
-    position: relative;
-    width: 120px;
-    height: 40px;
-    background: #004fff;
-    color: white;
-    font-size: 16px;
-    /* 박스쉐도우 : x축 y축 블러값 */
-    box-shadow: 0 4px 16px rgba(0,79,255,0.3);
-    font-weight: bold;
-    border-radius: 20px;
-}
-
-.popupSuccessBtn:focus {
-    outline: 0;
-}
-
-.popupSuccessBtn:hover {
-    box-shadow: 0 4px 16px rgba(0,79,255,0.9);
 }
 
 .speechBubble {
@@ -306,4 +219,30 @@ input::placeholder {
 
 #ios1:hover > #iosBlack1, #android1:hover > #androidBlack1, #ios2:hover > #iosBlack2, #android2:hover > #androidBlack2 {
     opacity: 1;
+}
+
+#modal1:nth-child(1) button {
+    position: relative;
+    left: 90%;
+    top: -42px;
+    font-size: 23px;
+    width: 25%;
+    height: 42px;
+    background-color: mistyrose;
+    color: maroon;
+    border-radius: 40px;
+    border: solid 1px mistyrose;
+}
+
+#modal1:nth-child(1) > div:nth-child(1) > div:nth-child(5) input {
+    width: 70%;
+    margin-top: 2.7%;
+    margin-left: 28.5%;
+    height: 42px;
+    font-size: 20px;
+    background: cornsilk;
+    border-radius: 40px;
+    text-align: center;
+    border: solid 1px cornsilk;
+    color: black;
 }

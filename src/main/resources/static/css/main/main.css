@@ -254,17 +254,6 @@ p.cursor {
     margin-left: 0px;
 }
 
-.section:nth-child(5) {
-    background-color: magenta;
-}
-
-.section:nth-child(6) {
-    background-color: teal;
-}
-
-.section:nth-child(7) {
-    background-color: coral;
-}
 
 .section8 {
     color: white;
@@ -350,22 +339,6 @@ p.cursor {
     height: 65px;
 }
 
-/* section8 다운로드 버튼 & 팝업창 */
-/*.section8-downloadButton-ios {*/
-/*    position: absolute;*/
-/*    top: 610px;*/
-/*    right: 970px;*/
-/*    cursor: pointer;*/
-/*    height: 4.5%;*/
-/*    border: 2px solid white;*/
-/*    border-radius: 40px;*/
-/*    padding: 10px 20px 10px 20px;*/
-/*}*/
-/*.section8-downloadButton-ios {*/
-/*    cursor: pointer;*/
-/*    width: 80%;*/
-/*    padding: 10px 20px 10px 25px;*/
-/*}*/
 
 .section8-downloadButton-ios {
     cursor: pointer;
@@ -374,13 +347,10 @@ p.cursor {
     z-index: 1;
 }
 
-/*.section8-downloadButton-ios:hover, .section1-downloadButton-ios:hover {*/
-/*    border: 2px solid black;*/
-/*}*/
+
 
 .section8-downloadButton1:hover, .section1-downloadButton-ios:hover {
     border: 2px solid black;
-    /*content: url("../../images/downloadBadge/app-store-badge-black-0333.png");*/
     background-image: url("../../images/downloadBadge/app-store-badge-black-0333.png");
     background-size: 196px 49px;
     background-repeat:no-repeat;
