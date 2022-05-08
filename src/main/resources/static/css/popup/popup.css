@@ -11,12 +11,13 @@
     top: 42%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 652px;
-    height: 814px;
+    /* TODO : width, height를 em, rem으로 바꾸면 오른쪽이 좀 잘림,,,일단 수치대로 바꾸긴했는데, 그림 다 나오게 하려면 40~으로 하면 됨 */
+    width: 39.0625rem;
+    height: 50.875rem;
     background-image: url("../../images/main/popup/popup-06.png");
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .section8-popup-box img {
@@ -27,22 +28,22 @@
     margin-top: 22%;
     color: sienna;
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5em;
     position: relative;
 }
 
 .section8-popup-box-text2 {
     color: sienna;
     text-align: center;
-    font-size: 22px;
-    margin-top: 35px;
+    font-size: 1.375em;
+    margin-top: 2.1875em;
     position: relative;
 }
 
 /* radio 옵션 전체 div */
 .section8-popup-box-option {
     text-align: center;
-    margin-top: 35px;
+    margin-top: 2.1875em;
     color: maroon;
     position: relative;
 }
@@ -50,12 +51,12 @@
 /* 각 라디오 버튼 마다 div */
 .section8-popup-box-option-div {
     display: inline;
-    font-size: 19px;
+    font-size: 1.1875em;
 }
 
 .section8-popup-box-option-text {
     display: inline-block;
-    font-size: 19px;
+    font-size: 1.1875em;
 }
 
 /* 교배 radio */
@@ -65,22 +66,21 @@
 
 /* 입양 radio */
 .section8-popup-box-option2 {
-    margin-left: -5px;
-    font-size: 20px;
+    margin-left: -0.3125rem;
     opacity: 0;
 }
 
 .section8-popup-box-text3 {
     color: darkgray;
     text-align: center;
-    font-size: 16px;
-    margin-top: 35px;
+    font-size: 1em;
+    margin-top: 2.1875em;
     position: relative;
 }
 
 .section8-popup-modal-btn {
     position: relative;
-    margin-top: -15px;
+    margin-top: -0.9375em;
 }
 
 .section8-popup-modal-btn-click {
@@ -120,7 +120,7 @@ input::placeholder {
 
 .speechBubble {
     color: black;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .speechBubble1 {
@@ -128,9 +128,9 @@ input::placeholder {
     background-image: url("../../images/main/popup/speechBubble/speechBubble-02.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 350px;
-    height: 100px;
-    margin: 150px 0px 0px -18px;
+    width: 21.875em;
+    height: 6.25em;
+    margin: 9.375em 0em 0em -1.125em;
     text-align: center;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -143,9 +143,9 @@ input::placeholder {
     background-image: url("../../images/main/popup/speechBubble/speechBubble-01.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 350px;
-    height: 100px;
-    margin: 150px 0px 0px -18px;
+    width: 21.875rem;
+    height: 6.25rem;
+    margin: 9.375em 0em 0em -1.125em;
     text-align: center;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -156,60 +156,60 @@ input::placeholder {
 .speechBubble1-1 {
     position: absolute;
     display: none;
-    margin-top: 30px;
-    margin-left: -104px;
+    margin-top: 1.875em;
+    margin-left: -6.5rem;
 }
 
 .speechBubble1-2 {
     position: absolute;
     display: none;
-    margin-top: 15px;
-    margin-right: 12px;
+    margin-top: 0.9375em;
+    margin-right: 0.75em;
 }
 
 .speechBubble1-3 {
-    margin-top: 43px;
-    margin-left: -20px;
-    margin-right: -10px;
+    margin-top: 2.6875em;
+    margin-left: -1.25em;
+    margin-right: -0.625em;
     display: none;
 }
 
 .speechBubble2-1 {
     display: none;
-    margin-top: 30px;
-    margin-right: 10px;
+    margin-top: 1.875rem;
+    margin-right: 0.625em;
 }
 
 #ios1 img {
     position: absolute;
     left: 38.5%;
     top: 69%;
-    margin-left: -75px;
-    margin-top: -100px;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
 }
 
 #ios2 img {
     position: absolute;
     left: 38.5%;
     top: 69%;
-    margin-left: -75px;
-    margin-top: -100px;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
 }
 
 #android1 img {
     position: absolute;
     left: 54.5%;
     top: 69%;
-    margin-left: -75px;
-    margin-top: -100px;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
 }
 
 #android2 img {
     position: absolute;
     left: 54.5%;
     top: 69%;
-    margin-left: -75px;
-    margin-top: -100px;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
 }
 
 #ios1 > #iosBlack1, #android1 > #androidBlack1, #ios2 > #iosBlack2, #android2 > #androidBlack2 {
@@ -224,13 +224,13 @@ input::placeholder {
 #modal1:nth-child(1) button {
     position: relative;
     left: 90%;
-    top: -42px;
-    font-size: 23px;
+    top: -2.625rem;
+    font-size: 1.4375em;
     width: 25%;
-    height: 42px;
+    height: 2.625rem;
     background-color: mistyrose;
     color: maroon;
-    border-radius: 40px;
+    border-radius: 2.5em;
     border: solid 1px mistyrose;
 }
 
@@ -238,10 +238,10 @@ input::placeholder {
     width: 70%;
     margin-top: 2.7%;
     margin-left: 28.5%;
-    height: 42px;
-    font-size: 20px;
+    height: 2.625rem;
+    font-size: 1.25em;
     background: cornsilk;
-    border-radius: 40px;
+    border-radius: 2.5rem;
     text-align: center;
     border: solid 1px cornsilk;
     color: black;

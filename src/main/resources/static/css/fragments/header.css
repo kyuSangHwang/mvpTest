@@ -12,34 +12,33 @@ li{
     background-color: rgba(0,0,0,0);
     position: fixed;
     width: 100%;
-    height: 92px;
+    height: 5.75rem;
     color: white;
     min-width: 1080px;
     top: 0;
     left: 0;
     margin: 0 auto;
     z-index: 3;
-    padding: 2.4rem 3rem 0px;
+    padding: 2.4rem 3rem 0rem;
     box-sizing: border-box;
-    font-size: 0px;
 }
 
 .header-container {
-    height: 52px;
+    height: 3.25rem;
     width: 100%;
     position: relative;
 }
 
 .container-logo-img {
-    width: 220px;
-    height: 45px;
+    width: 13.75rem;
+    height: 2.8125rem;
 }
 
 .container-ul {
     float: right;
-    margin: 0px;
-    padding: 0px;
-    padding-inline-start: 0px;
+    margin: 0rem;
+    padding: 0rem;
+    padding-inline-start: 0rem;
     list-style-type: none;
 }
 
@@ -48,15 +47,15 @@ li{
     position: relative;
     display: block;
     width: calc(12.5vw - 11rem);
-    max-width: calc(240px - 13rem);
-    min-width: 35px;
+    max-width: calc(15rem - 13rem);
+    min-width: 2.1875rem;
     margin-right: 1rem;
     box-sizing: border-box;
 }
 
 .container-li a {
     display: block;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -66,7 +65,7 @@ li{
     position: relative;
     display: inline-block;
     width: auto;
-    font-size: 14px;
+    font-size: 0.875em;
     font-weight: 500;
     color: #333;
     margin-right: 10px;
