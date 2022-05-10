@@ -302,7 +302,7 @@ input::placeholder {
 
     .speechBubble {
         color: black;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         margin-top: 3rem;
     }
 
@@ -313,7 +313,7 @@ input::placeholder {
         background-size: cover;
         width: 15.175rem;
         height: 4.3rem;
-        margin: 7em 0em 0em -1.125em;
+        margin: 6em 0 0 -1.125em;
         text-align: center;
         transform: translate(-50%,-50%);
         left: 50%;
@@ -324,15 +324,15 @@ input::placeholder {
     .speechBubble1-1 {
         position: absolute;
         display: none;
-        margin-top: 1.5em;
-        margin-left: -4.65rem;
+        margin-top: 1.53em;
+        margin-left: -4.5rem;
     }
 
     .speechBubble1-2 {
         position: absolute;
         display: none;
-        margin-top: 0.8375rem;
         margin-left: 0.35rem;
+        margin-top: 0.7rem;
     }
 
     .speechBubble1-3 {
@@ -348,7 +348,7 @@ input::placeholder {
         background-size: cover;
         width: 15.175rem;
         height: 4.3rem;
-        margin: 7.375em 0em 0em -1.125em;
+        margin: 6em 0em 0em -1.125em;
         text-align: center;
         transform: translate(-50%,-50%);
         left: 50%;
@@ -358,7 +358,7 @@ input::placeholder {
 
     .speechBubble2-1 {
         display: none;
-        margin-top: 1.3rem;
+        margin-top: 1.18rem;
         margin-right: 0.625em;
     }
 }
