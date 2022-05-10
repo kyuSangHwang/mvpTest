@@ -589,5 +589,17 @@ p.cursor {
 
 /* 반응형 모바일 세로 기준 */
 @media only screen and (max-width: 575px) {
+    /* 푸터  */
+    .section8-footer-logo-img {
+        margin-top: -5rem;
+        margin-left: -3rem;
+        width: 6.25rem;
+    }
+
+    .section8-footer-companyInfo {
+        display: none;
+    }
+
+
 
 }
