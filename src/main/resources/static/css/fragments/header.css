@@ -91,4 +91,63 @@ li{
 /* 반응형 모바일 세로 기준 */
 @media only screen and (max-width: 575px) {
 
+    #header-wrap {
+        background-color: rgba(0,0,0,0);
+        position: fixed;
+        width: 100%;
+        height: 3rem;
+        color: white;
+        min-width: 1080px;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        z-index: 3;
+        padding: 1.4rem 1rem 0rem;
+        box-sizing: border-box;
+    }
+
+    .header-container {
+        width: 98vw;
+        position: relative;
+    }
+
+    .container-logo-img {
+        width: 10rem;
+        height: 1.5rem;
+    }
+
+    .container-ul {
+        float: right;
+        list-style-type: none;
+    }
+
+    .container-li {
+        float: left;
+        position: relative;
+        display: block;
+        width: calc(12.5vw - 11rem);
+        max-width: calc(15rem - 13rem);
+        min-width: 2.19rem;
+        margin-right: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    .link-icon.instagram {
+        background-image: url(../../images/logo/sns/instagram/instagram-logo-color.png);
+        background-repeat: no-repeat;
+        background-size: 1.3rem;
+    }
+
+    .link-icon.facebook {
+        background-image: url(../../images/logo/sns/facebook/facebook-logo-color.png);
+        background-repeat: no-repeat;
+        background-size: 1.3rem;
+    }
+
+    .link-icon.band {
+        background-image: url(../../images/logo/sns/band/band-logo-color.png);
+        background-repeat: no-repeat;
+        background-size: 1.3rem;
+    }
+
 }

@@ -12,7 +12,8 @@
     left: 50%;
     transform: translate(-50%,-50%);
     /* TODO : width, height를 em, rem으로 바꾸면 오른쪽이 좀 잘림,,,일단 수치대로 바꾸긴했는데, 그림 다 나오게 하려면 40~으로 하면 됨 */
-    width: 39.0625rem;
+    /*width: 39.0625rem;*/
+    width: 41.0625rem;
     height: 50.875rem;
     background-image: url("../../images/main/popup/popup-06.png");
     background-size: cover;
@@ -180,47 +181,6 @@ input::placeholder {
     margin-right: 0.625em;
 }
 
-#ios1 img {
-    position: absolute;
-    left: 38.5%;
-    top: 69%;
-    margin-left: -4.6875em;
-    margin-top: -6.25em;
-}
-
-#ios2 img {
-    position: absolute;
-    left: 38.5%;
-    top: 69%;
-    margin-left: -4.6875em;
-    margin-top: -6.25em;
-}
-
-#android1 img {
-    position: absolute;
-    left: 54.5%;
-    top: 69%;
-    margin-left: -4.6875em;
-    margin-top: -6.25em;
-}
-
-#android2 img {
-    position: absolute;
-    left: 54.5%;
-    top: 69%;
-    margin-left: -4.6875em;
-    margin-top: -6.25em;
-}
-
-#ios1 > #iosBlack1, #android1 > #androidBlack1, #ios2 > #iosBlack2, #android2 > #androidBlack2 {
-    opacity: 0;
-    transition: opacity 1s
-}
-
-#ios1:hover > #iosBlack1, #android1:hover > #androidBlack1, #ios2:hover > #iosBlack2, #android2:hover > #androidBlack2 {
-    opacity: 1;
-}
-
 #modal1:nth-child(1) button {
     position: relative;
     left: 90%;
@@ -256,7 +216,7 @@ input::placeholder {
         transform: translate(-50%, -50%);
         width: 23rem;
         height: 28.8rem;
-        background-image: url(../../images/main/popup/popup-06.png);
+        background-image: url(../../images/main/popup/popup-06-mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 0.625rem;

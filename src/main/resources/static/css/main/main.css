@@ -270,7 +270,7 @@ p.cursor {
 }
 
 /* section8 part */
-.section8-title {
+.section8__main {
     text-align: center;
     display: inline-flex;
     flex-direction: column;
@@ -281,12 +281,15 @@ p.cursor {
     margin-bottom: 10rem;
 }
 
-.section8-title1{
-    font-size: 4.25em;
-    margin-bottom: 13rem;
+.section8__main-title{
+    margin-bottom: 8rem;
+    font-size: 4.375em;
+    font-weight: bold;
+    color: ghostwhite;
+    text-shadow: #fc0 1px 0 2px;
 }
 
-.section8__title__logo {
+.section8__main-logo {
     width: 250px;
     height: 250px;
     margin-top: 40px;
@@ -297,8 +300,8 @@ p.cursor {
     margin-bottom: 3rem;
 }
 
-.section8__img {
-    margin-left: -3.5rem;
+.main-logo {
+    margin-left: -0.5rem;
     width: 100%;
     height: 100%;
 }
@@ -339,15 +342,12 @@ p.cursor {
     height: 65px;
 }
 
-
 .section8-downloadButton-ios {
     cursor: pointer;
     width: 77%;
     padding: 10px 20px 10px 25px;
     z-index: 1;
 }
-
-
 
 .section8-downloadButton1:hover, .section1-downloadButton-ios:hover {
     border: 2px solid black;
@@ -493,6 +493,53 @@ p.cursor {
     margin: 4.75rem 5rem 0px 28.75rem;
 }
 
+#ios1 img {
+    position: absolute;
+    left: 40.5%;
+    top: 67%;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
+    width: 248px;
+    height: 72px;
+}
+
+#ios2 img {
+    position: absolute;
+    left: 39.5%;
+    top: 70%;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
+    width: 248px;
+    height: 72px;
+}
+
+#android1 img {
+    position: absolute;
+    left: 54.5%;
+    top: 67%;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
+    width: 248px;
+}
+
+#android2 img {
+    position: absolute;
+    left: 54.5%;
+    top: 70%;
+    margin-left: -4.6875em;
+    margin-top: -6.25em;
+    width: 248px;
+}
+
+#ios1 > #iosBlack1, #android1 > #androidBlack1, #ios2 > #iosBlack2, #android2 > #androidBlack2 {
+    opacity: 0;
+    transition: opacity 1s
+}
+
+#ios1:hover > #iosBlack1, #android1:hover > #androidBlack1, #ios2:hover > #iosBlack2, #android2:hover > #androidBlack2 {
+    opacity: 1;
+}
+
 /* test */
 .section-services {
     margin: 50px auto 0 auto;;
@@ -600,6 +647,45 @@ p.cursor {
         display: none;
     }
 
+
+
+    .container-01__main-text {
+        text-align: center;
+        margin-top: -9.25rem;
+    }
+
+    p.main-text-01, p.main-text-02 {
+        display: inline;
+        font-size: 2rem;
+        height: 1.25rem;
+        line-height: 4rem;
+        box-sizing: border-box;
+        border-right: 1px solid #fff;
+        margin: 0.3125rem;
+        font-weight: bold;
+        color: ghostwhite;
+        text-shadow: #fc0 0.0625rem 0 0.125rem;
+    }
+
+    #ios1 img {
+        position: absolute;
+        left: 28.5%;
+        top: 69%;
+        margin-left: -4.6875em;
+        margin-top: -6.25em;
+        width: 40vw;
+        height: 7vh;
+    }
+
+    #android1 img {
+        position: absolute;
+        left: 70.5%;
+        top: 69%;
+        margin-left: -4.6875em;
+        margin-top: -6.25em;
+        width: 40vw;
+        height: 7vh;
+    }
 
 
 }

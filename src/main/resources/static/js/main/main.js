@@ -1,4 +1,6 @@
 let preventDuplicateBtn = true;
+let mobileStatusHeader = false;
+let nowPath = "";
 
 $(document).ready(function () {
 
@@ -33,7 +35,24 @@ $(document).ready(function () {
         onLeave: function(origin, destination, direction){},
         afterLoad: function(anchorLink, index, origin, destination, direction){},
         afterRender: function(){
-            afterRenderTreePet();
+
+            const filter = "win16|win32|win64|mac|macintel";
+            const webType = "";
+
+            if (navigator.platform) {
+                if (0 > filter.indexOf(navigator.platform.toLowerCase())) {
+                    //mobile
+                    mobileStatusHeader = true;
+                    navigationTooltipsChangeM();
+                } else {
+                    //pc
+                    mobileStatusHeader = false;
+                    afterRenderTreePet();
+                }
+            }
+
+
+
         },
         afterResize: function(width, height){},
         afterReBuild: function(){},
@@ -78,7 +97,7 @@ $(document).ready(function () {
 
     $('.checkCategories').on('click', function () {
         const clickCategory = this;
-        const clickCategoryValue = clickCategory.innerText.substring(1,3);
+        const clickCategoryValue = clickCategory.innerText.replace(/ /g,"");
         let categoryLists = $(".checkCategories");
 
         if(!clickCategory || !clickCategoryValue || !categoryLists) {
@@ -87,7 +106,7 @@ $(document).ready(function () {
 
         for (let i = 0; i < categoryLists.length; i++) {
             let categoryList = categoryLists[i];
-            let categoryListValue = categoryList.innerText.substring(1,3);
+            let categoryListValue = categoryList.innerText.replace(/ /g,"");
 
             if (clickCategoryValue === categoryListValue) { //클릭한 값과 같을때
                 $('input[value=\"' + clickCategoryValue + '\"]').next().next().removeClass('bi-check-square'); //흰색 버튼 클래스 지우고
@@ -401,6 +420,37 @@ function navigationTooltipsChange() {
         navToolTipsDiv[0].style.marginTop = "-200px";
         navToolTipsDiv[0].style.backgroundColor = "rgba(0,0,0,0.2)";
         navToolTipsDiv[0].style.borderRadius = "50px";
+    }
+
+    // navigation tool tip dots css addition
+    if (!!navToolTipsDots && navToolTipsDots.length !== 0) {
+        for (let i = 0; i < navToolTipsDots.length; i++) {
+            let navToolTipsDot = navToolTipsDots[i];
+            navToolTipsDot.style.backgroundColor = "white";
+        }
+    }
+}
+
+function navigationTooltipsChangeM() {
+    const navTooltipsList = $("#fp-nav ul li .fp-tooltip.fp-right");
+    const navToolTipsDiv = $("#fp-nav.fp-right");
+    const navToolTipsDots = $(".fp-right li a span:nth-child(2)");
+
+    // navigation tool tip text color change
+    if (!!navTooltipsList) {
+        for (let navTooltipsListAttribute of navTooltipsList) {
+            navTooltipsListAttribute.style.color = "black";
+            navTooltipsListAttribute.style.marginRight = "10px";
+            navTooltipsListAttribute.style.left = "25px";
+        }
+    }
+
+    // navigation tool tip div css addition
+    if (!!navToolTipsDiv && navToolTipsDiv.length === 1 && !!navToolTipsDiv[0]) {
+        navToolTipsDiv[0].style.marginTop = "140px";
+        navToolTipsDiv[0].style.backgroundColor = "rgba(0,0,0,0.2)";
+        navToolTipsDiv[0].style.borderRadius = "50px";
+        navToolTipsDiv[0].style.right = "330px";
     }
 
     // navigation tool tip dots css addition
