@@ -60,6 +60,18 @@
     font-size: 1.1875em;
 }
 
+.option {
+    display: none;
+}
+
+.checkCategories {
+    margin-left: 1rem;
+}
+
+.checkCategories > i {
+    margin-left: 0.2rem;
+}
+
 /* 교배 radio */
 .section8-popup-box-option1 {
     opacity: 0;
@@ -210,20 +222,13 @@ input::placeholder {
 /* 반응형 모바일 세로 기준 */
 @media only screen and (max-width: 575px) {
     .section8-popup-box {
-        position: absolute;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 23rem;
-        height: 28.8rem;
+        top: 1rem;
+        width: 390px;
+        height: 500px;
         background-image: url(../../images/main/popup/popup-06-mobile.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        border-radius: 0.625rem;
     }
 
     .section8-popup-box-text1 {
-        margin-top: 22%;
         color: sienna;
         text-align: center;
         font-size: 1.6em;
@@ -248,7 +253,7 @@ input::placeholder {
 
     .section8-popup-box-option {
         text-align: center;
-        margin-top: 0.1875em;
+        margin-top: 1.1875em;
         color: maroon;
         position: relative;
         margin-left: -2rem;
@@ -298,6 +303,7 @@ input::placeholder {
     .speechBubble {
         color: black;
         font-size: 0.82rem;
+        margin-top: 3rem;
     }
 
     .speechBubble1 {

@@ -637,17 +637,46 @@ p.cursor {
 /* 반응형 모바일 세로 기준 */
 @media only screen and (max-width: 575px) {
     /* 푸터  */
-    .section8-footer-logo-img {
-        margin-top: -5rem;
-        margin-left: -3rem;
-        width: 6.25rem;
+    .section8-footer {
+        padding: 1.4306vw 2.7778vw 2.4306vw 2.7778vw;
+        justify-content: space-between;
+        background: rgba(0,0,0,0.3);
+        position: absolute;
+        top: 82vh;
+        width: 100vw;
+        color: ghostwhite;
+        display: inline-block;
+        text-align: center;
     }
 
-    .section8-footer-companyInfo {
-        display: none;
+    .section8__main {
+        text-align: center;
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 8rem;
     }
 
+    .section8__main-title {
+        margin-bottom: 8rem;
+        font-size: 10.7vw;
+        font-weight: bold;
+        color: ghostwhite;
+        text-shadow: #fc0 1px 0 2px;
+    }
 
+    .section8__main-logo {
+        position: absolute;
+        left: 50vw;
+        transform: translateX(-50%);
+        margin-bottom: 3vh;
+        width: 200px;
+        height: 200px;
+        margin-top: 0;
+    }
 
     .container-01__main-text {
         text-align: center;
@@ -677,6 +706,16 @@ p.cursor {
         height: 7vh;
     }
 
+    #ios2 img {
+        position: absolute;
+        left: 27.5%;
+        top: 67%;
+        margin-left: -4.6875em;
+        margin-top: -6.25em;
+        width: 40vw;
+        height: 7vh;
+    }
+
     #android1 img {
         position: absolute;
         left: 70.5%;
@@ -685,6 +724,42 @@ p.cursor {
         margin-top: -6.25em;
         width: 40vw;
         height: 7vh;
+    }
+
+    #android2 img {
+        position: absolute;
+        left: 70.5%;
+        top: 67%;
+        margin-left: -4.6875em;
+        margin-top: -6.25em;
+        width: 40vw;
+        height: 7vh;
+    }
+
+    .section8-footer-logo {
+        align-items: center;
+        display: none;
+        margin-left: 3.125em;
+    }
+
+    .section8-footer-logo-img {
+        margin-top: -1rem;
+        margin-left: -3rem;
+        width: 6.25rem;
+    }
+
+    .section8-footer-companyInfo {
+        display: none;
+    }
+
+    .section8-footer-contact {
+        margin: auto;
+    }
+
+    .section8-footer-productionSource {
+        font-size: 0.7em;
+        margin: 0;
+        text-align: center;
     }
 
 
