@@ -220,7 +220,7 @@ input::placeholder {
 }
 
 /* 반응형 모바일 세로 기준 */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 480px) {
     .section8-popup-box {
         top: 1rem;
         width: 390px;

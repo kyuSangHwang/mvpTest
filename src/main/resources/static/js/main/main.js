@@ -14,7 +14,7 @@ $(document).ready(function () {
         slidesNavigation: true,
         navigationPosition: 'right',
         // Scroll
-        css3:false,
+        css3: false,
         scrollingSpeed: 700,
         autoScrolling: true,
         scrollHorizontally: true,
@@ -24,12 +24,11 @@ $(document).ready(function () {
         // Accessibility
         keyboardScrolling: false, //키보드로 슬라이더 이동
         // Design
-        sectionsColor : ['#3e55f2', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb', '#fffffb'],
         controlArrows: false, //슬라이더 버튼
         paddingTop: '0px',
         paddingBottom: '0px',
         // Custom Selector
-        slideSelector: '.horizontal-scrolling',
+        slideSelector: 'slides',
 
         // Event
         onLeave: function(origin, destination, direction){},
@@ -50,8 +49,6 @@ $(document).ready(function () {
                     afterRenderTreePet();
                 }
             }
-
-
 
         },
         afterResize: function(width, height){},
@@ -447,10 +444,10 @@ function navigationTooltipsChangeM() {
 
     // navigation tool tip div css addition
     if (!!navToolTipsDiv && navToolTipsDiv.length === 1 && !!navToolTipsDiv[0]) {
-        navToolTipsDiv[0].style.marginTop = "140px";
+        navToolTipsDiv[0].style.marginTop = "37vw";
         navToolTipsDiv[0].style.backgroundColor = "rgba(0,0,0,0.2)";
         navToolTipsDiv[0].style.borderRadius = "50px";
-        navToolTipsDiv[0].style.right = "330px";
+        navToolTipsDiv[0].style.right = "88vw";
     }
 
     // navigation tool tip dots css addition
