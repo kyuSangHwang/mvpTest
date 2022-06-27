@@ -283,7 +283,10 @@ function sendEmail() {
     let optionVal = $('input[name="option"]:checked').val();
     const emailCheck = /[a-zA-Z0-9._+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.]+/;
     const optionName = $('input[name="option"]');
-    const templateParams = { category: optionVal, email: $("#email").val() };
+    const templateParams = {
+        category: optionVal,
+        email: $("#email").val()
+    };
 
     if (optionVal == null) { // 원하는 서비스를 선택하지 않았을 떄
         emailSuccessHide();
@@ -322,6 +325,7 @@ function sendEmail() {
 //input 텍스트 초기화 ('')
 function reset() {
     const email = document.getElementsByClassName('section8-popup-modal-btn-text-email');
+
     for(let i=0; i<email.length; i++){
         email[i].value='';
     }
