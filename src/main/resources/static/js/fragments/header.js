@@ -43,8 +43,10 @@ function mainHeaderManager(index) {
     if (index > 0 && index < 7) {
         $containerLi.css('color', 'black');
         $headerLogoImg.src="images/logo/treePet/mainLogo-mix-origin-black.png";
+
     } else {
         $containerLi.css('color', 'white');
         $headerLogoImg.src="images/logo/treePet/mainLogo-mix-origin-white.png";
+
     }
 }
