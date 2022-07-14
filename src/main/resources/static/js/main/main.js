@@ -10,7 +10,8 @@ $(document).ready(function () {
         licenseKey: 'D1AF2031-25C74F5F-8F279168-8FF34DAF',
         // Move
         navigation: true,
-        navigationTooltips: ['메인페이지', '회사소개', '매칭서비스', '입양/검증', '등록/정보', '지식정보', '스토어', 'Contact us'],
+        // navigationTooltips: ['메인페이지', '회사소개', '매칭서비스', '입양/검증', '등록/정보', '지식정보', '스토어', 'Contact us'],
+        navigationTooltips: ['메인페이지', '매칭서비스', '입양/검증', '등록/정보', '지식정보', '스토어', 'Contact us'],
         slidesNavigation: true,
         navigationPosition: 'right',
         // Scroll
@@ -514,29 +515,29 @@ function addAutoHover() {
  */
 function mainAnimation(index) {
 
-    if (!index || index === 1 || index === 2 || index === 8) {
+    if (!index || index === 1 ||index === 7) {
         return "";
-    } else if (index === 3) {
+    } else if (index === 2) {
         animateCSS('.index-03-icon','fadeInLeft');
         animateCSS('.index-03-h','fadeInLeft');
         animateCSS('.index-03-span','fadeInLeft');
         animateCSS('.index-03-image','fadeInRight');
-    } else if (index === 4) {
+    } else if (index === 3) {
         animateCSS('.index-04-image','fadeInLeft');
         animateCSS('.index-04-icon','fadeInRight');
         animateCSS('.index-04-h','fadeInRight');
         animateCSS('.index-04-span','fadeInRight');
-    } else if (index === 5) {
+    } else if (index === 4) {
         animateCSS('.index-05-icon','fadeInLeft');
         animateCSS('.index-05-h','fadeInLeft');
         animateCSS('.index-05-span','fadeInLeft');
         animateCSS('.index-05-image','fadeInRight');
-    } else if (index === 6) {
+    } else if (index === 5) {
         animateCSS('.index-06-image','fadeInLeft');
         animateCSS('.index-06-icon','fadeInRight');
         animateCSS('.index-06-h','fadeInRight');
         animateCSS('.index-06-span','fadeInRight');
-    } else if (index === 7) {
+    } else if (index === 6) {
         animateCSS('.index-07-icon','fadeInLeft');
         animateCSS('.index-07-h','fadeInLeft');
         animateCSS('.index-07-span','fadeInLeft');
