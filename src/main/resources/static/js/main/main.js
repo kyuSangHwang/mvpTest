@@ -301,6 +301,7 @@ function sendEmail() {
                 console.log('SUCCESS!', response.status, response.text);
             },function (error) {
                 console.log('FAILED...', error);
+                setState('failed');
             })
 
             reset();
